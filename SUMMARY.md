@@ -29,15 +29,21 @@
   * [Listeners](api-reference/bookie-api/listeners.md)
   * [Tournaments](api-reference/bookie-api/tournaments.md)
 
----
+## Peerplays API Libraries
 
-* [Python Peerplays](python-peerplays/README.md)
-  * [Installation](python-peerplays/installation.md)
-  * [Creating an Account](python-peerplays/creating-an-account.md)
-  * [Creating a Peerplays Wallet](python-peerplays/creating-a-peerplays-wallet.md)
-  * [NFT API](python-peerplays/nft-api.md)
-  * [Marketplace API](python-peerplays/marketplace-api.md)
-  * [Role Based Permissions API](python-peerplays/role-based-permissions-api.md)
+* [Python Peerplays](peerplays-api-libraries/python-peerplays/README.md)
+  * [Installation](peerplays-api-libraries/python-peerplays/installation.md)
+  * [Creating an Account](peerplays-api-libraries/python-peerplays/creating-an-account.md)
+  * [Creating a Peerplays Wallet](peerplays-api-libraries/python-peerplays/creating-a-peerplays-wallet.md)
+  * [NFT API](peerplays-api-libraries/python-peerplays/nft-api.md)
+  * [Marketplace API](peerplays-api-libraries/python-peerplays/marketplace-api.md)
+  * [Role Based Permissions API](peerplays-api-libraries/python-peerplays/role-based-permissions-api.md)
+
+## Tools and Integrations
+
+* [Random Number Generator](tools-and-integrations/random-number-generator/README.md)
+  * [RNG Technical Summary](tools-and-integrations/random-number-generator/rng-technical-summary.md)
+  * [RNG API](tools-and-integrations/random-number-generator/rng-api.md)
 
 ## Other Documentation
 
