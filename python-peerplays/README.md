@@ -2,7 +2,7 @@
 description: Introduction
 ---
 
-# Python Peerplays API
+# Python Peerplays
 
 Its the Python library for communicating with the Peerplays blockchain.
 

@@ -31,10 +31,13 @@
 
 ---
 
-* [Python Peerplays API](python-peerplays-api/README.md)
-  * [NFT API](python-peerplays-api/nft-api.md)
-  * [Marketplace API](python-peerplays-api/marketplace-api.md)
-  * [Role Based Permissions API](python-peerplays-api/role-based-permissions-api.md)
+* [Python Peerplays](python-peerplays/README.md)
+  * [Installation](python-peerplays/installation.md)
+  * [Creating an Account](python-peerplays/creating-an-account.md)
+  * [Creating a Peerplays Wallet](python-peerplays/creating-a-peerplays-wallet.md)
+  * [NFT API](python-peerplays/nft-api.md)
+  * [Marketplace API](python-peerplays/marketplace-api.md)
+  * [Role Based Permissions API](python-peerplays/role-based-permissions-api.md)
 
 ## Other Documentation
 
