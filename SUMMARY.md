@@ -28,6 +28,10 @@
   * [General Calls](api-reference/bookie-api/general-calls.md)
   * [Listeners](api-reference/bookie-api/listeners.md)
   * [Tournaments](api-reference/bookie-api/tournaments.md)
+* [Python Peerplays API](api-reference/python-peerplays-api/README.md)
+  * [NFT API](api-reference/python-peerplays-api/nft-api.md)
+  * [Marketplace API](api-reference/python-peerplays-api/marketplace-api.md)
+  * [Role Based Permissions API](api-reference/python-peerplays-api/role-based-permissions-api.md)
 
 ## Other Documentation
 
