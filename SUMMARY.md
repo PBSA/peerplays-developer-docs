@@ -24,6 +24,10 @@
   * [Trading Calls](api-reference/wallet-api/trading-calls.md)
   * [Transaction Builder](api-reference/wallet-api/transaction-builder.md)
   * [Wallet Calls](api-reference/wallet-api/wallet-calls.md)
+* [Bookie API](api-reference/bookie-api/README.md)
+  * [General Calls](api-reference/bookie-api/general-calls.md)
+  * [Listeners](api-reference/bookie-api/listeners.md)
+  * [Tournaments](api-reference/bookie-api/tournaments.md)
 
 ## Other Documentation
 
