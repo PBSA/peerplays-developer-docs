@@ -29,7 +29,7 @@ The list of asset objects, ordered by symbol.
 
 Creates a new user-issued or market-issued asset.
 
-Many options can be changed later using [`update_asset()`](asset-calls.md#update_asset)\`\`
+Many options can be changed later using [`update_asset()`](asset-calls.md#update_asset).
 
 {% hint style="warning" %}
 **Note**: Right now this function is difficult to use because you must provide raw JSON data structures for the options objects, and those include prices and asset ids.
@@ -91,7 +91,7 @@ The signed transaction updating the asset
 
 Update the options specific to a BitAsset.
 
-BitAssets have some options which are not relevant to other asset types. This operation is used to update those options an an existing BitAsset.
+BitAssets have some options which are not relevant to other asset types. This operation is used to update those options as an existing BitAsset.
 
 **See** [update\_asset\(\)](asset-calls.md#update_asset)
 
@@ -154,7 +154,7 @@ The feed object in this command contains three prices:
 The call limit price is structured as \(collateral asset\) / \(debt asset\) and the short limit price is structured as \(asset for sale\) / \(collateral asset\).
 
 {% hint style="warning" %}
-**Note**: The asset IDs are opposite to each other, so if we’re publishing a feed for USD, the call limit price will be CORE/USD and the short limit price will be USD/CORE.
+**Note**: The asset IDs are opposite to each other, so if we’re publishing a feed for BTC, the call limit price will be PPY/BTC and the short limit price will be BTC/PPY.
 {% endhint %}
 
 The settlement price may be flipped either direction, as long as it is a ratio between the market-issued asset and its collateral.
@@ -228,7 +228,7 @@ The information about the asset stored in the block chain.
 
 ### **get\_bitasset\_data**
 
-Returns the BitAsset-specific data for a given asset. Market-issued assets’s behaviour are determined both by their “BitAsset Data” and their basic asset data, as returned by [`get_asset()`](asset-calls.md#get_asset)\`\`
+Returns the BitAsset-specific data for a given asset. Market-issued asset’s behavior are determined both by their “BitAsset Data” and their basic asset data, as returned by [`get_asset()`](asset-calls.md#get_asset).
 
 ```cpp
 asset_bitasset_data_object graphene::wallet::wallet_api::get_bitasset_data(
@@ -281,15 +281,15 @@ Burns an amount of given asset.
 This command burns an amount of given asset to reduce the amount in circulation.
 
 {% hint style="warning" %}
-**Note: Y**ou can't burn market-issued assets.
+**Note:** You can't burn market-issued assets.
 {% endhint %}
 
 ```cpp
-signed_transaction graphene::
-wallet
-::
-wallet_api
-::reserve_asset(string from, string amount, string symbol, bool broadcast = false)
+signed_transaction graphene::wallet::wallet_api::reserve_asset(
+    string from, 
+    string amount, 
+    string symbol, 
+    bool broadcast = false)
 ```
 
 {% tabs %}
@@ -311,20 +311,19 @@ Forces a global settling of the given asset \(black swan or prediction markets\)
 
 In order to use this operation, `asset_to_settle` must have the `global_settle` flag set
 
-When this operation is executed all open margin positions are called at the settle price. A pool will be formed containing the collateral got from the margin positions. Users owning an amount of the asset may use [`settle_asset()`](https://dev.bitshares.works/en/master/api/wallet_api.html?highlight=set_voting_proxy#classgraphene_1_1wallet_1_1wallet__api_1a95a3baa4b0c83c1fce14827acbbddd62) to claim collateral instantly at the settle price from the pool.
+When this operation is executed all open margin positions are called at the settle price. A pool will be formed containing the collateral got from the margin positions. Users owning an amount of the asset may use [`settle_asset()`](trading-calls.md#settle_asset) to claim collateral instantly at the settle price from the pool.
 
 If this asset is used as backing for other BitAssets, those BitAssets will not be affected.
 
 {% hint style="warning" %}
-**Note: T**his operation is used only by the asset issuer.
+**Note:** This operation is used only by the asset issuer.
 {% endhint %}
 
 ```cpp
-signed_transaction graphene::
-wallet
-::
-wallet_api
-::global_settle_asset(string symbol, price settle_price, bool broadcast = false)
+signed_transaction graphene::wallet::wallet_api::global_settle_asset(
+    string symbol, 
+    price settle_price, 
+    bool broadcast = false)
 ```
 
 {% tabs %}
