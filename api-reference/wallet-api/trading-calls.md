@@ -6,7 +6,7 @@
 
 Place a limit order attempting to sell one asset for another.
 
-Buying and selling are the same operation on Graphene; if you want to buy BTS with USD, you should sell USD for BTS.
+Buying and selling are the same operation on Peerplays; if you want to buy PPY with BTC, you should sell BTC for PPY.
 
 The blockchain will attempt to sell the `symbol_to_sell` for as much `symbol_to_receive` as possible, as long as the price is at least `min_to_receive` / `amount_to_sell`.
 
@@ -31,7 +31,7 @@ signed_transaction graphene::wallet::wallet_api::sell_asset(
 {% tabs %}
 {% tab title="Parameters" %}
 * **`seller_account`**: the account providing the asset being sold, and which will receive the proceeds of the sale.
-* **`amount_to_sell`**: the amount of the asset being sold to sell \(in nominal units\)
+* **`amount_to_sell`**: the amount of the asset being sold to sell \(in nominal units, for example 0.5 for half of a PPY\)
 * **`symbol_to_sell`**: the name or id of the asset to sell
 * **`min_to_receive`**: the minimum amount you are willing to receive in return for selling the entire amount\_to\_sell
 * **`symbol_to_receive`**: the name or id of the asset you wish to receive
@@ -102,7 +102,7 @@ Schedules a market-issued asset for automatic settlement.
 
 Holders of market-issued assets may request a forced settlement for some amount of their asset. This means that the specified sum will be locked by the chain and held for the settlement period, after which time the chain will choose a margin position holder and buy the settled asset using the margin’s collateral.
 
-The price of this sale will be based on the feed price for the market-issued asset being settled. The exact settlement price will be the feed price at the time of settlement with an offset in favour of the margin position, where the offset is a blockchain parameter set in the global\_property\_object.
+The price of this sale will be based on the feed price for the market-issued asset being settled. The exact settlement price will be the feed price at the time of settlement with an offset in favor of the margin position, where the offset is a blockchain parameter set in the global\_property\_object.
 
 ```cpp
 signed_transaction graphene::wallet::wallet_api::settle_asset(
@@ -127,7 +127,7 @@ The signed transaction settling the named asset.
 
 ### get\_market\_history
 
-Get OHLCV data of a trading pair in a time range.
+Get OHLCV \(Open, High, Low, Close, & Volume\) data of a trading pair in a time range.
 
 ```cpp
 vector<bucket_object> graphene::wallet::wallet_api::get_market_history(
