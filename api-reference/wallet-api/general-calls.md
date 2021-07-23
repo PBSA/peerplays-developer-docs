@@ -6,7 +6,7 @@
 
 Returns a list of all commands supported by the wallet API.
 
-This lists each command, along with its arguments and return types. For more detailed help on a single command, use [`gethelp()`](general-calls.md#gethelp)\`\`
+This lists each command, along with its arguments and return types. For more detailed help on a single command, use [`gethelp()`](general-calls.md#gethelp).
 
 ```cpp
 string graphene::wallet::wallet_api::help()const
@@ -56,11 +56,7 @@ Runtime info about the blockchain
 Returns info such as client version, git version of graphene/fc, version of boost, openssl etc.
 
 ```cpp
-variant_object graphene::
-wallet
-::
-wallet_api
-::about()const
+variant_object graphene::wallet::wallet_api::about()const
 ```
 
 {% tabs %}
