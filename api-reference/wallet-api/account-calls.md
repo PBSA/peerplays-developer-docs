@@ -4,7 +4,7 @@
 
 ### list\_my\_accounts
 
-Lists all accounts controlled by this wallet. This returns a list of the full account objects for all accounts whose private keys we possess
+Lists all accounts controlled by this wallet. This returns a list of the full account objects for all accounts whose private keys we possess.
 
 ```cpp
 vector<account_object> graphene::wallet::wallet_api::list_my_accounts()
