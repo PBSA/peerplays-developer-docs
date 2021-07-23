@@ -64,7 +64,7 @@ Registers a third party’s account on the blockchain.
 
 This function is used to register an account for which you do not own the private keys. When acting as a registrar, an end user will generate their own private keys and send you the public keys. The registrar will use this function to register the account on behalf of the end user.
 
-**See also** [create\_account\_with\_brain\_key\(\)](https://dev.bitshares.works/en/master/api/wallet_api.html?highlight=set_voting_proxy#classgraphene_1_1wallet_1_1wallet__api_1ac27928f7ca6db74e0ec4aee3ff0c545e)\*\*\*\*
+**See also** [create\_account\_with\_brain\_key\(\)](account-calls.md#create_account_with_brain_key)\*\*\*\*
 
 ```cpp
 signed_transaction graphene::wallet::wallet_api::register_account(
@@ -118,7 +118,7 @@ The signed transaction upgrading the account
 
 Creates a new account and registers it on the blockchain.
 
-**See also** [suggest\_brain\_key\(\)](https://dev.bitshares.works/en/master/api/wallet_api.html?highlight=set_voting_proxy#classgraphene_1_1wallet_1_1wallet__api_1ab936e7a26d41b35cbfaf44d369d60e1d), [register\_account\(\)](https://dev.bitshares.works/en/master/api/wallet_api.html?highlight=set_voting_proxy#classgraphene_1_1wallet_1_1wallet__api_1aba1c5e3025f44273fb19e264c2b3ec2f)\*\*\*\*
+**See also** [suggest\_brain\_key\(\)](wallet-calls.md#suggest_brain_key), [register\_account\(\)](account-calls.md#register_account)\*\*\*\*
 
 ```cpp
 signed_transaction graphene::wallet::wallet_api::create_account_with_brain_key(
@@ -161,7 +161,7 @@ signed_transaction graphene::wallet::wallet_api::transfer(
 {% tab title="Parameters" %}
 * **`from`**: the name or id of the account sending the funds
 * **`to`**: the name or id of the account receiving the funds
-* **`amount`**: the amount to send \(in nominal units to send half of a BTS, specify 0.5\)
+* **`amount`**: the amount to send \(in nominal units, for example to send half of a PPY specify 0.5\)
 * **`asset_symbol`**: the symbol or id of the asset to send
 * **`memo`**: a memo to attach to the transaction. The memo will be encrypted in the transaction and readable for the receiver. There is no length limit other than the limit imposed by maximum transaction size, but transaction increase with transaction size
 * **`broadcast`**: true to broadcast the transaction on the network
@@ -189,7 +189,7 @@ pair<transaction_id_type, signed_transaction> graphene::wallet::wallet_api::tran
 {% tab title="Parameters" %}
 * **`from`**: the name or id of the account sending the funds
 * **`to`**: the name or id of the account receiving the funds
-* **`amount`**: the amount to send \(in nominal units to send half of a BTS, specify 0.5\)
+* **`amount`**: the amount to send \(in nominal units, for example to send half of a PPY specify 0.5\)
 * **`asset_symbol`**: the symbol or id of the asset to send
 * **`memo`**: a memo to attach to the transaction. The memo will be encrypted in the transaction and readable for the receiver. There is no length limit other than the limit imposed by maximum transaction size, but transaction increase with transaction size
 {% endtab %}
