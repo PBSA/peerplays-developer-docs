@@ -22,7 +22,7 @@ _True_ if the wallet is new.
 
 Checks whether the wallet is locked \(is unable to use its private keys\).
 
-This state can be changed by calling [`lock()`](wallet-calls.md#lock) or [`unlock()`](wallet-calls.md#unlock)\`\`
+This state can be changed by calling [`lock()`](wallet-calls.md#lock) or [`unlock()`](wallet-calls.md#unlock)
 
 ```cpp
 bool graphene::wallet::wallet_api::is_locked()const
@@ -57,7 +57,7 @@ void graphene::wallet::wallet_api::unlock(
 
 {% tabs %}
 {% tab title="Parameters" %}
-* **`password`**: the password previously set with [`set_password()`](https://dev.bitshares.works/en/master/api/wallet_api.html?highlight=set_voting_proxy#classgraphene_1_1wallet_1_1wallet__api_1a2a5d174ec4fde8633b8e962fabc00804)
+* **`password`**: the password previously set with [`set_password()`](wallet-calls.md#set_password)
 {% endtab %}
 {% endtabs %}
 
@@ -84,7 +84,7 @@ void graphene::wallet::wallet_api::set_password(
 
 Dumps all private keys owned by the wallet.
 
-The keys are printed in WIF format. You can import these keys into another wallet using [`import_key()`](wallet-calls.md#import_key)\`\`
+The keys are printed in WIF format. You can import these keys into another wallet using [`import_key()`](wallet-calls.md#import_key)
 
 ```cpp
 map<public_key_type, string> graphene::wallet::wallet_api::dump_private_keys()
@@ -102,7 +102,7 @@ Imports the private key for an existing account.
 
 The private key must match either an owner key or an active key for the named account.
 
-See also _\*\*_[`dump_private_keys()`](wallet-calls.md#dump_private_keys)\`\`
+See also _\*\*_[`dump_private_keys()`](wallet-calls.md#dump_private_keys)
 
 ```cpp
 bool graphene::wallet::wallet_api::import_key(
