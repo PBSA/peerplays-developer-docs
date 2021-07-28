@@ -66,22 +66,25 @@ These features will be low priority, phase II features that will ensure addition
 
 #### **3.2.1. Account creation**
 
-* A user shall be able to create an account only by have email, Facebook id or Google id
-* A user should be able to change the passwords
-* A user should be able to import or export his Peerplays keys
-* A forgot password option must be provided
+* A user shall be able to create an account with any one of the following:
+  * email address
+  * Facebook id
+  * Google id
+* A user shall be able to change their password
+* A user shall be able to import or export their Peerplays keys
+* A password recovery \(forgot password\) option shall be provided
 
 #### 3.2.2. dApp provisioning <a id="1.5.dApp-provisioning"></a>
 
-1. The first step of the dApp creation is to create a corresponding blockchain account for the dApp. A simple UI will be provided for the same.
+1. The first step of dApp creation is to create a corresponding blockchain account for the dApp. A simple UI shall be provided for creating the dApp account.
 
-Aspects provisioned
+Aspects provisioned for the dApp account:
 
 * account name
 * access credentials - usernames, passwords, permissions
-* secure tokens
-* federated logins with Google, Twitch, Youtube, Facebook, STEAM, EPIC games etc
-* support for Multi factor authentication
+* security tokens
+* federated logins with Google, Twitch, Youtube, Facebook, Steam, EPIC games, etc.
+* support for multi-factor authentication
 
 ## 4. Glossary
 
