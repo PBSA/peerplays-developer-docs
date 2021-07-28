@@ -42,6 +42,7 @@
 ## Tools and Integrations
 
 * [PeerID](tools-and-integrations/peerid/README.md)
+  * [Authentication with PeerID](tools-and-integrations/peerid/authentication-with-peerid.md)
   * [Requirements Specification](tools-and-integrations/peerid/requirements-specification.md)
 * [Random Number Generator](tools-and-integrations/random-number-generator/README.md)
   * [RNG Technical Summary](tools-and-integrations/random-number-generator/rng-technical-summary.md)
