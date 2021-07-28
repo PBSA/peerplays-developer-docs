@@ -41,6 +41,8 @@
 
 ## Tools and Integrations
 
+* [PeerID](tools-and-integrations/peerid/README.md)
+  * [Requirements Specification](tools-and-integrations/peerid/requirements-specification.md)
 * [Random Number Generator](tools-and-integrations/random-number-generator/README.md)
   * [RNG Technical Summary](tools-and-integrations/random-number-generator/rng-technical-summary.md)
   * [RNG API](tools-and-integrations/random-number-generator/rng-api.md)
