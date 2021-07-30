@@ -48,6 +48,10 @@
   * [RNG Technical Summary](tools-and-integrations/random-number-generator/rng-technical-summary.md)
   * [RNG API](tools-and-integrations/random-number-generator/rng-api.md)
 
+## Supporting & Reference Docs
+
+* [Sidechain Token Flow Diagram](supporting-and-reference-docs/sidechain-token-flow-diagram.md)
+
 ## Other Documentation
 
 ---
