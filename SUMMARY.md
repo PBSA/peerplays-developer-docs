@@ -50,7 +50,7 @@
 
 ## Supporting & Reference Docs
 
-* [Sidechain Token Flow Diagram \(HIVE\)](supporting-and-reference-docs/sidechain-token-flow-diagram.md)
+* [Sidechain Token Flow Diagram \(HIVE\)](supporting-and-reference-docs/sidechain-token-flow-diagram-hive.md)
 
 ## Other Documentation
 
