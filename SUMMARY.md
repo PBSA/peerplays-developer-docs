@@ -51,7 +51,7 @@
 ## Supporting & Reference Docs
 
 * [Sidechain Flow Diagram \(HIVE coin\)](supporting-and-reference-docs/sidechain-flow-diagram-hive.md)
-* [Sidechain Token Flow Diagram \(BTC\)](supporting-and-reference-docs/sidechain-token-flow-diagram-btc.md)
+* [Sidechain Flow Diagram \(Bitcoin\)](supporting-and-reference-docs/sidechain-flow-diagram-bitcoin.md)
 
 ## Other Documentation
 

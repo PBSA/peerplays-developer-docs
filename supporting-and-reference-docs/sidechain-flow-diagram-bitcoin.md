@@ -2,7 +2,7 @@
 description: Deposits and withdraws of Bitcoin using the Peerplays sidechain.
 ---
 
-# Sidechain Token Flow Diagram \(BTC\)
+# Sidechain Flow Diagram \(Bitcoin\)
 
 ![](../.gitbook/assets/sidechain-flow-diagram-bitcoin.png)
 
