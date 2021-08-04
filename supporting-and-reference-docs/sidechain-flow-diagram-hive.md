@@ -4,7 +4,15 @@ description: Deposits and withdraws of the HIVE coin using the Peerplays sidecha
 
 # Sidechain Flow Diagram \(HIVE coin\)
 
-![](../.gitbook/assets/sidechain-flow-diagram-hive.png)
+![](../.gitbook/assets/sidechain-flow-diagram-hive%20%281%29.png)
 
-{% file src="../.gitbook/assets/sidechain-flow-diagram-hive.pdf" caption="Sidechain Flow Diagram \(HIVE\)" %}
+## Downloads
+
+The Diagram in PDF form to easily view and share:
+
+{% file src="../.gitbook/assets/sidechain-flow-diagram-hive \(1\).pdf" caption="Peerplays Sidechain Flow - HIVE Coin \(PDF\)" %}
+
+The Diagram in Draw.io's XML format. You can edit the diargam using this file in Draw.io:
+
+{% file src="../.gitbook/assets/sidechain-flow-diagram-hive.xml" caption="Peerplays Sidechain Flow - HIVE Coin \(Draw.io XML\)" %}
 
