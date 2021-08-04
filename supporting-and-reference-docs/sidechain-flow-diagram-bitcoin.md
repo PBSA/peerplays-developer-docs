@@ -8,7 +8,11 @@ description: Deposits and withdraws of Bitcoin using the Peerplays sidechain.
 
 ## Downloads
 
-{% file src="../.gitbook/assets/sidechain-flow-diagram-bitcoin \(1\).pdf" caption="Peerplays Sidechain Flow Diagram - Bitcoin" %}
+The Diagram in PDF form to easily view and share:
 
+{% file src="../.gitbook/assets/sidechain-flow-diagram-bitcoin \(1\).pdf" caption="Peerplays Sidechain Flow - Bitcoin \(PDF\)" %}
 
+The Diagram in Draw.io's XML format. You can edit the diargam using this file in Draw.io:
+
+{% file src="../.gitbook/assets/sidechain-flow-diagram-bitcoin.xml" caption="Peerplays Sidechain Flow - Bitcoin \(Draw.io XML\)" %}
 
