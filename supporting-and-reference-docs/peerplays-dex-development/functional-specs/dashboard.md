@@ -1,16 +1,16 @@
 ---
-description: Dex Functional Specifications - Dashboard
+description: DEX Functional Specifications - Dashboard
 ---
 
 # Dashboard
 
 ## 1. Purpose
 
-The purpose of this document is to outline functional specifications for the Peerplays Decentralized Exchange \(Dex\) relating to the Dashboard page from the user's perspective.
+The purpose of this document is to outline functional specifications for the Peerplays Decentralized Exchange \(DEX\) relating to the Dashboard page from the user's perspective.
 
 ## 2. Scope
 
-The Dex will be a feature rich application that users will depend on to trade their native and sidechain assets. As development on the Dex continues the list of features available to users will grow. A Dashboard page offers users the ability to see their account activity at-a-glance as well as provide the essential actions users often take. In this way, the Dashboard provides the user the basics of the Dex on one page.
+The DEX will be a feature rich application that users will depend on to trade their native and sidechain assets. As development on the DEX continues the list of features available to users will grow. A Dashboard page offers users the ability to see their account activity at-a-glance as well as provide the essential actions users often take. In this way, the Dashboard provides the user the basics of the DEX on one page.
 
 Specific functions covered include:
 
@@ -78,7 +78,7 @@ To send an asset with the Quick Send widget:
 
 ## 4. Context
 
-The Dashboard provides user-friendliness to the Dex by providing a simplified way of interacting with all the various components of the Dex. The Dashboard is intended to be accessible and concise. While the Dashboard is wide in the scope of its offerings, it has a minimal depth of features.
+The Dashboard provides user-friendliness to the DEX by providing a simplified way of interacting with all the various components of the DEX. The Dashboard is intended to be accessible and concise. While the Dashboard is wide in the scope of its offerings, it has a minimal depth of features.
 
 ## 5. Requirements
 
