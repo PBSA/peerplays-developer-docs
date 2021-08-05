@@ -4,7 +4,7 @@ description: >-
   specification for the exchange page.
 ---
 
-# index
+# Exchange Page
 
 ## 1. Purpose
 
