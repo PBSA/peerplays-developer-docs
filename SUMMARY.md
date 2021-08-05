@@ -50,6 +50,11 @@
 
 ## Supporting & Reference Docs
 
+* [Sidechain Operator Node \(SON\) Development](supporting-and-reference-docs/sidechain-operator-node-development/README.md)
+  * [Generic Sidechain Docs](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/README.md)
+    * [Requirements Specification](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/requirements-specification.md)
+  * [Bitcoin Sidechain Docs](supporting-and-reference-docs/sidechain-operator-node-development/bitcoin-sidechain-docs.md)
+  * [Hive Sidechain Docs](supporting-and-reference-docs/sidechain-operator-node-development/hive-sidechain-docs.md)
 * [Peerplays DEX Development](supporting-and-reference-docs/peerplays-dex-development/README.md)
   * [Requirements Specification](supporting-and-reference-docs/peerplays-dex-development/requirements-specification.md)
   * [Functional Specs](supporting-and-reference-docs/peerplays-dex-development/functional-specs/README.md)
