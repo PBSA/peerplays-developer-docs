@@ -1,6 +1,6 @@
 ---
 description: >-
-  The Peerplays Decentralized Exchange (Dex) platform functional requirements
+  The Peerplays Decentralized Exchange (DEX) platform functional requirements
   specification for the asset info related functions.
 ---
 
@@ -8,11 +8,11 @@ description: >-
 
 ## 1. Purpose
 
-The purpose of this document is to outline functional specifications for the Peerplays Decentralized Exchange \(Dex\) relating to asset information functions from the user's perspective.
+The purpose of this document is to outline functional specifications for the Peerplays Decentralized Exchange \(DEX\) relating to asset information functions from the user's perspective.
 
 ## 2. Scope
 
-The "my assets" list, asset info page, and asset explorer are part of the wallet functionality built into the Dex. This functional spec covers listing a user's owned assets in various locations throughout the Dex app.
+The "my assets" list, asset info page, and asset explorer are part of the wallet functionality built into the DEX. This functional spec covers listing a user's owned assets in various locations throughout the DEX app.
 
 {% hint style="info" %}
 **Peerplays assets** in the context of this functional spec are any on-chain asset. This includes native Peerplays assets like the PPY coin, Peerplays NFTs, and CATs. This also includes assets that have originated off-chain that have been transferred onto the Peerplays chain through the services of Peerplays SONs. These external \(sidechain\) assets include Peerplays versions of BTC, HIVE, or ETH and even Peerplays versions of NFTs living on the Ethereum chain. The external assets are backed by their counterparts, locked in a Peerplays controlled account on their native chains.
@@ -67,7 +67,7 @@ User navigation:
 
 ## 5. Context
 
-Various pages in the Dex require a list of assets the user owns. Asset lists throughout the Dex can add to the user friendliness of the app by providing quick access to detailed asset information and links to the most important Dex features.
+Various pages in the DEX require a list of assets the user owns. Asset lists throughout the DEX can add to the user friendliness of the app by providing quick access to detailed asset information and links to the most important DEX features.
 
 ## 6. Design Wireframes
 
@@ -272,5 +272,5 @@ the Asset Info Page holders info section:
 
 ## 9. Related documents
 
-* [Peerplays Dex Requirements Specification](../requirements-specification.md)
+* [Peerplays DEX Requirements Specification](../requirements-specification.md)
 
