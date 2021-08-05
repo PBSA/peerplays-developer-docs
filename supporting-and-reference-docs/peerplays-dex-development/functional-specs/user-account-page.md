@@ -191,7 +191,7 @@ User Interface settings:
 Notifications settings:
 
 * **UA-31** shall allow the user to toggle each notification on and off.
-* **UA-32** shall allow the user to toggle the voting pop-up feature. \(**see VP-57 through VP-63:** [DEX Functional Specs - Voting Page](https://app.gitbook.com/@peerplays/s/community-project-docs/peerplays-dex/functional-specs/voting-page)\)
+* **UA-32** shall allow the user to toggle the voting pop-up feature. \(**see VP-57 through VP-63:** [DEX Functional Specs - Voting Page](voting-page.md)\)
 * may allow the user to configure exchange notifications based on trading pair and price.
 
 {% hint style="info" %}
@@ -226,5 +226,5 @@ Sibling Documents \(referenced in this document\)
 
 * [DEX Functional Specs - Asset Info Page and Asset Lists](asset-info-page-and-asset-lists.md)
 * [DEX Functional Specs - Exchange Page](exchange-page.md)
-* [DEX Functional Specs - Voting Page](https://app.gitbook.com/@peerplays/s/community-project-docs/peerplays-dex/functional-specs/voting-page)
+* [DEX Functional Specs - Voting Page](voting-page.md)
 
