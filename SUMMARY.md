@@ -55,7 +55,7 @@
     * [Requirements Specification](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/requirements-specification.md)
     * [Functional Specs](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/functional-specs/README.md)
       * [SON Configuration](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/functional-specs/son-configuration.md)
-      * [Untitled](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/functional-specs/untitled.md)
+      * [SON rewards](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/functional-specs/son-rewards.md)
   * [Bitcoin Sidechain Docs](supporting-and-reference-docs/sidechain-operator-node-development/bitcoin-sidechain-docs/README.md)
     * [Functional Specs](supporting-and-reference-docs/sidechain-operator-node-development/bitcoin-sidechain-docs/functional-specs/README.md)
       * [SON Multisig Bitcoin Wallet](supporting-and-reference-docs/sidechain-operator-node-development/bitcoin-sidechain-docs/functional-specs/son-multisig-bitcoin-wallet.md)
