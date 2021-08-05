@@ -54,6 +54,7 @@
   * [Requirements Specification](supporting-and-reference-docs/peerplays-dex-development/requirements-specification.md)
   * [Functional Specs](supporting-and-reference-docs/peerplays-dex-development/functional-specs/README.md)
     * [Asset Info Page and Asset Lists](supporting-and-reference-docs/peerplays-dex-development/functional-specs/asset-info-page-and-asset-lists.md)
+    * [Dashboard](supporting-and-reference-docs/peerplays-dex-development/functional-specs/dashboard.md)
 * [Sidechain Flow Diagram \(HIVE coin\)](supporting-and-reference-docs/sidechain-flow-diagram-hive.md)
 * [Sidechain Flow Diagram \(Bitcoin\)](supporting-and-reference-docs/sidechain-flow-diagram-bitcoin.md)
 
