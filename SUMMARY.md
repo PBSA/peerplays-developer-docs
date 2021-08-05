@@ -65,6 +65,7 @@
       * [SON Multisig Bitcoin Wallet](supporting-and-reference-docs/sidechain-operator-node-development/bitcoin-sidechain-docs/functional-specs/son-multisig-bitcoin-wallet.md)
       * [Bitcoin Deposit Handling](supporting-and-reference-docs/sidechain-operator-node-development/bitcoin-sidechain-docs/functional-specs/bitcoin-deposit-handling.md)
       * [Bitcoin Withdrawal Handling](supporting-and-reference-docs/sidechain-operator-node-development/bitcoin-sidechain-docs/functional-specs/bitcoin-withdrawal-handling.md)
+      * [BTC Transaction Processing & Signing](supporting-and-reference-docs/sidechain-operator-node-development/bitcoin-sidechain-docs/functional-specs/btc-transaction-processing-and-signing.md)
   * [Hive Sidechain Docs](supporting-and-reference-docs/sidechain-operator-node-development/hive-sidechain-docs.md)
 * [Peerplays DEX Development](supporting-and-reference-docs/peerplays-dex-development/README.md)
   * [Requirements Specification](supporting-and-reference-docs/peerplays-dex-development/requirements-specification.md)

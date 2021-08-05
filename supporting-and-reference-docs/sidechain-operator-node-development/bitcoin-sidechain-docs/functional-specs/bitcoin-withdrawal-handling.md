@@ -69,7 +69,7 @@ To facilitate conversion of peerplays tokens into bitcoin, SON must include an e
 
 ## 6. Flow Diagram
 
-![](../../../../.gitbook/assets/1.jpeg)
+![](../../../../.gitbook/assets/1%20%281%29.jpeg)
 
 ## 7. Requirements
 
