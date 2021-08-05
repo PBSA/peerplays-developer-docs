@@ -1,7 +1,7 @@
 ---
 title: Peerplays Dex Requirements Specification
 description: >-
-  The Peerplays Decentralized Exchange (Dex) platform design requirements
+  The Peerplays Decentralized Exchange (DEX) platform design requirements
   specification.
 ---
 
@@ -9,11 +9,11 @@ description: >-
 
 ## 1. Introduction
 
-This requirements specification \(RS\) describes the high-level requirements for the initial release of the Peerplays Decentralized Exchange platform \(Dex\). This document is intended to be used by the members of the project team who will implement and verify the correct functioning of the system. Unless otherwise noted, all requirements specified here are committed for the initial release.
+This requirements specification \(RS\) describes the high-level requirements for the initial release of the Peerplays Decentralized Exchange platform \(DEX\). This document is intended to be used by the members of the project team who will implement and verify the correct functioning of the system. Unless otherwise noted, all requirements specified here are committed for the initial release.
 
 ### 1.1. Purpose
 
-The purpose of this RS is to cover the high-level outline and resulting requirements of the Dex. Lower level requirements documents for each component will be created.
+The purpose of this RS is to cover the high-level outline and resulting requirements of the DEX. Lower level requirements documents for each component will be created.
 
 ### 1.2. Document Conventions
 
@@ -34,7 +34,7 @@ The keyword `shall` indicates a requirement statement.
 
 ### 1.3. Project Scope
 
-The Dex will permit Peerplays users to:
+The DEX will permit Peerplays users to:
 
 * exchange Peerplays assets
 * view, auction, buy, and sell NFTs
@@ -55,27 +55,27 @@ The Dex will permit Peerplays users to:
 
 ### 2.1. Product Perspective
 
-The design for the Dex seamlessly integrates application, asset exchange, and wallet functions into a singular app. The Dex will act as the main wallet for Peerplays users. It will give users the ability to use the exchange without needing another app. Basic NFT related functions will be included. The Dex is composed of three components: The application, The exchange, and the wallet.
+The design for the DEX seamlessly integrates application, asset exchange, and wallet functions into a singular app. The DEX will act as the main wallet for Peerplays users. It will give users the ability to use the exchange without needing another app. Basic NFT related functions will be included. The DEX is composed of three components: The application, The exchange, and the wallet.
 
 ![](../../.gitbook/assets/peerplays-dex-pages-map.png)
 
-_FIG 1. Peerplays Dex Application High-Level Overview \(Page Map\)_
+_FIG 1. Peerplays_ DEX _Application High-Level Overview \(Page Map\)_
 
-The structure of the Dex will be based on two layers, the interface \(UI\) layer, and the chain layer. The interface layer consists of the UI/UX design elements and interfaces with the chain layer to perform actions on behalf of the user. The chain layer consists of the blockchain and API. It provides business logic, object models, and storage.
+The structure of the DEX will be based on two layers, the interface \(UI\) layer, and the chain layer. The interface layer consists of the UI/UX design elements and interfaces with the chain layer to perform actions on behalf of the user. The chain layer consists of the blockchain and API. It provides business logic, object models, and storage.
 
 ![](../../.gitbook/assets/peerplays-dex-pages-layers.png)
 
-_FIG 2. Peerplays Dex Two Layer Structure_
+_FIG 2. Peerplays_ DEX _Two Layer Structure_
 
 ### 2.2. User Classes and Characteristics
 
 | User class | Description |
 | :--- | :--- |
-| User | A user is an entity that accesses the Dex. A user with a Peerplays account has the intention of using the Dex to manage their account and Peerplays assets. A user without a Peerplays account has the intention of using the Dex to create a new account. A user \(with or without an account\) may also be interested in accessing the Dex to view information on the status of the blockchain, markets, etc. |
+| User | A user is an entity that accesses the DEX . A user with a Peerplays account has the intention of using the DEX to manage their account and Peerplays assets. A user without a Peerplays account has the intention of using the DEX to create a new account. A user \(with or without an account\) may also be interested in accessing the DEX to view information on the status of the blockchain, markets, etc. |
 
 ### 2.3. Operating Environment
 
-**OE-1:** The Dex shall operate correctly with the following web browsers \(and platforms\):
+**OE-1:** The DEX shall operate correctly with the following web browsers \(and platforms\):
 
 | Browser | Platforms |
 | :--- | :--- |
@@ -84,12 +84,12 @@ _FIG 2. Peerplays Dex Two Layer Structure_
 | Brave | Ubuntu GNU Linux, Windows 10, Android, macOS, iOS |
 | Safari | macOS, iOS |
 
-**OE-2:** The Dex shall operate correctly at the minimum resolution of 1334-by-750-pixel resolution at 326 ppi onward \(iPhone SE resolution\).
+**OE-2:** The DEX shall operate correctly at the minimum resolution of 1334-by-750-pixel resolution at 326 ppi onward \(iPhone SE resolution\).
 
-**OE-3:** The Dex shall permit user access by desktop computer, Android, iOS, and Windows smartphones and tablets.
+**OE-3:** The DEX shall permit user access by desktop computer, Android, iOS, and Windows smartphones and tablets.
 
 {% hint style="info" %}
-**OE-4:** In later versions of the Dex, the Dex shall operate as both a hosted version and a stand-alone app \(i.e. Electron App\).
+**OE-4:** In later versions of the DEX , the DEX shall operate as both a hosted version and a stand-alone app \(i.e. Electron App\).
 {% endhint %}
 
 ### 2.4. Design and Implementation Constraints
@@ -98,11 +98,11 @@ _FIG 2. Peerplays Dex Two Layer Structure_
 
 **CO-2:** Design elements shall maintain a standard look and feel by using Tailwind CSS and Tailwind UI components.
 
-**CO-3:** The Dex UI shall be built with a responsive UI design.
+**CO-3:** The DEX UI shall be built with a responsive UI design.
 
 ### 2.5. Assumptions and Dependencies
 
-**DE-1:** The operation of the Dex depends on the Peerplays chain being operational.
+**DE-1:** The operation of the DEX depends on the Peerplays chain being operational.
 
 **DE-2:** Successful transfers of assets on to and off of the Peerplays chain depends on having an operational sidechain for any given asset.
 
@@ -114,7 +114,7 @@ _FIG 2. Peerplays Dex Two Layer Structure_
 
 **Description**
 
-The interface layer of the Dex consists of the overall application's graphical design framework. This framework ties together the UIs of the application, exchange, and wallet components into one cohesive UX design. In this way the interface layer can be described as both the individual UI elements and the wrapper that binds them into what a user would experience as a single app.
+The interface layer of the DEX consists of the overall application's graphical design framework. This framework ties together the UIs of the application, exchange, and wallet components into one cohesive UX design. In this way the interface layer can be described as both the individual UI elements and the wrapper that binds them into what a user would experience as a single app.
 
 The interface layer is responsible for information display, receiving and validating user input, managing input and output from the chain layer, and app navigation.
 
@@ -122,12 +122,12 @@ The interface layer interfaces with the chain layer. Users never interact direct
 
 ![](../../.gitbook/assets/peerplays-dex-pages-interface.png)
 
-_FIG 3. Peerplays Dex Interface Layer_
+_FIG 3. Peerplays_ DEX _Interface Layer_
 
 **Requirements**
 
 {% hint style="info" %}
-The requirements below are for the overall Dex UI which contains the application, wallet, and exchange specific UIs. See the sections relating to each specific component for requirements for their part of the interface layer.
+The requirements below are for the overall DEX UI which contains the application, wallet, and exchange specific UIs. See the sections relating to each specific component for requirements for their part of the interface layer.
 {% endhint %}
 
 **IL-1:** The interface layer shall integrate component specific UIs to provide a consistent graphical design across all components.
@@ -164,18 +164,18 @@ The requirements below are for the overall Dex UI which contains the application
 
 **Description**
 
-The chain layer of the Dex consists of the blockchain API, on-chain objects, and transaction storage. The API provides business logic required to take user input, transform that input as necessary, and perform actions on the blockchain. The chain layer also supplies the interface layer with information from the chain. The purpose of the chain layer is to split away the business logic and data storage from the graphical design.
+The chain layer of the DEX consists of the blockchain API, on-chain objects, and transaction storage. The API provides business logic required to take user input, transform that input as necessary, and perform actions on the blockchain. The chain layer also supplies the interface layer with information from the chain. The purpose of the chain layer is to split away the business logic and data storage from the graphical design.
 
 In a traditional web app, the chain layer would be like the server-side code and data storage.
 
 ![](../../.gitbook/assets/peerplays-dex-pages-chain.png)
 
-_FIG 4. Peerplays Dex Chain Layer_
+_FIG 4. Peerplays_ DEX _Chain Layer_
 
 **Requirements**
 
 {% hint style="info" %}
-The requirements below are for the overall Dex functions which contains the application, wallet, and exchange specific functions. See the sections relating to each specific component for requirements for their part of the chain layer.
+The requirements below are for the overall DEX functions which contains the application, wallet, and exchange specific functions. See the sections relating to each specific component for requirements for their part of the chain layer.
 {% endhint %}
 
 **CL-1:** The chain layer shall interface with the interface layer via the blockchain API.
@@ -188,9 +188,9 @@ The requirements below are for the overall Dex functions which contains the appl
 
 **Description**
 
-The application component is the basic foundation for the Dex. It provides the following functions:
+The application component is the basic foundation for the DEX. It provides the following functions:
 
-* the Dex home page
+* the DEX home page
 * navigation
 * account creation
 * authentication
@@ -299,9 +299,9 @@ Something like a hybrid between Uniswap and a traditional exchange order book, t
 
 ![](../../.gitbook/assets/peerplays-dex-amm.png)
 
-_FIG 5. Peerplays Dex Automated Market Maker_
+_FIG 5. Peerplays_ DEX _Automated Market Maker_
 
-In a traditional exchange, an order book is filled with the orders of buyers and sellers in a given market. Orders are filled when buyers are willing to pay what the sellers are asking for, or sellers are willing to take what buyers are bidding. Liquidity in this case is entirely dependant on the supply provided by the buyers and sellers.
+In a traditional exchange, an order book is filled with the orders of buyers and sellers in a given market. Orders are filled when buyers are willing to pay what the sellers are asking for, or sellers are willing to take what buyers are bidding. Liquidity in this case is entirely dependent on the supply provided by the buyers and sellers.
 
 In a Uniswap system, there are no order books. Instead, people stake assets into liquidity pools to earn rewards based on generated transaction fees. Buyers and sellers simply swap their assets at a price that preserves the liquidity within the underlying liquidity pools. Essentially, the greater the gap in supply between two assets, the higher the price will be for that trading pair. This creates an incentive to balance the supply in the liquidity pools.
 
@@ -331,7 +331,7 @@ The liquidity pools are special Peerplays controlled accounts that store staked 
 
 **Description**
 
-Slippage refers to the difference between the expected price of a trade and the price at which the trade is executed. Slippage can occur at any time but is most prevalent during periods of higher volatility when market orders are used. It can also occur when a large order is executed but there isn't enough volume at the chosen price to maintain the current bid/ask spread. To protect users from slippage on large market orders, the Dex should provide slippage protection.
+Slippage refers to the difference between the expected price of a trade and the price at which the trade is executed. Slippage can occur at any time but is most prevalent during periods of higher volatility when market orders are used. It can also occur when a large order is executed but there isn't enough volume at the chosen price to maintain the current bid/ask spread. To protect users from slippage on large market orders, the DEX should provide slippage protection.
 
 **Requirements**
 
@@ -412,7 +412,7 @@ Lower level requirements specification documents will contain functional specifi
 | Term | Meaning | Notes / References |
 | :--- | :--- | :--- |
 | RS | Requirement Specification | - |
-| Dex | Decentralized Exchange | - |
+| DEX | Decentralized Exchange | - |
 | NFT\(s\) | Non-Fungible Token\(s\) | - |
 | GPOS | Gamified Proof of Stake | - |
 | CAT\(s\) | Community Asset Token\(s\) | - |
