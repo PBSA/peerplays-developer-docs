@@ -31,7 +31,7 @@ If an SON decides to stop operating the node by disabling the SON plugin, any vo
 
 ## Flow Diagram
 
-![](../../../../.gitbook/assets/0.png)
+![](../../../../.gitbook/assets/0%20%281%29.png)
 
 ## SON Voting Command
 
