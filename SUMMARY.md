@@ -60,6 +60,7 @@
       * [SONs switchover scenarios](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/functional-specs/sons-switchover-scenarios.md)
       * [SON Status Operations & Monitoring](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/functional-specs/son-status-operations-and-monitoring.md)
       * [Proposals](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/functional-specs/proposals.md)
+      * [SON Smart Contracts](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/functional-specs/son-smart-contracts.md)
   * [Bitcoin Sidechain Docs](supporting-and-reference-docs/sidechain-operator-node-development/bitcoin-sidechain-docs/README.md)
     * [Functional Specs](supporting-and-reference-docs/sidechain-operator-node-development/bitcoin-sidechain-docs/functional-specs/README.md)
       * [SON Multisig Bitcoin Wallet](supporting-and-reference-docs/sidechain-operator-node-development/bitcoin-sidechain-docs/functional-specs/son-multisig-bitcoin-wallet.md)
