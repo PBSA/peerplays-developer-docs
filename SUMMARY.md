@@ -57,6 +57,7 @@
     * [Dashboard](supporting-and-reference-docs/peerplays-dex-development/functional-specs/dashboard.md)
     * [Exchange Page](supporting-and-reference-docs/peerplays-dex-development/functional-specs/exchange-page.md)
     * [Login and Account Creation](supporting-and-reference-docs/peerplays-dex-development/functional-specs/login-and-account-creation.md)
+    * [User Account Page](supporting-and-reference-docs/peerplays-dex-development/functional-specs/user-account-page.md)
 * [Sidechain Flow Diagram \(HIVE coin\)](supporting-and-reference-docs/sidechain-flow-diagram-hive.md)
 * [Sidechain Flow Diagram \(Bitcoin\)](supporting-and-reference-docs/sidechain-flow-diagram-bitcoin.md)
 
