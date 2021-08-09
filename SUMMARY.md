@@ -77,7 +77,9 @@
     * [Login and Account Creation](supporting-and-reference-docs/peerplays-dex-development/functional-specs/login-and-account-creation.md)
     * [User Account Page](supporting-and-reference-docs/peerplays-dex-development/functional-specs/user-account-page.md)
     * [Voting Page](supporting-and-reference-docs/peerplays-dex-development/functional-specs/voting-page.md)
-* [NFT Development](supporting-and-reference-docs/nft-development.md)
+* [NFT Development](supporting-and-reference-docs/nft-development/README.md)
+  * [Django-NFT](supporting-and-reference-docs/nft-development/django-nft/README.md)
+    * [Requirements Specification](supporting-and-reference-docs/nft-development/django-nft/requirements-specification.md)
 * [Sidechain Flow Diagram \(HIVE coin\)](supporting-and-reference-docs/sidechain-flow-diagram-hive.md)
 * [Sidechain Flow Diagram \(Bitcoin\)](supporting-and-reference-docs/sidechain-flow-diagram-bitcoin.md)
 
