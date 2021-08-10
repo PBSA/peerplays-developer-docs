@@ -12,7 +12,7 @@ The Diagram in PDF form to easily view and share:
 
 {% file src="../.gitbook/assets/sidechain-flow-diagram-hive \(3\).pdf" %}
 
-The Diagram in Draw.io's XML format. You can edit the diargam using this file in Draw.io:
+The Diagram in Draw.io's XML format. You can edit the diagram using this file in Draw.io:
 
 {% file src="../.gitbook/assets/sidechain-flow-diagram-hive \(2\).xml" %}
 
