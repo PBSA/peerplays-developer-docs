@@ -339,7 +339,33 @@ Let's break these down one-by-one. Pay special attention to the permissions and 
 
 #### permissions & flags
 
+Permissions and flags go together. Permissions settings determine if the issuer has the ability to update the corresponding flags. The flags are the actual on-off switches for the various asset options. Here are the available flags and their effects:
 
+* `charge_market_fee`: an issuer-specified percentage of all market trades in this asset is paid to the issuer.
+* `white_list`: accounts must be white-listed in order to hold this asset.
+* `override_authority`: issuer may transfer asset back to their own account from another account.
+* `transfer_restricted`: require the issuer to be one party to every transfer.
+* `disable_force_settle`: disable force settling.
+* `global_settle`: \(only for MIAs\) allows market asset issuer to force a global settling - this may be set in permissions, but should not be set as a flag. Unless, for instance, a prediction market has to be resolved. If this flag has been enabled, no further shares can be borrowed!
+* `disable_confidential`: allow the asset to be used with confidential transactions.
+* `witness_fed_asset`: allow the asset to be fed by witnesses.
+* `committee_fed_asset`: allow the asset to be fed by the committee.
+
+The permissions/flags in the `asset_details` are integers and are a sum of the following mapping:
+
+```text
+"charge_market_fee" = 0x01 (1)
+"white_list" = 0x02 (2)
+"override_authority" = 0x04 (4)
+"transfer_restricted" = 0x08 (8)
+"disable_force_settle" = 0x10 (16)
+"global_settle" = 0x20 (32)
+"disable_confidential" = 0x40 (64)
+"witness_fed_asset" = 0x80 (128)
+"committee_fed_asset" = 0x100 (256)
+```
+
+So in our case, we set `flags` to 0, which means all of these are disabled initially. The `permissions` is set to 79, which means that "charge\_market\_fee", "white\_list", "override\_authority", and "disable\_confidential" are able to be modified later. The other properties are immutable since they were set to false initially.
 
 #### exchange rate
 
