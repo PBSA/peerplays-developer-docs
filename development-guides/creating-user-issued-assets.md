@@ -30,7 +30,7 @@ The regulations that apply to each kind of token vary widely and are often diffe
 
 ### 1.1. User Issued Assets vs. Market Issued Assets
 
-A **User Issued Asset** allows the issuer to control the supply of the asset. A Market Issued Asset \(also known as a Market Pegged Asset, MPA, or Smart Coin\) puts the control of the asset's supply in the hands of the market.
+A **User Issued Asset** allows the issuer to control the supply of the asset. A Market Issued Asset \(MIA, and also known as a Market Pegged Asset, MPA, or Smart Coin\) puts the control of the asset's supply in the hands of the market.
 
 **Market issued assets** are used for pegging the value of an asset to another underlying asset. This type of asset requires collateral to back its value and a fair market price feed so the market can automatically trigger margin calls to balance the market asset value. Market issued assets will be the subject of another guide.
 
@@ -201,6 +201,125 @@ Please see section [1.4. Asset Options](creating-user-issued-assets.md#1-4-asset
 {% endtabs %}
 
 ### 1.4. Asset Options
+
+The `asset_options` object contains the options that are common to all assets. This is why it's necessary to supply for both UIAs and MIAs. The options need to be passed as a raw JSON object that contains these settings:
+
+```text
+{
+   "max_supply" : <number>
+   "market_fee_percent" : <number>
+   "max_market_fee" : <number>
+   "issuer_permissions" : <permissions>,
+   "flags" : <flags>,
+   "core_exchange_rate" : {
+       "base": {
+         "amount": <number>,
+         "asset_id": "1.3.0"
+       },
+       "quote": {
+         "amount": <number>,
+         "asset_id": <this asset's ID>
+       }
+   },
+   "whitelist_authorities" : [],
+   "blacklist_authorities" : [],
+   "whitelist_markets" : [],
+   "blacklist_markets" : [],
+   "description" : <string>
+}
+```
+
+Let's break these down one-by-one. Pay special attention to the permissions and flags as they are the most complicated part of the options object.
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">key</th>
+      <th style="text-align:left">description</th>
+      <th style="text-align:left">example value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">max_supply</td>
+      <td style="text-align:left">
+        <p>The maximum amount of this asset that can exist in circulation. This number
+          is in Satoshi.
+          <br />So if you want a max supply of 100 tokens, and the asset has a precision
+          of 2, the max_supply value should be 10000.</p>
+        <p>100.00 (100 tokens with precision of 2)</p>
+        <p>10000 (and remove the decimal point)</p>
+      </td>
+      <td style="text-align:left">10000</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">market_fee_percent</td>
+      <td style="text-align:left">
+        <p>If market fees of a UIA are turned on, fees have to be payed for each
+          market transaction. The issuer can claim these fees. If the fee is set
+          to 1%, the issuer will earn 1% of market volume as profit.</p>
+        <p>
+          <br />This is set in hundredths of one percent.
+          <br />So if you want 0.3%...</p>
+        <p>0.3% = 0.003</p>
+        <p>(hundredth of one percent) 100 / 0.01 = 10,000</p>
+        <p>0.003 * 10,000 = 30 (our value for the 0.3% fee we want)</p>
+      </td>
+      <td style="text-align:left">30</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">max_market_fee</td>
+      <td style="text-align:left">
+        <p>The maximum amount to charge for any market transaction. This is set in
+          Satoshi as well.</p>
+        <p>If you want the max fee to be only 1 token...</p>
+        <p>1.00 (1 token with precision of 2)</p>
+        <p>100 (and remove the decimal point)</p>
+      </td>
+      <td style="text-align:left">100</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">issuer_permissions</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">flags</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">core_exchange_rate</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">whitelist_authorities</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">blacklist_authorities</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">whitelist_markets</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">blacklist_markets</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">description</td>
+      <td style="text-align:left">A string that describes the asset.</td>
+      <td style="text-align:left">&quot;My fancy new token&quot;</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 1.5. Issuing Assets
 
