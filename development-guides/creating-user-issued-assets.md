@@ -209,8 +209,8 @@ The `asset_options` object contains the options that are common to all assets. T
    "max_supply" : <number>
    "market_fee_percent" : <number>
    "max_market_fee" : <number>
-   "issuer_permissions" : <permissions>,
-   "flags" : <flags>,
+   "issuer_permissions" : <number>,
+   "flags" : <number>,
    "core_exchange_rate" : {
        "base": {
          "amount": <number>,
