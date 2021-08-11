@@ -60,7 +60,7 @@ The basic structure of the `create_asset` function looks like this:
 
 {% code title="When using the cli\_wallet..." %}
 ```text
-create_asset <issuer> <symbol> <precision> <options> null false
+create_asset <issuer> <symbol> <precision> <options> null true
 ```
 {% endcode %}
 
@@ -121,6 +121,84 @@ A set of curly braces, **`{}`** for the parameter could be used to construct a *
 {% endhint %}
 
 ### 1.3. Updating Assets
+
+A UIA can be modified by the issuer after its creation. A separate call, `update_asset`, has been created for this purpose.
+
+What can and cannot be changed? Except for the **symbol** and **precision**, every parameter, option, or setting can be updated.
+
+{% hint style="danger" %}
+Note that once a permission is removed, it can **never** be re-enabled again!
+{% endhint %}
+
+#### update\_asset
+
+This function updates the core options on an asset. There are a number of options which all assets in the network use. These options are enumerated in the `asset_object::asset_options` struct. This command is used to update these options for an existing asset.
+
+{% code title="return type, namespace, & method" %}
+```cpp
+signed_transaction graphene::wallet::wallet_api::update_asset(
+    string symbol, 
+    optional<string> new_issuer, 
+    asset_options new_options, 
+    bool broadcast = false)
+```
+{% endcode %}
+
+{% tabs %}
+{% tab title="Function Call" %}
+The basic structure of the `update_asset` function looks like this:
+
+{% code title="When using the cli\_wallet..." %}
+```text
+update_asset <symbol> <new_issuer> <new_options> true
+```
+{% endcode %}
+
+#### Parameters
+
+| name | data type | description | details |
+| :--- | :--- | :--- | :--- |
+| symbol | string | The ticker symbol of the existing asset being updated. | n/a |
+| new\_issuer | string | If changing the asset’s issuer, the name or id of the new issuer. `null` if you wish to remain the issuer of the asset. | n/a |
+| new\_options | asset\_options | The new asset\_options object, which will entirely replace the existing options. See section [1.4. Asset Options](creating-user-issued-assets.md#1-4-asset-options) for details. | n/a |
+| broadcast | bool | `true` or `false`, whether or not you want to broadcast the transaction. | n/a |
+
+#### Example Call
+
+```text
+update_asset "BTFUN" null {"max_supply" : 1000000000000000,"market_fee_percent" : 50,"max_market_fee" : 1000000000000000,"issuer_permissions" : 79,"flags" : 0,"core_exchange_rate" : {"base": {"amount": 1,"asset_id": "1.3.0"},"quote": {"amount": 1,"asset_id": "1.3.1"}},"whitelist_authorities" : [],"blacklist_authorities" : [],"whitelist_markets" : [],"blacklist_markets" : [],"description" : "BitFun token for fun!"} true
+```
+
+In this example call we used the following settings for the `common` parameter:
+
+```text
+{
+  "max_supply" : 1000000000000000,
+  "market_fee_percent" : 50,
+  "max_market_fee" : 1000000000000000,
+  "issuer_permissions" : 79,
+  "flags" : 0,
+  "core_exchange_rate" : {
+    "base": {
+      "amount": 1,
+      "asset_id": "1.3.0"
+    },
+    "quote": {
+      "amount": 1,
+      "asset_id": "1.3.1"
+    }
+  },
+  "whitelist_authorities" : [],
+  "blacklist_authorities" : [],
+  "whitelist_markets" : [],
+  "blacklist_markets" : [],
+  "description" : "BitFun token for fun!"
+}
+```
+
+Please see section [1.4. Asset Options](creating-user-issued-assets.md#1-4-asset-options) for an explanation of the `common` parameter!
+{% endtab %}
+{% endtabs %}
 
 ### 1.4. Asset Options
 
