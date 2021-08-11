@@ -39,6 +39,10 @@
   * [Marketplace API](peerplays-api-libraries/python-peerplays/marketplace-api.md)
   * [Role Based Permissions API](peerplays-api-libraries/python-peerplays/role-based-permissions-api.md)
 
+## Development Guides
+
+* [Creating User Issued Assets](development-guides/creating-user-issued-assets.md)
+
 ## Tools and Integrations
 
 * [PeerID](tools-and-integrations/peerid/README.md)
