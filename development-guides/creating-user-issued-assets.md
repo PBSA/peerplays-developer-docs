@@ -298,18 +298,14 @@ Let's break these down one-by-one. Pay special attention to the permissions and 
       <td style="text-align:left">This part of the options sets up the exchange rate between this new asset
         and PPY, the core asset of Peerplays. See the <b>exchange rate </b>section
         below to learn how to set this option.</td>
-      <td style="text-align:left">a JSON object</td>
+      <td style="text-align:left">a JSON object (see <b>exchange rate</b> section below)</td>
     </tr>
     <tr>
       <td style="text-align:left">whitelist_authorities</td>
-      <td style="text-align:left">
-        <p>The white/blacklist authorities options allows you to list custom authorities.
-          The whitelists and blacklists of accounts with these authorities are combined
-          and serve as white/blacklists for the asset. This allows for easy outsourcing
-          of KYC/AML verification to 3rd-party providers.</p>
-        <p>See the <b>white/blacklists</b> section below to learn more about these
-          options.</p>
-      </td>
+      <td style="text-align:left">The white/blacklist authorities options allows you to list custom authorities.
+        The whitelists and blacklists of accounts with these authorities are combined
+        and serve as white/blacklists for the asset. This allows for easy outsourcing
+        of KYC/AML verification to 3rd-party providers.</td>
       <td style="text-align:left">[issuer123, kycprovider]</td>
     </tr>
     <tr>
@@ -319,13 +315,10 @@ Let's break these down one-by-one. Pay special attention to the permissions and 
     </tr>
     <tr>
       <td style="text-align:left">whitelist_markets</td>
-      <td style="text-align:left">
-        <p>An issuer of a UIA may want to restrict trading pairs for their assets
-          for legal reasons. You can chose to restrict trading pairs with white/blacklists.</p>
-        <p>See the <b>white/blacklists</b> section below to learn more about these
-          options.</p>
-      </td>
-      <td style="text-align:left">[BTC, USDT]</td>
+      <td style="text-align:left">An issuer of a UIA may want to restrict trading pairs for their assets
+        for legal reasons. You can chose to restrict trading pairs with white/blacklists.</td>
+      <td
+      style="text-align:left">[BTC, USDT]</td>
     </tr>
     <tr>
       <td style="text-align:left">blacklist_markets</td>
@@ -339,6 +332,34 @@ Let's break these down one-by-one. Pay special attention to the permissions and 
     </tr>
   </tbody>
 </table>
+
+#### permissions & flags
+
+
+
+#### exchange rate
+
+The `core_exchange_rate` option consists of a `base` section and a `quote` section:
+
+```text
+"core_exchange_rate" : {
+       "base": {
+         "amount": 21,           # denominator
+         "asset_id": "1.3.0"     # PPY
+       },
+       "quote": {
+         "amount": 76399,        # numerator
+         "asset_id": "1.3.1"     # This new asset
+       }
+```
+
+The idea is to create a ratio of an amount of PPY and an amount of the new asset.
+
+In this example, we have 21 PPY and 76,399 of the new asset \(BTFUN\). This would make the exchange rate 3,638.05 BTFUN per 1 PPY. \(76399 / 21 = 3,638.05\)
+
+The `asset_id` in the `base` section will always be `"1.3.0"`, the ID of PPY.
+
+The `asset_id` in the `quote` section will be unknown at the time the asset is being created. That's ok. Putting `"1.3.1"` here will be detected and overwritten by the blockchain with the new ID. Then you can get the new ID with the `get_asset` function.
 
 ### 1.5. Issuing Assets
 
