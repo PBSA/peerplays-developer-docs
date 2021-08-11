@@ -42,18 +42,7 @@ User issued assets are controlled and distributed by the issuing user. This guid
 
 This function creates a new user issued or market issued asset. Many of the asset's options can be changed later using `update_asset`. You must provide raw JSON data structures for the `options` object.
 
-{% tabs %}
-{% tab title="Structure" %}
-The basic structure of the `create_asset` function looks like this:
-
-{% code title="When using the cli\_wallet..." %}
-```text
-create_asset <issuer> <symbol> <precision> <options> null false
-```
-{% endcode %}
-
-More specifically:
-
+{% code title="return type, namespace, & method" %}
 ```cpp
 signed_transaction graphene::wallet::wallet_api::create_asset(
     string issuer, 
@@ -63,21 +52,65 @@ signed_transaction graphene::wallet::wallet_api::create_asset(
     fc::optional<bitasset_options> bitasset_opts, 
     bool broadcast = false)
 ```
-{% endtab %}
+{% endcode %}
 
-{% tab title="Parameters" %}
-* **`issuer`**: the name or id of the account who will pay the fee and become the issuer of the new asset. This can be updated later.
-* **`symbol`**: the ticker symbol of the new asset
-* **`precision`**: the number of digits of precision to the right of the decimal point, must be less than or equal to 12
-* **`common`**: asset options required for all new assets. Note that core\_exchange\_rate technically needs to store the asset ID of this new asset. Since this ID is not known at the time this operation is created, create this price as though the new asset has instance ID 1, and the chain will overwrite it with the new asset’s ID.
-* **`bitasset_opts`**: options specific to BitAssets. This may be null unless the `market_issued` flag is set in common.flags
-* **`broadcast`**: true to broadcast the transaction on the network
-{% endtab %}
-{% endtabs %}
+{% tabs %}
+{% tab title="Function Call" %}
+The basic structure of the `create_asset` function looks like this:
+
+{% code title="When using the cli\_wallet..." %}
+```text
+create_asset <issuer> <symbol> <precision> <options> null false
+```
+{% endcode %}
 
 #### Parameters
 
+| name | data type | description | details |
+| :--- | :--- | :--- | :--- |
+| issuer | string | The name or id of the account who will pay the fee and become the issuer of the new asset. This can be updated later. | n/a |
+| symbol | string | The ticker symbol of the new asset. | n/a |
+| precision | uint8\_t | The number of digits of precision to the right of the decimal point, must be between 0 and 12 \(inclusive\). | min 0, max 12 |
+| common | asset\_options | Asset options required for all new assets. See section [1.4. Asset Options](creating-user-issued-assets.md#1-4-asset-options) for details. | n/a |
+| bitasset\_opts | bitasset\_options | Options specific to market issued assets. Put `null` here for a UIA. Put `{}` here for a market issued asset with the default price feed settings. Or you can price feed details here. | `null` for UIAs! |
+| broadcast | bool | `true` or `false`, whether or not you want to broadcast the transaction. | n/a |
 
+#### Example Call
+
+```text
+create_asset "1.2.18" "BTFUN" 8 {"max_supply" : 1000000000000000,"market_fee_percent" : 0,"max_market_fee" : 1000000000000000,"issuer_permissions" : 79,"flags" : 0,"core_exchange_rate" : {"base": {"amount": 1,"asset_id": "1.3.0"},"quote": {"amount": 1,"asset_id": "1.3.1"}},"whitelist_authorities" : [],"blacklist_authorities" : [],"whitelist_markets" : [],"blacklist_markets" : [],"description" : "BitFun token with precision 8"} null true
+```
+
+In this example call we used the following settings for the `common` parameter:
+
+```text
+{
+  "max_supply" : 1000000000000000,
+  "market_fee_percent" : 0,
+  "max_market_fee" : 1000000000000000,
+  "issuer_permissions" : 79,
+  "flags" : 0,
+  "core_exchange_rate" : {
+    "base": {
+      "amount": 1,
+      "asset_id": "1.3.0"
+    },
+    "quote": {
+      "amount": 1,
+      "asset_id": "1.3.1"
+    }
+  },
+  "whitelist_authorities" : [],
+  "blacklist_authorities" : [],
+  "whitelist_markets" : [],
+  "blacklist_markets" : [],
+  "description" : "BitFun token with precision 8"
+}
+```
+
+Please see section [1.4. Asset Options](creating-user-issued-assets.md#1-4-asset-options) for an explanation of the `common` parameter!
+{% endtab %}
+{% endtabs %}
 
 {% hint style="danger" %}
 **Important Note:**
