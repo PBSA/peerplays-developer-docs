@@ -280,38 +280,57 @@ Let's break these down one-by-one. Pay special attention to the permissions and 
     </tr>
     <tr>
       <td style="text-align:left">issuer_permissions</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">This represents the permissions available to the issuer of the asset.
+        If any permission is ever set to false, that permission can never be set
+        to true again. See the <b>permissions &amp; flags</b> section below to learn
+        how to set this number.</td>
+      <td style="text-align:left">79</td>
     </tr>
     <tr>
       <td style="text-align:left">flags</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">This number represents the settings which correspond to the permissions
+        available when setting the issuer_permissions. See the <b>permissions &amp; flags</b> section
+        below to learn how to set this number.</td>
+      <td style="text-align:left">0</td>
     </tr>
     <tr>
       <td style="text-align:left">core_exchange_rate</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">This part of the options sets up the exchange rate between this new asset
+        and PPY, the core asset of Peerplays. See the <b>exchange rate </b>section
+        below to learn how to set this option.</td>
+      <td style="text-align:left">a JSON object</td>
     </tr>
     <tr>
       <td style="text-align:left">whitelist_authorities</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p>The white/blacklist authorities options allows you to list custom authorities.
+          The whitelists and blacklists of accounts with these authorities are combined
+          and serve as white/blacklists for the asset. This allows for easy outsourcing
+          of KYC/AML verification to 3rd-party providers.</p>
+        <p>See the <b>white/blacklists</b> section below to learn more about these
+          options.</p>
+      </td>
+      <td style="text-align:left">[issuer123, kycprovider]</td>
     </tr>
     <tr>
       <td style="text-align:left">blacklist_authorities</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">Same as whitelist_authorities.</td>
+      <td style="text-align:left">[issuer123, kycprovider]</td>
     </tr>
     <tr>
       <td style="text-align:left">whitelist_markets</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p>An issuer of a UIA may want to restrict trading pairs for their assets
+          for legal reasons. You can chose to restrict trading pairs with white/blacklists.</p>
+        <p>See the <b>white/blacklists</b> section below to learn more about these
+          options.</p>
+      </td>
+      <td style="text-align:left">[BTC, USDT]</td>
     </tr>
     <tr>
       <td style="text-align:left">blacklist_markets</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">Same as whitelist_markets.</td>
+      <td style="text-align:left">[PPY]</td>
     </tr>
     <tr>
       <td style="text-align:left">description</td>
