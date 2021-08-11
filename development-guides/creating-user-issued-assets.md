@@ -60,7 +60,7 @@ The basic structure of the `create_asset` function looks like this:
 
 {% code title="When using the cli\_wallet..." %}
 ```text
-create_asset <issuer> <symbol> <precision> <options> null true
+create_asset <issuer> <symbol> <precision> <common> null true
 ```
 {% endcode %}
 
@@ -203,6 +203,51 @@ Please see section [1.4. Asset Options](creating-user-issued-assets.md#1-4-asset
 ### 1.4. Asset Options
 
 ### 1.5. Issuing Assets
+
+So far creating assets with `create_asset` doesn't actually produce the new tokens into anyone's account. For that we use the `issue_asset` function.
+
+#### issue\_asset
+
+Issues new shares of an asset that exists via `create_asset`.
+
+{% code title="return type, namespace, & method" %}
+```cpp
+signed_transaction graphene::wallet::wallet_api::issue_asset(
+    string to_account, 
+    string amount, 
+    string symbol, 
+    string memo, 
+    bool broadcast = false)
+```
+{% endcode %}
+
+{% tabs %}
+{% tab title="Function Call" %}
+The basic structure of the `issue_asset` function looks like this:
+
+{% code title="When using the cli\_wallet..." %}
+```text
+issue_asset <to_account> <amount> <symbol> <memo> true
+```
+{% endcode %}
+
+#### Parameters
+
+| name | data type | description | details |
+| :--- | :--- | :--- | :--- |
+| to\_account | string | The name or id of the account to receive the new shares. | n/a |
+| amount | string | The amount to issue, in nominal units. | Example: 0.5 for half a token |
+| symbol | string | The ticker symbol of the asset to issue. | n/a |
+| memo | string | A memo to include in the transaction, readable by the recipient. | n/a |
+| broadcast | bool | `true` or `false`, whether or not you want to broadcast the transaction. | n/a |
+
+#### Example Call
+
+```text
+issue_asset "myfriend1" 1000 "BTFUN" "Enjoy some BitFun, Friend!" true
+```
+{% endtab %}
+{% endtabs %}
 
 ## 2. Reserved Tokens
 
