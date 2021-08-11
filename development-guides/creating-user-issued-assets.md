@@ -200,6 +200,10 @@ Please see section [1.4. Asset Options](creating-user-issued-assets.md#1-4-asset
 {% endtab %}
 {% endtabs %}
 
+{% hint style="warning" %}
+Using `update_asset` will overwrite all the perviously set options with the new options you enter here. So make sure all the options you need are present in the new options object!
+{% endhint %}
+
 ### 1.4. Asset Options
 
 The `asset_options` object contains the options that are common to all assets. This is why it's necessary to supply for both UIAs and MIAs. The options need to be passed as a raw JSON object that contains these settings:
