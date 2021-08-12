@@ -211,6 +211,8 @@ A valid timestamp looks like this: `"2019-11-22T18:30:00"`
 ```cpp
 create_custom_account_authority account01 1.27.0 0 "2019-11-22T18:30:00" "2020-12-03T17:53:25" true
 ```
+
+Basically this represents a full HRP where the transfer operation on `account01` can be done by authorities present in `1.27.0` instead of account owner `account01`.
 {% endtab %}
 {% endtabs %}
 
@@ -229,7 +231,35 @@ signed_transaction graphene::wallet::wallet_api::update_custom_account_authority
 ```
 {% endcode %}
 
+{% tabs %}
+{% tab title="Function Call" %}
+The basic structure of the `update_custom_account_authority` function looks like this:
 
+{% code title="When using the cli\_wallet..." %}
+```text
+update_custom_account_authority <owner> <auth_id> <new_valid_from> <new_valid_to> true
+```
+{% endcode %}
+
+#### Parameters <a id="parameters"></a>
+
+| name | data type | description | details |
+| :--- | :--- | :--- | :--- |
+| owner | string | The name or id of the account who is updating the permission. | n/a |
+| auth\_id | custom\_account\_authority\_id\_type | The ID of the custom account authority we're intending to edit. | n/a |
+| new\_valid\_from | time\_point\_sec | The timestamp when the permission begins to be valid. See below for what a valid timestamp looks like. | n/a |
+| new\_valid\_to | time\_point\_sec | The timestamp when the permission stops being valid. See below for what a valid timestamp looks like. | n/a |
+| broadcast | bool | `true` or `false`, whether or not you want to broadcast the transaction. | n/a |
+
+A valid timestamp looks like this: `"2019-11-22T18:30:00"`
+
+#### Example Call
+
+```cpp
+update_custom_account_authority account01 1.28.0 "2020-06-02T17:52:25" "2020-06-03T17:52:25" true
+```
+{% endtab %}
+{% endtabs %}
 
 ### 2.6. delete\_custom\_permission
 
@@ -250,7 +280,11 @@ signed_transaction graphene::wallet::wallet_api::delete_custom_permission(
 ```
 {% endcode %}
 
+{% tabs %}
+{% tab title="Function Call" %}
 
+{% endtab %}
+{% endtabs %}
 
 ### 2.7. delete\_custom\_account\_authority
 
