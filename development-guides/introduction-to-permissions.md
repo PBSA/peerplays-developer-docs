@@ -183,7 +183,36 @@ signed_transaction graphene::wallet::wallet_api::create_custom_account_authority
 ```
 {% endcode %}
 
+{% tabs %}
+{% tab title="Function Call" %}
+The basic structure of the `create_custom_account_authority` function looks like this:
 
+{% code title="When using the cli\_wallet..." %}
+```text
+create_custom_account_authority <owner> <permission_id> <operation_type> <valid_from> <valid_to> true
+```
+{% endcode %}
+
+#### Parameters <a id="parameters"></a>
+
+| name | data type | description | details |
+| :--- | :--- | :--- | :--- |
+| owner | string | The name or id of the account who is updating the permission. | n/a |
+| permission\_id | custom\_permission\_id\_type | The ID of the custom permission we're intending to edit. | n/a |
+| operation\_type | int | This is the ID of any particular operation. | n/a |
+| valid\_from | time\_point\_sec | The timestamp when the permission begins to be valid. See below for what a valid timestamp looks like. | n/a |
+| valid\_to | time\_point\_sec | The timestamp when the permission stops being valid. See below for what a valid timestamp looks like. | n/a |
+| broadcast | bool | `true` or `false`, whether or not you want to broadcast the transaction. | n/a |
+
+A valid timestamp looks like this: `"2019-11-22T18:30:00"`
+
+#### Example Call
+
+```cpp
+create_custom_account_authority account01 1.27.0 0 "2019-11-22T18:30:00" "2020-12-03T17:53:25" true
+```
+{% endtab %}
+{% endtabs %}
 
 ### 2.5. update\_custom\_account\_authority
 
