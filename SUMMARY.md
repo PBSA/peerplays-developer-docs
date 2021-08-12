@@ -42,6 +42,7 @@
 ## Development Guides
 
 * [Creating User Issued Assets](development-guides/creating-user-issued-assets.md)
+* [Introduction to Permissions](development-guides/introduction-to-permissions.md)
 
 ## Tools and Integrations
 
