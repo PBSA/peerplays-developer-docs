@@ -366,7 +366,96 @@ signed_transaction graphene::wallet::wallet_api::create_account_role(
 ```
 {% endcode %}
 
+{% tabs %}
+{% tab title="Function Call" %}
+The basic structure of the `create_account_role` function looks like this:
 
+{% code title="When using the cli\_wallet..." %}
+```text
+create_account_role <owner_account_id_or_name> <name> <metadata> <allowed_operations> <whitelisted_accounts> <valid_to> true
+```
+{% endcode %}
+
+#### Parameters <a id="parameters"></a>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">name</th>
+      <th style="text-align:left">data type</th>
+      <th style="text-align:left">description</th>
+      <th style="text-align:left">details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">owner_account_id_or_name</td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">The name or id of the account who is creating the account role.</td>
+      <td
+      style="text-align:left">n/a</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">name</td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">The name of the account role. For example, <code>&quot;Movie Interstellar Permissions&quot;</code>
+      </td>
+      <td style="text-align:left">n/a</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">metadata</td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">Metadata for additional info. For example, this could be a JSON object
+        or and external URL with info.</td>
+      <td style="text-align:left">n/a</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">allowed_operations</td>
+      <td style="text-align:left">flat_set&lt;int&gt;</td>
+      <td style="text-align:left">An array of numbers which represent all the operations that this role
+        allows.</td>
+      <td style="text-align:left">n/a</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">whitelisted_accounts</td>
+      <td style="text-align:left">flat_set&lt;account_id_type&gt;</td>
+      <td style="text-align:left">An array of account IDs for the accounts that belong to this role and
+        are therefore granted the allowed_operations for the resource.</td>
+      <td
+      style="text-align:left">n/a</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">valid_to</td>
+      <td style="text-align:left">time_point_sec</td>
+      <td style="text-align:left">
+        <p>The time at which the role no longer provides the allowed_operations to
+          its whitelisted_accounts.</p>
+        <p>Note: <code>valid_from</code> is automatically set to the time the account
+          role was created.</p>
+      </td>
+      <td style="text-align:left">n/a</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">broadcast</td>
+      <td style="text-align:left">bool</td>
+      <td style="text-align:left"><code>true</code> or <code>false</code>, whether or not you want to broadcast
+        the transaction.</td>
+      <td style="text-align:left">n/a</td>
+    </tr>
+  </tbody>
+</table>
+
+A valid timestamp looks like this: `"2020-09-04T13:43:39"`
+
+#### Example Call
+
+```cpp
+create_account_role account01 ar1 ar1 [89,95] [1.2.40, 1.2.41, 1.2.43] "2020-09-04T13:43:39" true
+```
+
+This command effectively limits any NFT to be sold or transferred between only three accounts, `1.2.40`, `1.2.41`, and `1.2.43`.
+{% endtab %}
+{% endtabs %}
 
 ### 3.2. get\_account\_roles\_by\_owner
 
