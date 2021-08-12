@@ -197,7 +197,7 @@ create_custom_account_authority <owner> <permission_id> <operation_type> <valid_
 
 | name | data type | description | details |
 | :--- | :--- | :--- | :--- |
-| owner | string | The name or id of the account who is updating the permission. | n/a |
+| owner | string | The name or id of the account who is creating the account authority. | n/a |
 | permission\_id | custom\_permission\_id\_type | The ID of the custom permission we're intending to edit. | n/a |
 | operation\_type | int | This is the ID of any particular operation. | n/a |
 | valid\_from | time\_point\_sec | The timestamp when the permission begins to be valid. See below for what a valid timestamp looks like. | n/a |
@@ -245,7 +245,7 @@ update_custom_account_authority <owner> <auth_id> <new_valid_from> <new_valid_to
 
 | name | data type | description | details |
 | :--- | :--- | :--- | :--- |
-| owner | string | The name or id of the account who is updating the permission. | n/a |
+| owner | string | The name or id of the account who is updating the account authority. | n/a |
 | auth\_id | custom\_account\_authority\_id\_type | The ID of the custom account authority we're intending to edit. | n/a |
 | new\_valid\_from | time\_point\_sec | The timestamp when the permission begins to be valid. See below for what a valid timestamp looks like. | n/a |
 | new\_valid\_to | time\_point\_sec | The timestamp when the permission stops being valid. See below for what a valid timestamp looks like. | n/a |
@@ -282,7 +282,27 @@ signed_transaction graphene::wallet::wallet_api::delete_custom_permission(
 
 {% tabs %}
 {% tab title="Function Call" %}
+The basic structure of the `delete_custom_permission` function looks like this:
 
+{% code title="When using the cli\_wallet..." %}
+```text
+delete_custom_permission <owner> <permission_id> true
+```
+{% endcode %}
+
+#### Parameters <a id="parameters"></a>
+
+| name | data type | description | details |
+| :--- | :--- | :--- | :--- |
+| owner | string | The name or id of the account who is deleting the permission. | n/a |
+| permission\_id | custom\_permission\_id\_type | The ID of the custom permission we're intending to delete. | n/a |
+| broadcast | bool | `true` or `false`, whether or not you want to broadcast the transaction. | n/a |
+
+#### Example Call
+
+```cpp
+delete_custom_permission account01 1.27.0 true
+```
 {% endtab %}
 {% endtabs %}
 
@@ -299,7 +319,31 @@ signed_transaction graphene::wallet::wallet_api::delete_custom_account_authority
 ```
 {% endcode %}
 
+{% tabs %}
+{% tab title="Function Call" %}
+The basic structure of the `delete_custom_account_authority` function looks like this:
 
+{% code title="When using the cli\_wallet..." %}
+```text
+delete_custom_account_authority <owner> <auth_id> true
+```
+{% endcode %}
+
+#### Parameters <a id="parameters"></a>
+
+| name | data type | description | details |
+| :--- | :--- | :--- | :--- |
+| owner | string | The name or id of the account who is deleting the account authority. | n/a |
+| auth\_id | custom\_account\_authority\_id\_type | The ID of the custom account authority we're intending to delete. | n/a |
+| broadcast | bool | `true` or `false`, whether or not you want to broadcast the transaction. | n/a |
+
+#### Example Call
+
+```cpp
+delete_custom_account_authority account01 1.28.0 true
+```
+{% endtab %}
+{% endtabs %}
 
 ## 3. Resource Permissions with Account Roles
 
