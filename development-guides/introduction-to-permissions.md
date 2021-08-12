@@ -169,6 +169,8 @@ The new authority object will **replace** the old authority object using this fu
 
 ### 2.4. create\_custom\_account\_authority
 
+Creating a custom authority maps the created [custom permissions](introduction-to-permissions.md#2-1-create_custom_permission) with the actual operations present on the blockchain. It also has expiry time by when this custom permission is no longer valid on any given account and operation combination.
+
 {% code title="return type, namespace, & method" %}
 ```cpp
 signed_transaction graphene::wallet::wallet_api::create_custom_account_authority(
@@ -185,6 +187,8 @@ signed_transaction graphene::wallet::wallet_api::create_custom_account_authority
 
 ### 2.5. update\_custom\_account\_authority
 
+This function can be used to update existing `valid_from` and `valid_to` times.
+
 {% code title="return type, namespace, & method" %}
 ```cpp
 signed_transaction graphene::wallet::wallet_api::update_custom_account_authority(
@@ -200,6 +204,14 @@ signed_transaction graphene::wallet::wallet_api::update_custom_account_authority
 
 ### 2.6. delete\_custom\_permission
 
+This function is used to delete an existing custom permission.
+
+{% hint style="warning" %}
+This will delete all the custom account authorities linked to this permission as well.
+
+A cascading delete!
+{% endhint %}
+
 {% code title="return type, namespace, & method" %}
 ```cpp
 signed_transaction graphene::wallet::wallet_api::delete_custom_permission(
@@ -212,6 +224,8 @@ signed_transaction graphene::wallet::wallet_api::delete_custom_permission(
 
 
 ### 2.7. delete\_custom\_account\_authority
+
+This function is used to delete an account authority attached to a permission.
 
 {% code title="return type, namespace, & method" %}
 ```cpp
@@ -230,6 +244,8 @@ Resource permissions can be granted by applying account roles to those resources
 
 ### 3.1. create\_account\_role
 
+This function creates an account role.
+
 {% code title="return type, namespace, & method" %}
 ```cpp
 signed_transaction graphene::wallet::wallet_api::create_account_role(
@@ -247,6 +263,8 @@ signed_transaction graphene::wallet::wallet_api::create_account_role(
 
 ### 3.2. get\_account\_roles\_by\_owner
 
+You can use this to find all the account roles by their owner.
+
 {% code title="return type, namespace, & method" %}
 ```cpp
 signed_transaction graphene::wallet::wallet_api::get_account_roles_by_owner(
@@ -257,6 +275,8 @@ signed_transaction graphene::wallet::wallet_api::get_account_roles_by_owner(
 
 
 ### 3.3. update\_account\_role
+
+As a resource owner, you can update the operations and whitelisted accounts present in an account role. This helps in blacklisting any users from selling or transferring NFTs or any resources.
 
 {% code title="return type, namespace, & method" %}
 ```cpp
@@ -277,6 +297,12 @@ signed_transaction graphene::wallet::wallet_api::update_account_role(
 
 
 ### 3.4. delete\_account\_role
+
+This function deletes an account role.
+
+{% hint style="warning" %}
+Once an account role is deleted, restrictions on resource access no longer work!
+{% endhint %}
 
 {% code title="return type, namespace, & method" %}
 ```cpp
