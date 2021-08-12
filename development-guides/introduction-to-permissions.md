@@ -27,6 +27,8 @@ To create a custom HRP, the first step is to create the custom permission. Then 
 
 ### 2.1. create\_custom\_permission
 
+This function creates a new custom permission.
+
 {% code title="return type, namespace, & method" %}
 ```cpp
 signed_transaction graphene::wallet::wallet_api::create_custom_permission(
@@ -85,6 +87,8 @@ create_custom_permission account01 perm1 { "weight_threshold": 1,  "account_auth
 
 ### 2.2. get\_custom\_permissions
 
+This function returns the custom permissions that have been created by the given account.
+
 {% code title="return type, namespace, & method" %}
 ```cpp
 signed_transaction graphene::wallet::wallet_api::get_custom_permissions(
@@ -92,9 +96,33 @@ signed_transaction graphene::wallet::wallet_api::get_custom_permissions(
 ```
 {% endcode %}
 
+{% tabs %}
+{% tab title="Function Call" %}
+The basic structure of the `get_custom_permission` function looks like this:
 
+{% code title="When using the cli\_wallet..." %}
+```text
+get_custom_permissions <owner>
+```
+{% endcode %}
+
+#### Parameters <a id="parameters"></a>
+
+| name | data type | description | details |
+| :--- | :--- | :--- | :--- |
+| owner | string | The name or id of the account for which we'd like to see the list of created custom permissions. | n/a |
+
+#### Example Call
+
+```cpp
+get_custom_permissions account01
+```
+{% endtab %}
+{% endtabs %}
 
 ### 2.3. update\_custom\_permission
+
+This function updates an existing permission with the new authority object that you supply.
 
 {% code title="return type, namespace, & method" %}
 ```cpp
@@ -106,7 +134,38 @@ signed_transaction graphene::wallet::wallet_api::update_custom_permission(
 ```
 {% endcode %}
 
+{% tabs %}
+{% tab title="Function Call" %}
+The basic structure of the `update_custom_permission` function looks like this:
 
+{% code title="When using the cli\_wallet..." %}
+```text
+update_custom_permissions <owner> <permission_id> <new_auth> true
+```
+{% endcode %}
+
+#### Parameters <a id="parameters"></a>
+
+| name | data type | description | details |
+| :--- | :--- | :--- | :--- |
+| owner | string | The name or id of the account who is updating the permission. | n/a |
+| permission\_id | custom\_permission\_id\_type | The ID of the custom permission we're intending to edit. | n/a |
+| new\_auth | authority | Just like [create\_custom\_permission](introduction-to-permissions.md#2-1-create_custom_permission), this is a JSON object which represents an account authority. | n/a |
+| broadcast | bool | `true` or `false`, whether or not you want to broadcast the transaction. | n/a |
+
+#### Example Call
+
+```cpp
+update_custom_permission account01 1.27.0 { "weight_threshold": 1,  "account_auths": [["1.2.53",1]], "key_auths": [], "address_auths": [] } true
+```
+
+Here we removed the `key_auths` and added `1.2.53` with weight 1, which is equal to `weight_threshold` , so `1.2.53` can alone sign the transaction successfully.
+{% endtab %}
+{% endtabs %}
+
+{% hint style="danger" %}
+The new authority object will **replace** the old authority object using this function call. Make sure that the authority object that you supply here is set exactly as you'd like.
+{% endhint %}
 
 ### 2.4. create\_custom\_account\_authority
 
