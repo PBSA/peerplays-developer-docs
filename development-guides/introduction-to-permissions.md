@@ -468,7 +468,29 @@ signed_transaction graphene::wallet::wallet_api::get_account_roles_by_owner(
 ```
 {% endcode %}
 
+{% tabs %}
+{% tab title="Function Call" %}
+The basic structure of the `get_account_roles_by_owner` function looks like this:
 
+{% code title="When using the cli\_wallet..." %}
+```text
+get_account_roles_by_owner <owner_account_id_or_name>
+```
+{% endcode %}
+
+#### Parameters <a id="parameters"></a>
+
+| name | data type | description | details |
+| :--- | :--- | :--- | :--- |
+| owner\_account\_id\_or\_name | string | The name or id of the account for which we'd like to see the list of created account roles. | n/a |
+
+#### Example Call
+
+```cpp
+get_account_roles_by_owner account01
+```
+{% endtab %}
+{% endtabs %}
 
 ### 3.3. update\_account\_role
 
