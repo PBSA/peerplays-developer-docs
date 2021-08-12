@@ -512,7 +512,121 @@ signed_transaction graphene::wallet::wallet_api::update_account_role(
 ```
 {% endcode %}
 
+{% tabs %}
+{% tab title="Function Call" %}
+The basic structure of the `update_account_role` function looks like this:
 
+{% code title="When using the cli\_wallet..." %}
+```text
+update_account_role <owner_account_id_or_name> <role_id> <name> <metadata> <operations_to_add> <operations_to_remove> <accounts_to_add> <accounts_to_remove> <valid_to> true
+```
+{% endcode %}
+
+#### Parameters <a id="parameters"></a>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">name</th>
+      <th style="text-align:left">data type</th>
+      <th style="text-align:left">description</th>
+      <th style="text-align:left">details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">owner_account_id_or_name</td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">The name or id of the account who is updating the account role.</td>
+      <td
+      style="text-align:left">n/a</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">role_id</td>
+      <td style="text-align:left">account_role_id_type</td>
+      <td style="text-align:left">The ID of the account role we&apos;re intending to update.</td>
+      <td style="text-align:left">n/a</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">name</td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">The name of the account role. For example, <code>&quot;Movie Interstellar Permissions&quot;</code>
+      </td>
+      <td style="text-align:left">n/a</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">metadata</td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">Metadata for additional info. For example, this could be a JSON object
+        or and external URL with info.</td>
+      <td style="text-align:left">n/a</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">operations_to_add</td>
+      <td style="text-align:left">flat_set&lt;int&gt;</td>
+      <td style="text-align:left">An array of numbers which represent all the operations that should be
+        added to the role.</td>
+      <td style="text-align:left">n/a</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">operations_to_remove</td>
+      <td style="text-align:left">flat_set&lt;int&gt;</td>
+      <td style="text-align:left">An array of numbers which represent all the operations that should be
+        removed from the role.</td>
+      <td style="text-align:left">n/a</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">accounts_to_add</td>
+      <td style="text-align:left">flat_set&lt;account_id_type&gt;</td>
+      <td style="text-align:left">An array of account IDs for the accounts that should be added to the role.</td>
+      <td
+      style="text-align:left">n/a</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">accounts_to_remove</td>
+      <td style="text-align:left">flat_set&lt;account_id_type&gt;</td>
+      <td style="text-align:left">An array of account IDs for the accounts that should be removed from the
+        role.</td>
+      <td style="text-align:left">n/a</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">valid_to</td>
+      <td style="text-align:left">time_point_sec</td>
+      <td style="text-align:left">
+        <p>The time at which the role no longer provides the allowed_operations to
+          its whitelisted_accounts.</p>
+        <p>Note: <code>valid_from</code> is automatically set to the time the account
+          role was created.</p>
+      </td>
+      <td style="text-align:left">n/a</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">broadcast</td>
+      <td style="text-align:left">bool</td>
+      <td style="text-align:left"><code>true</code> or <code>false</code>, whether or not you want to broadcast
+        the transaction.</td>
+      <td style="text-align:left">n/a</td>
+    </tr>
+  </tbody>
+</table>
+
+A valid timestamp looks like this: `"2020-09-04T13:43:39"`
+
+#### Example Call
+
+```cpp
+update_account_role account01 1.32.0 null null [88] [95] [1.2.42] [1.2.40] "2020-09-04T13:52:38" true
+```
+
+`88` `offer_operation` is added.
+
+`95` `nft_safe_transfer_from_operation` is removed.
+
+`1.2.42` account is added to the whitelist.
+
+`1.2.40` account is removed from the whitelist.
+{% endtab %}
+{% endtabs %}
 
 ### 3.4. delete\_account\_role
 
@@ -531,5 +645,29 @@ signed_transaction graphene::wallet::wallet_api::delete_account_role(
 ```
 {% endcode %}
 
+{% tabs %}
+{% tab title="Function Call" %}
+The basic structure of the `delete_account_role` function looks like this:
 
+{% code title="When using the cli\_wallet..." %}
+```text
+delete_account_role <owner_account_id_or_name> <role_id> true
+```
+{% endcode %}
+
+#### Parameters <a id="parameters"></a>
+
+| name | data type | description | details |
+| :--- | :--- | :--- | :--- |
+| owner\_account\_id\_or\_name | string | The name or id of the account who is deleting the account role. | n/a |
+| role\_id | account\_role\_id\_type | The ID of the account role we're intending to delete. | n/a |
+| broadcast | bool | `true` or `false`, whether or not you want to broadcast the transaction. | n/a |
+
+#### Example Call
+
+```cpp
+delete_account_role account01 1.32.0 true
+```
+{% endtab %}
+{% endtabs %}
 
