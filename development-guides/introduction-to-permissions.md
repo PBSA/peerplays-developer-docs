@@ -25,6 +25,10 @@ As opposed to HRP mentioned above, resource permissions are controlled by the ow
 
 To create a custom HRP, the first step is to create the custom permission. Then the custom permission will be mapped to the actual operations present on the blockchain by creating a related custom account authority.
 
+{% hint style="info" %}
+Some of the following functions need Operation IDs. You can find a list of [Operation IDs here](../supporting-and-reference-docs/operation-ids-list.md).
+{% endhint %}
+
 ### 2.1. create\_custom\_permission
 
 This function creates a new custom permission.
@@ -199,7 +203,7 @@ create_custom_account_authority <owner> <permission_id> <operation_type> <valid_
 | :--- | :--- | :--- | :--- |
 | owner | string | The name or id of the account who is creating the account authority. | n/a |
 | permission\_id | custom\_permission\_id\_type | The ID of the custom permission we're intending to edit. | n/a |
-| operation\_type | int | This is the ID of any particular operation. | n/a |
+| operation\_type | int | This is the ID of any particular operation. IDs are [available here](../supporting-and-reference-docs/operation-ids-list.md). | n/a |
 | valid\_from | time\_point\_sec | The timestamp when the permission begins to be valid. See below for what a valid timestamp looks like. | n/a |
 | valid\_to | time\_point\_sec | The timestamp when the permission stops being valid. See below for what a valid timestamp looks like. | n/a |
 | broadcast | bool | `true` or `false`, whether or not you want to broadcast the transaction. | n/a |
@@ -350,7 +354,7 @@ delete_custom_account_authority account01 1.28.0 true
 Resource permissions can be granted by applying account roles to those resources. The allowed permissions are attached to the role. Then accounts can be added to the role to grant them the permissions the role provides.
 
 {% hint style="info" %}
-The following functions need Operation IDs. You can find a list of [Operation IDs here](../supporting-and-reference-docs/operation-ids-list.md).
+Some of the following functions need Operation IDs. You can find a list of [Operation IDs here](../supporting-and-reference-docs/operation-ids-list.md).
 {% endhint %}
 
 ### 3.1. create\_account\_role
@@ -417,8 +421,9 @@ create_account_role <owner_account_id_or_name> <name> <metadata> <allowed_operat
       <td style="text-align:left">allowed_operations</td>
       <td style="text-align:left">flat_set&lt;int&gt;</td>
       <td style="text-align:left">An array of numbers which represent all the operations that this role
-        allows.</td>
-      <td style="text-align:left">n/a</td>
+        allows. IDs are <a href="../supporting-and-reference-docs/operation-ids-list.md">available here</a>.</td>
+      <td
+      style="text-align:left">n/a</td>
     </tr>
     <tr>
       <td style="text-align:left">whitelisted_accounts</td>
@@ -569,15 +574,17 @@ update_account_role <owner_account_id_or_name> <role_id> <name> <metadata> <oper
       <td style="text-align:left">operations_to_add</td>
       <td style="text-align:left">flat_set&lt;int&gt;</td>
       <td style="text-align:left">An array of numbers which represent all the operations that should be
-        added to the role.</td>
-      <td style="text-align:left">n/a</td>
+        added to the role. IDs are <a href="../supporting-and-reference-docs/operation-ids-list.md">available here</a>.</td>
+      <td
+      style="text-align:left">n/a</td>
     </tr>
     <tr>
       <td style="text-align:left">operations_to_remove</td>
       <td style="text-align:left">flat_set&lt;int&gt;</td>
       <td style="text-align:left">An array of numbers which represent all the operations that should be
-        removed from the role.</td>
-      <td style="text-align:left">n/a</td>
+        removed from the role. IDs are <a href="../supporting-and-reference-docs/operation-ids-list.md">available here</a>.</td>
+      <td
+      style="text-align:left">n/a</td>
     </tr>
     <tr>
       <td style="text-align:left">accounts_to_add</td>
