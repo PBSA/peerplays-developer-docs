@@ -8,7 +8,7 @@ The fees are set individually for every operation. The fees will also change ove
 
 You might do something like the following:
 
-1. Use the _`get_global_properties`_ function. Copy the whole list of operation IDs/fees from the return.
+1. Use the `get_global_properties` function. Copy the whole list of operation IDs/fees from the return.
 2. Download the latest copy of the Operation ID mapping.
 3. Combine the two lists to get the fee for each operation.
 
