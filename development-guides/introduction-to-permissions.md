@@ -671,3 +671,17 @@ delete_account_role account01 1.32.0 true
 {% endtab %}
 {% endtabs %}
 
+## 4. Fee Considerations
+
+Every operation on the Peerplays blockchain requires a small fee to cover the cost of the use of the network and data storage on the chain. These fees can add up so it's best to plan ahead, especially if you'll need to make hundreds or thousands of transactions.
+
+The fees are set individually for every operation. The fees will also change over time due to blockchain governance voting. You can check the current fees using the **`get_global_properties`** function, and then calculate your total costs given how many times you'll need to run each operation.
+
+### 4.1. get\_global\_properties
+
+```text
+
+```
+
+
+

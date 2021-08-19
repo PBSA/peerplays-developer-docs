@@ -44,6 +44,7 @@
 * [Creating User Issued Assets](development-guides/creating-user-issued-assets.md)
 * [Introduction to Permissions](development-guides/introduction-to-permissions.md)
 * [NFT Minting](development-guides/nft-minting.md)
+* [Calculating Costs](development-guides/calculating-costs.md)
 
 ## Tools and Integrations
 
