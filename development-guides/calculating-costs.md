@@ -18,7 +18,7 @@ Then you can use your combined list to easily calculate the total transaction co
 
 An example of the combined list of Operation IDs, Operation Names, and their Fees:
 
-
+{% file src="../.gitbook/assets/peerplays-operations.xlsx" caption="Peerplays Operations with Fees" %}
 
 {% hint style="info" %}
 PPY has a precision of 5. So the numbers listed in the `get_global_properties` function are in Satoshi. That is to say, to convert this number to nominal units, a decimal point is added 5 places from the right.
