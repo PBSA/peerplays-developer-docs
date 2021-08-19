@@ -9,7 +9,7 @@ The fees are set individually for every operation. The fees will also change ove
 You might do something like the following:
 
 1. Use the `get_global_properties` function. Copy the whole list of operation IDs/fees from the return.
-2. Download the latest copy of the Operation ID mapping.
+2. Download the latest copy of the [Operation ID mapping](../supporting-and-reference-docs/operation-ids-list.md#download).
 3. Combine the two lists to get the fee for each operation.
 
 Then you can use your combined list to easily calculate the total transaction costs for what you plan to do. At this time, there is no automated process for generating such a list. Here's an example that you can download to get you started, keeping in mind that the fees may have changed since the writing of this guide.
