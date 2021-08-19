@@ -87,6 +87,7 @@
 * [NFT Development](supporting-and-reference-docs/nft-development/README.md)
   * [Django-NFT](supporting-and-reference-docs/nft-development/django-nft/README.md)
     * [Requirements Specification](supporting-and-reference-docs/nft-development/django-nft/requirements-specification.md)
+* [Operation IDs List](supporting-and-reference-docs/operation-ids-list.md)
 * [Sidechain Flow Diagram \(HIVE coin\)](supporting-and-reference-docs/sidechain-flow-diagram-hive.md)
 * [Sidechain Flow Diagram \(Bitcoin\)](supporting-and-reference-docs/sidechain-flow-diagram-bitcoin.md)
 
