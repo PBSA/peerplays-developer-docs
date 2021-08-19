@@ -97,6 +97,7 @@ In the above function...
   * 89 - Bid operation in marketplace
   * 90 - Cancel Offer operation in marketplace
   * 95 - Safe transfer from owner to another NFT
+  * IDs are [available here](../supporting-and-reference-docs/operation-ids-list.md).
 * **\[1.2.40, 1.2.41\]** List of accounts whitelisted for the above operations. Offer, bid and transfer operations can only be among the whitelisted accounts.
 * **"2020-11-04T13:43:39"** Expiry date of the permission
 * **true** broadcast, keep it true to include the transaction in upcoming block.
