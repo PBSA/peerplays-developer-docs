@@ -141,7 +141,14 @@ Parts of the example return have been truncated to fit. The actual return is muc
 
 ### 1.2. An Example
 
-Let's say you need to make 
+Let's say you need to make 50,000 NFTs and issue them to various accounts.
+
+To calculate the total cost for this, we'll find the transaction fees for each transaction to accomplish the goal and then multiply by how may times we'll need to execute each transaction.
+
+Using `get_global_properties` and the list of operation ID's we find the following transaction fees:
+
+1. Operation \#92 -&gt; `nft_metadata_create_operation` -&gt; Fee = 1PPY, & Fee/Kb of Data = 1PPY
+2. Operation \#94 -&gt; `nft_mint_operation` -&gt; Fee = 1PPY, & Fee/Kb of Data = 1PPY
 
 > Remember the 5 "P's"... Proper planning prevents poor performance!
 
