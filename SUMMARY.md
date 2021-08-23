@@ -46,6 +46,10 @@
 * [NFT Minting](development-guides/nft-minting.md)
 * [Calculating Costs](development-guides/calculating-costs.md)
 
+## The Cookbook <a id="cookbook"></a>
+
+* [NFTs for Staking Creator Tokens](cookbook/nfts-for-staking-creator-tokens.md)
+
 ## Tools and Integrations
 
 * [PeerID](tools-and-integrations/peerid/README.md)
