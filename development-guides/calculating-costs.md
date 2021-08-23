@@ -139,5 +139,9 @@ Parts of the example return have been truncated to fit. The actual return is muc
 {% endtab %}
 {% endtabs %}
 
+### 1.2. An Example
+
+Let's say you need to make 
+
 > Remember the 5 "P's"... Proper planning prevents poor performance!
 
