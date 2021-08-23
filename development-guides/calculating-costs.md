@@ -153,9 +153,15 @@ Using `get_global_properties` and the list of operation ID's you find the follow
 
 You will need to create the custom permissions once: 1 PPY \(the fee\) + 1 PPY \(for 1 Kb worth of data\). Then you will need to create the NFT metadata once: 1 PPY \(the fee\) + 1 PPY \(for 1 Kb worth of data\). Last you will need to mint the 50,000 NFTs, which issues them to the accounts that will ultimately own them: 50,000 PPY \(the fee\) + 50,000 PPY \(for 1 Kb worth of data\).
 
+{% hint style="info" %}
+A Kb \(Kilobyte\) of data can accomodate about 1/2 page worth of text. So unless you have a lot of information to apply to your NFTs, the 1 PPY for a Kb of data should cover most use cases!
+{% endhint %}
+
 When added all together, you get:
 
 1 + 1 + 1 + 1 + 50,000 + 50,000 = **100,004 PPY**
+
+This could represent 50,000 movie tickets, 50,000 shares of a company, or even 50,000 college degrees!
 
 > Remember the 5 "P's"... Proper planning prevents poor performance!
 
