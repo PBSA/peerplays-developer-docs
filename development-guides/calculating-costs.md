@@ -141,14 +141,21 @@ Parts of the example return have been truncated to fit. The actual return is muc
 
 ### 1.2. An Example
 
-Let's say you need to make 50,000 NFTs and issue them to various accounts.
+Let's say you need to make 50,000 NFTs with custom permissions and issue them to various accounts.
 
-To calculate the total cost for this, we'll find the transaction fees for each transaction to accomplish the goal and then multiply by how may times we'll need to execute each transaction.
+To calculate the total cost for this, you'll find the transaction fees for each transaction to accomplish the goal and then multiply by how may times you need to execute each transaction.
 
-Using `get_global_properties` and the list of operation ID's we find the following transaction fees:
+Using `get_global_properties` and the list of operation ID's you find the following transaction fees:
 
-1. Operation \#92 -&gt; `nft_metadata_create_operation` -&gt; Fee = 1PPY, & Fee/Kb of Data = 1PPY
-2. Operation \#94 -&gt; `nft_mint_operation` -&gt; Fee = 1PPY, & Fee/Kb of Data = 1PPY
+1. Operation \#85 -&gt; `custom_account_authority_create_operation` -&gt; Fee = 1PPY & Kb of Data = 1PPY
+2. Operation \#92 -&gt; `nft_metadata_create_operation` -&gt; Fee = 1PPY & Kb of Data = 1PPY
+3. Operation \#94 -&gt; `nft_mint_operation` -&gt; Fee = 1PPY & Kb of Data = 1PPY
+
+You will need to create the custom permissions once: 1 PPY \(the fee\) + 1 PPY \(for 1 Kb worth of data\). Then you will need to create the NFT metadata once: 1 PPY \(the fee\) + 1 PPY \(for 1 Kb worth of data\). Last you will need to mint the 50,000 NFTs, which issues them to the accounts that will ultimately own them: 50,000 PPY \(the fee\) + 50,000 PPY \(for 1 Kb worth of data\).
+
+When added all together, you get:
+
+1 + 1 + 1 + 1 + 50,000 + 50,000 = **100,004 PPY**
 
 > Remember the 5 "P's"... Proper planning prevents poor performance!
 
