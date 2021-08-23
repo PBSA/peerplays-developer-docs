@@ -294,3 +294,7 @@ In the example above:
 {% endtab %}
 {% endtabs %}
 
+## 5. Related Documents
+
+The functions listed in this guide will cost transaction fees. To calculate how much PPY you'll need to make these transactions and meet your development goals, please see the [Calculating Costs](calculating-costs.md) guide.
+
