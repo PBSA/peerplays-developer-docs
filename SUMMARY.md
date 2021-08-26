@@ -63,6 +63,7 @@
 
 * [Sidechain Operator Node \(SON\) Development](supporting-and-reference-docs/sidechain-operator-node-development/README.md)
   * [Generic Sidechain Docs](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/README.md)
+    * [Quick joining GLADIATOR](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/quick-joining-gladiator.md)
     * [Changes to Peerplaysjs-lib](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/changes-to-peerplaysjs-lib.md)
     * [Requirements Specification](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/requirements-specification.md)
     * [Functional Specs](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/functional-specs/README.md)
