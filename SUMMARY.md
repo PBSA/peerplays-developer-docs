@@ -127,6 +127,8 @@
     * [User Account Page](supporting-and-reference-docs/peerplays-dex-development/functional-specs/user-account-page.md)
     * [Voting Page](supporting-and-reference-docs/peerplays-dex-development/functional-specs/voting-page.md)
 * [NFT Development](supporting-and-reference-docs/nft-development/README.md)
+  * [NFT Store](supporting-and-reference-docs/nft-development/nft-store/README.md)
+    * [NFT Store User Stories](supporting-and-reference-docs/nft-development/nft-store/nft-store-user-stories.md)
   * [Django-NFT](supporting-and-reference-docs/nft-development/django-nft/README.md)
     * [Requirements Specification](supporting-and-reference-docs/nft-development/django-nft/requirements-specification.md)
 * [Operation IDs List](supporting-and-reference-docs/operation-ids-list.md)
