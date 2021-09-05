@@ -31,7 +31,7 @@ The purpose of this High Level Design \(HLD\) document is to provide a concise a
 
 ## 5. User Classifications
 
-Several [user personas](https://devs.peerplays.tech/supporting-and-reference-docs/nft-development/nft-store/nft-store-user-stories#3-user-personas) have been identified to facilitate the development of the NFT Store design. While the personas demonstrate how people of various backgrounds may interact with the system, all users within the NFT Store will have the same features available to them. As such, only one type of user exists in the NFT Store, the NFT Store **enjoyer**.
+Several [user personas](https://devs.peerplays.tech/supporting-and-reference-docs/nft-development/nft-store/nft-store-user-stories#3-user-personas) have been identified to facilitate the development of the NFT Store design. While the personas demonstrate how people of various backgrounds may interact with the system, all users within the NFT Store will have the same features available to them. As such, only one type of user exists in the NFT Store, the NFT Store **creator**. They are named "creators" because the purpose of using the NFT store is to create.
 
 ## 6. System Security
 
@@ -39,11 +39,11 @@ The NFT Store server-side security will be accomplished through the use of SSL e
 
 ### 6.1. User Accounts
 
-User accounts are issued and maintained on the blockchain through the [PeerID](https://devs.peerplays.tech/tools-and-integrations/peerid) system integration. Each enjoyer must have a unique account registered in the Peerplays blockchain. Unauthenticated enjoyers can browse the NFT Store, but can't transact with the blockchain and are therefore required to log in to buy/sell/bid, create/edit NFTs, or manage their profile.
+User accounts are issued and maintained on the blockchain through the [PeerID](https://devs.peerplays.tech/tools-and-integrations/peerid) system integration. Each creator must have a unique account registered in the Peerplays blockchain. Unauthenticated enjoyers can browse the NFT Store, but can't transact with the blockchain and are therefore required to log in to buy/sell/bid, create/edit NFTs, create galleries and collections, or manage their profile.
 
 ### 6.2. Passwords
 
-Enjoyer passwords are not stored on the network or PeerID system. Instead, the PeerID system can transact on behalf of the enjoyer using custom permission encrypted public-private key pairs and OAuth access tokens.
+Creator passwords are not stored on the network or PeerID system. Instead, the PeerID system can transact on behalf of the enjoyer using custom permission encrypted public-private key pairs and OAuth access tokens.
 
 ## 7. NFT Store Pages & Features
 
