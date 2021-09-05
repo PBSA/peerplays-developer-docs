@@ -45,19 +45,83 @@ Figure 3 is a visual representation of the points above. The NFT Store is struct
 
 ### 4.2. Creators
 
-Creators are the enjoyers who come to make, buy, sell, and auction NFTs. They need a place to display their NFTs in a way that makes sense to potential buyers.
+Creators are the enjoyers who come to make, buy, sell, and auction NFTs. They need a place to display their NFTs in a way that makes sense to potential buyers. A `creator` object is not yet defined on the blockchain, however, it may be possible to simply use the `account` object that is already defined.
+
+A creator object could be developed like this:
+
+```cpp
+class nft_creator_object : public abstract_object<nft_creator_object>
+   {
+      public:
+         static const uint8_t space_id = protocol_ids;
+         static const uint8_t type_id  = nft_creator_object_type;
+         
+         account_id_type                owner;
+         std::string                    creator_nickname;
+         std::string                    creator_bio;
+         std::string                    creator_avatar_image_uri;
+         std::string                    creator_banner_image_uri;
+         vector<std::string>            creator_social_media_links;
+         vector<nft_gallery_id_type>    gallery_ids;
+         vector<nft_collection_id_type> collection_ids;
+         vector<nft_id_type>            token_ids;
+   }
+```
+
+{% hint style="info" %}
+App settings like notification and display settings will need to be stored off-chain in local \(in browser\) storage. This is to prevent needless blockchain transactions.
+{% endhint %}
 
 ### 4.3. Galleries
 
-Galleries can also be thought of as storefronts, showcases, shops, etc. These are meant to represent the highest level of branding and can provide a very customized, unique, and polished feel for customers. Like entering a store in a shopping mall or plaza, galleries can be used to contain the broadest categories of NFTs that still belong together.
+Galleries can also be thought of as storefronts, showcases, shops, etc. These are meant to represent the highest level of branding and can provide a very customized, unique, and polished feel for customers. Like entering a store in a shopping mall or plaza, galleries can be used to contain the broadest categories of NFTs that still belong together. A `gallery` object is not yet defined on the blockchain.
+
+A gallery object could be developed like this:
+
+```cpp
+class nft_gallery_object : public abstract_object<nft_gallery_object>
+   {
+      public:
+         static const uint8_t space_id = protocol_ids;
+         static const uint8_t type_id  = nft_gallery_object_type;
+         
+         account_id_type     owner;
+         // nft_creator_id_type creator; // If using the creator object.
+         std::string         gallery_title;
+         std::string         gallery_description;
+         std::string         gallery_thumbnail_image_uri;
+         std::string         gallery_banner_image_uri;
+         vector<nft_collection_id_type> collection_ids;
+         vector<nft_id_type> token_ids;
+   }
+```
 
 ### 4.4. Collections
 
-Collections are essentially sets of related NFTs. Collections are meant for narrower categories so that the NFTs within are closely related.
+Collections are essentially sets of related NFTs. Collections are meant for narrower categories so that the NFTs within are closely related. A `collection` object is not yet defined on the blockchain.
+
+A collection object could be developed like this:
+
+```cpp
+class nft_collection_object : public abstract_object<nft_collection_object>
+   {
+      public:
+         static const uint8_t space_id = protocol_ids;
+         static const uint8_t type_id  = nft_collection_object_type;
+         
+         account_id_type     owner;
+         // nft_creator_id_type creator; // If using the creator object.
+         std::string         collection_title;
+         std::string         collection_description;
+         std::string         collection_thumbnail_image_uri;
+         std::string         collection_banner_image_uri;
+         vector<nft_id_type> token_ids;
+   }
+```
 
 ### 4.5. NFTs
 
-NFTs are the discrete units of sale. They may exist as one-offs that don't belong to any collection. More often they can relate closely together as a collection.
+NFTs are the discrete units of sale. They may exist as one-offs that don't belong to any collection. More often they can relate closely together as a collection. NFTs are already defined as objects on the blockchain. They allow the creator to set custom permissions and even to edit their metadata.
 
 ### 4.6. Some Examples
 
