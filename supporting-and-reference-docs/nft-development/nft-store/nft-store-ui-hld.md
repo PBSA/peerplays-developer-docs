@@ -251,6 +251,32 @@ It's also possible to view the profiles of other enjoyers. This displays their o
 
 #### 7.3.1. Creating a New NFT
 
+Creating an NFT using the CLI Wallet program is a multi-step process. This process gets more complex if applying custom permissions to the NFTs. The most complex workflow consists of the following steps:
+
+1. Create an **Account Role**. This requires...
+   1. the name of the new role
+   2. any additional metadata you need to store
+   3. the list of operations to allow for the new role
+   4. the list of accounts that are applied to this role
+   5. the timestamp for when this role expires
+2. Create an **NFT Metadata** object using the new Account Role. This requires...
+   1. the name of the NFTs that will be created with this metadata
+   2. the symbol of the NFTs that will be created with this metadata
+   3. the URI of the NFTs that will be created with this metadata
+   4. the account name of the revenue partner \(who gets royalties on all sales\)
+   5. the revenue split amount \(the percentage of the sales that go to the revenue partner\)
+   6. if the minted NFTs are transferable
+   7. if the minted NFTs are sell-able \(or auctionable\)
+   8. the Account Role id from step 1
+3. And finally, **create the NFT**. This requires...
+   1. the account of the owner of the Metadata from step 2
+   2. the Metadata id from step 2
+   3. the owner of the minted NFT
+   4. the approved account of the minted NFT \(usually the owner\)
+   5. the URI of this specific minted NFT
+
+
+
 #### 7.3.2. Editing an Existing NFT
 
 #### 7.3.3. The Creator's Owned NFTs \(My NFTs\)
