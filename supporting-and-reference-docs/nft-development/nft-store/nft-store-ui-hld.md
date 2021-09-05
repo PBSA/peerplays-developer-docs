@@ -275,7 +275,7 @@ Creating an NFT using the CLI Wallet program is a multi-step process. This proce
    4. the approved account of the minted NFT \(usually the owner\)
    5. the URI of this specific minted NFT
 
-
+This requires three transactions on the blockchain and a lot of information gathering. 
 
 #### 7.3.2. Editing an Existing NFT
 
