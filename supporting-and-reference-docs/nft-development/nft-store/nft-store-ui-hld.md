@@ -200,6 +200,12 @@ The page body contains the content of the specific page.
 
 The site footer contains marketing content, social media site links, broader scope of navigation, and links to legal documents such as privacy policy and terms of service, if required.
 
+All object lists \(NFTs, Creators, Transactions, Galleries, Collections, etc.\) will provide the basic functions for various view options:
+
+* List view / grid view / detail view
+* sorting / filtering / searching
+* pagination / number of items per page
+
 ### 7.1. Accessing the NFT Store
 
 #### 7.1.1. The NFT Store Homepage
@@ -266,7 +272,7 @@ Creating an NFT using the CLI Wallet program is a multi-step process. This proce
    4. the account name of the revenue partner \(who gets royalties on all sales\)
    5. the revenue split amount \(the percentage of the sales that go to the revenue partner\)
    6. if the minted NFTs are transferable
-   7. if the minted NFTs are sell-able \(or auctionable\)
+   7. if the minted NFTs are sell-able \(or auction-able\)
    8. the Account Role id from step 1
 3. And finally, **create the NFT**. This requires...
    1. the account of the owner of the Metadata from step 2
@@ -275,15 +281,72 @@ Creating an NFT using the CLI Wallet program is a multi-step process. This proce
    4. the approved account of the minted NFT \(usually the owner\)
    5. the URI of this specific minted NFT
 
-This requires three transactions on the blockchain and a lot of information gathering. 
+This requires three operations on the blockchain and a lot of information gathering. The workflow steps can be recreated, and the required information simplified, as a single GUI page in the NFT Store. The necessary details can be entered by the creator on one page. Then the workflow can follow the appropriate steps, in order, behind the scenes.
+
+To maintain user-friendliness, the NFT Store UI can combine the concepts of the Account Role, NFT Metadata, and NFT minting operations into a unified "NFT Template" or similar idea. The NFT Store can also provide pre-populated input fields \(drop-downs, radio buttons, etc.\) with valid data to avoid data validation issues, malicious inputs, and messy / accidental inputs. 
 
 #### 7.3.2. Editing an Existing NFT
 
+Editing an NFT or set of NFTs can also be a single page. Similar to creating an NFT, editing an NFT can be presented as editing a unified "NFT Template" or similar. Special care must be given to educating creators as to how editing NFTs can effect people who own minted NFTs from their metadata. This concept is very different from Ethereum based NFTs! For example, Account Roles do expire and may need to be updated later. Also, revenue share and permission settings on the metadata can be changed.
+
 #### 7.3.3. The Creator's Owned NFTs \(My NFTs\)
+
+A list of owned NFTs must be provided for the creator and others to view. This list helps the creator manage their NFTs and others to browse. From this list creators can quickly get basic info about their NFTs, list them for sale/auction, kick off a search for similar NFTs, and mark their favorite NFTs.
+
+Specifically, the list view should offer the following for each item in the list:
+
+* NFT name \(or symbol\)
+* the creator's nickname and link to their profile
+* collection name  with link to the collection \(if applicable\)
+* function to favorite / un-favorite
+* a thumbnail image
+* link to the details page for this NFT
+* a quick menu:
+  * List it for sale / auction \(if owned by the logged in creator\)
+  * Buy it now / make a bid \(if owned by another creator\)
+  * Search for similar NFTs
 
 #### 7.3.4. NFTs On Offer \(for sale / auction\)
 
+The list of NFTs on offer is one of the most important pages of the NFT Store. It displays all the NFTs that are currently on offer \(for sale or for auction\). This page shows all NFTs together as a generic NFT Store gallery. Creators, galleries, and collections become facets of the sort, filter, and search functions of this page. Enjoyers browsing the NFTs on offer page can also use commonly found NFT metadata parameters to customize their search.
+
 #### 7.3.5. NFT Details Page
+
+The NFT Details page will provide all the NFT's information, including but not limited to:
+
+* NFT name
+* NFT symbol
+* NFT description
+* Creator \(NFT metadata owner\)
+* Owner \(NFT instance owner\)
+* NFT URI
+* NFT image, video, music, 3D model, etc. \(the payload\)
+* if the NFT has unlockable data
+* revenue partner
+* revenue split
+* if transfers are allowed
+* if selling is allowed
+* account role owner
+* account role name
+* account role permissions
+* account role accounts
+* account role custom metadata
+* when the account role expires
+* NFT custom metadata \(custom parameters\)
+* if the NFT belongs to a collection, and which one
+
+This page should be equiped to display the intended payload of the NFT. For example, if the NFT contains a video, the video should be displayed in a video player.
+
+In addition to the NFT specific information, pricing and other market information should be available. This should include:
+
+* lifetime transactions of this NFT
+  * transaction type \(transfer, sold, auctioned, minted\)
+  * transaction participants
+  * transaction date, block number
+  * transaction price, if applicable
+  * transaction currency \(PPY, BTC, USD\)
+* Price history
+* Estimated value
 
 ### 7.4 Collection Pages
 
