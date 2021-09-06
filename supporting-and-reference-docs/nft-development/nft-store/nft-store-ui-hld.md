@@ -112,6 +112,7 @@ class nft_collection_object : public abstract_object<nft_collection_object>
          account_id_type     owner;
          // nft_creator_id_type creator; // If using the creator object.
          std::string         collection_title;
+         vector<std::string> collection_categories;
          std::string         collection_description;
          std::string         collection_thumbnail_image_uri;
          std::string         collection_banner_image_uri;
@@ -123,7 +124,7 @@ class nft_collection_object : public abstract_object<nft_collection_object>
 
 NFTs are the discrete units of sale. They may exist as one-offs that don't belong to any collection. More often they can relate closely together as a collection. NFTs are already defined as objects on the blockchain. They allow the creator to set custom permissions and even to edit their metadata.
 
-Additional fields that might be standard in the NFT Store, such as the NFT description and custom key-value pair parameters, could be stored in the `token_uri` field of the minted NFT or the `base_uri` field of the NFT Metadata object already defined on the blockchain. These fields are simple string fields and could accomodate JSON objects with such info.
+Additional fields that might be standard in the NFT Store, such as the NFT description, category, and custom key-value pair parameters, could be stored in the `token_uri` field of the minted NFT or the `base_uri` field of the NFT Metadata object already defined on the blockchain. These fields are simple string fields and could accommodate JSON objects with such info.
 
 ### 4.6. Some Examples
 
@@ -255,6 +256,17 @@ Display settings include:
 
 It's also possible to view the profiles of other enjoyers. This displays their owned NFTs, NFT Collections, NFT Stores, account activity, public profile info, and activity relating to the logged in enjoyer \(if any\).
 
+#### 7.2.3. Transactions List
+
+Transaction lists should be available on the profiles of creators. These will list transaction histories from the perspective of the creator rather than the perspective of the NFT. This should provide the same information available in other transaction lists, like:
+
+* transaction type \(transfer, sold, auctioned, minted\)
+* transaction participants
+* transaction date, block number
+* transaction item \(the NFT\)
+* transaction price, if applicable
+* transaction currency \(PPY, BTC, USD\)
+
 ### 7.3 NFT Pages
 
 #### 7.3.1. Creating a New NFT
@@ -327,6 +339,12 @@ The NFT Details page will provide all the NFT's information, including but not l
 * NFT URI
 * NFT image, video, music, 3D model, etc. \(the payload\)
 * if the NFT has unlock-able data
+* stake NFT info \(if applicable\)
+  * NFT age and maturity date
+  * claimed rewards / unclaimed rewards
+  * voting power
+  * stake quantity and currency
+  * Peerplays community \(if applicable\)
 * revenue partner
 * revenue split
 * if transfers are allowed
@@ -339,6 +357,7 @@ The NFT Details page will provide all the NFT's information, including but not l
 * when the account role expires
 * NFT custom metadata \(custom parameters\)
 * if the NFT belongs to a collection, and which one
+* if the NFT belongs \(directly\) to a gallery, and which one
 
 This page should be equipped to display the intended payload of the NFT. For example, if the NFT contains a video, the video should be displayed in a video player.
 
@@ -358,30 +377,51 @@ A variety of functions should also be available on this page as well:
 
 * favorite / un-favorite function
 * sharing options
+* add to / remove from collection
+* add to / remove from gallery
 * listings of this NFT for sale
   * with an option to buy
 * offers to buy this NFT
 * list of other NFTs in the same collection
 
-### 7.4 Collection Pages
+### 7.4 Collection & Gallery Pages
 
-#### 7.4.1. Creating a New Collection
+#### 7.4.1. Creating a New Collection / Gallery
 
-#### 7.4.2. Editing an Existing Collection
+**Collections** can be created to group related NFTs together. A creator can give the collection a title, description, a banner and thumbnail image, and select its appropriate categories. This is like a display you would find in a supermarket for a brand of candy bar. There may be multiple flavors but they are all the same brand and have the same marketing message.
 
-#### 7.4.3. The Creator's Collections \(My Collections\)
+**Galleries** can be created to group similar collections and/or distinct NFTs. A creator can give the gallery its own title, description, banner and thumbnail image. Since galleries are the top level of hierarchy, they don't get categories. They can contain collections and NFTs with multiple different categories. Continuing the supermarket analogy, a gallery would represent a whole department within the store. This is like the whole candy isle with all its different brands and marketing messages.
 
-#### 7.4.4. Collection Details Page
+#### 7.4.2. Editing an Existing Collection / Gallery
 
-### 7.5 Gallery Pages
+Editing collections and galleries is a simple matter of giving creators a form to change their existing information.
 
-#### 7.5.1. Creating a New Gallery
+NFTs can be added and removed from collections.
 
-#### 7.5.2. Editing an Existing Gallery
+NFTs and collections can be added and removed from galleries.
 
-#### 7.5.3. The Creator's Galleries \(My Galleries\)
+#### 7.4.3. The Creator's Collections / Galleries \(My Collections / My Galleries\)
 
-#### 7.5.4. Gallery Details Page
+These pages display the collections or galleries owned by a given creator. Much like the list of NFTs, basic information should be displayed about each item in the list.
+
+* title
+* images
+* categories \(for collections\)
+* owner name
+* number of contained NFTs
+
+#### 7.4.4. Collection Details / Gallery Details Page
+
+The collection or gallery details page would be the display of the collection or gallery itself. These pages would display the contents of the given collection or gallery along with their branding. The lists of NFTs provided by these pages offer robust sorting, filtering, and searching, just like the overall NFTs on offer page but specific to the collection or gallery.
 
 ## 8. Help and User Support
+
+Links to help documents should be provided from the navigation menu. Pages within the NFT Store can also be available to support NFT Store branding on help documents. Documents should provide help in a variety of formats, such as:
+
+* FAQs
+* User Guides on specific topics \(like creating an NFT, buying an NFT, wallet info, etc.\)
+* Conceptual guides \(like What is an NFT, Why I should buy an NFT, etc.\)
+* Security information \(like known NFT scams and how to avoid them, reporting bad activity, etc.\)
+* Video guides \(use universal design theory, like providing captions or transcripts, etc.\)
+* P2P help forums or Stack Overflow-like Q&A portals
 
