@@ -123,6 +123,8 @@ class nft_collection_object : public abstract_object<nft_collection_object>
 
 NFTs are the discrete units of sale. They may exist as one-offs that don't belong to any collection. More often they can relate closely together as a collection. NFTs are already defined as objects on the blockchain. They allow the creator to set custom permissions and even to edit their metadata.
 
+Additional fields that might be standard in the NFT Store, such as the NFT description and custom key-value pair parameters, could be stored in the `token_uri` field of the minted NFT or the `base_uri` field of the NFT Metadata object already defined on the blockchain. These fields are simple string fields and could accomodate JSON objects with such info.
+
 ### 4.6. Some Examples
 
 <table>
@@ -317,11 +319,14 @@ The NFT Details page will provide all the NFT's information, including but not l
 * NFT name
 * NFT symbol
 * NFT description
-* Creator \(NFT metadata owner\)
-* Owner \(NFT instance owner\)
+* NFT category
+* Creator name\(NFT metadata owner\)
+  * avatar icon
+* Owner name\(NFT instance owner\)
+  * avatar icon
 * NFT URI
 * NFT image, video, music, 3D model, etc. \(the payload\)
-* if the NFT has unlockable data
+* if the NFT has unlock-able data
 * revenue partner
 * revenue split
 * if transfers are allowed
@@ -335,7 +340,7 @@ The NFT Details page will provide all the NFT's information, including but not l
 * NFT custom metadata \(custom parameters\)
 * if the NFT belongs to a collection, and which one
 
-This page should be equiped to display the intended payload of the NFT. For example, if the NFT contains a video, the video should be displayed in a video player.
+This page should be equipped to display the intended payload of the NFT. For example, if the NFT contains a video, the video should be displayed in a video player.
 
 In addition to the NFT specific information, pricing and other market information should be available. This should include:
 
@@ -345,8 +350,18 @@ In addition to the NFT specific information, pricing and other market informatio
   * transaction date, block number
   * transaction price, if applicable
   * transaction currency \(PPY, BTC, USD\)
-* Price history
+* Price & volume history
 * Estimated value
+* Estimated popularity
+
+A variety of functions should also be available on this page as well:
+
+* favorite / un-favorite function
+* sharing options
+* listings of this NFT for sale
+  * with an option to buy
+* offers to buy this NFT
+* list of other NFTs in the same collection
 
 ### 7.4 Collection Pages
 
