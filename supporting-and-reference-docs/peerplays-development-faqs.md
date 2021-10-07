@@ -2,7 +2,7 @@
 
 ## Bitcoin-SON
 
-### How can I generate Bitcoin addresses?
+### ❓ How can I generate Bitcoin addresses?
 
 Command:
 
@@ -16,11 +16,11 @@ References:
 
 {% embed url="https://developer.bitcoin.org/reference/rpc/getnewaddress.html" %}
 
-### How to get TEST BTC on the REGTEST network?
+### ❓ How to get TEST BTC on the REGTEST network?
 
 
 
-### How can I generate / find the public key for a Bitcoin address?
+### ❓ How can I generate / find the public key for a Bitcoin address?
 
 Command:
 
@@ -34,31 +34,31 @@ References:
 
 {% embed url="https://developer.bitcoin.org/reference/rpc/getaddressinfo.html" %}
 
-### If funds are deposited to a Bitcoin address, will there be logs?
+### ❓ If funds are deposited to a Bitcoin address, will there be logs?
 
 
 
-### What is the cli\_command to generate a Bitcoin deposit address in the Peerplays blockchain?
+### ❓ What is the cli\_command to generate a Bitcoin deposit address in the Peerplays blockchain?
 
 
 
-### If a Bitcoin deposit address is created for a Peerplays address \(account\) what are the logs in the Peerplays blockchain?
+### ❓ If a Bitcoin deposit address is created for a Peerplays address \(account\) what are the logs in the Peerplays blockchain?
 
 
 
-### How to run a Peerplays blockchain node with RPC debugging turned on?
+### ❓ How to run a Peerplays blockchain node with RPC debugging turned on?
 
 
 
 ## Gamified Proof of Stake \(GPOS\)
 
-### What are the blockchain logs when a successful GPOS Vesting is done?
+### ❓ What are the blockchain logs when a successful GPOS Vesting is done?
 
 
 
 ## Faucet
 
-### What are the logs in faucet when an account is successfully created?
+### ❓ What are the logs in faucet when an account is successfully created?
 
 One can use **Curl** command or **POSTMAN** in order to create a new account in the Faucet. With **Curl** you can do the following:
 
