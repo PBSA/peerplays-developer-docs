@@ -15,7 +15,7 @@ NFTs are rapidly growing in terms of scope and scale. New kinds of users are fin
   * homepage with initial navigation, marketing, search bar
 * Account
   * login / logout
-  * create new
+  * create new \(using email, Facebook, or Discord\)
 * Profile
   * manage profile / app settings, user help tickets, messages \(user's profile\)
   * view NFTs owned & on offer, public info \(other user's profile\)
@@ -28,10 +28,10 @@ NFTs are rapidly growing in terms of scope and scale. New kinds of users are fin
   * single NFT view
 * NFT Market List
   * multiple NFTs on offer
-* Knowledgebase / Support
+* Knowledge base / Support
   * FAQs
   * user support
-  * help docs / how-to's
+  * help docs / how-to docs
 * Admin Panel
   * dashboard
   * user help tickets
