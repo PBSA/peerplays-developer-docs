@@ -18,7 +18,37 @@ References:
 
 ### ❓ How to get TEST BTC on the REGTEST network?
 
+From developer.bitcoin.org...
 
+> For situations where interaction with random peers and blocks is unnecessary or unwanted, Bitcoin Core’s regression test mode \(regtest mode\) lets you instantly create a brand-new private block chain with the same basic rules as testnet—but one major difference: you choose when to create new blocks, so you have complete control over the environment.
+>
+> Many developers consider regtest mode the preferred way to develop new applications. The following example will let you create a regtest environment after you first [configure bitcoind](https://developer.bitcoin.org/examples/index.html).
+
+```text
+bitcoind -regtest -daemon
+```
+
+> Start `bitcoind` in regtest mode to create a private block chain.
+
+```text
+bitcoin-cli -regtest generatetoaddress 101 $(bitcoin-cli -regtest getnewaddress)
+```
+
+> Generate 101 blocks using a special [RPC](https://developer.bitcoin.org/reference/rpc/index.html) which is only available in regtest mode. This takes less than a second on a generic PC. Because this is a new block chain using Bitcoin’s default rules, the first blocks pay a block reward of 50 bitcoins. Unlike mainnet, in regtest mode only the first 150 blocks pay a reward of 50 bitcoins. However, a block must have 100 confirmations before that reward can be spent, so we generate 101 blocks to get access to the coinbase transaction from block \#1.
+
+```text
+bitcoin-cli -regtest getbalance
+```
+
+> Verify that we now have 50 bitcoins available to spend.
+>
+> You can now use Bitcoin Core [RPCs](https://developer.bitcoin.org/reference/rpc/index.html) prefixed with `bitcoin-cli -regtest`.
+>
+> Regtest wallets and block chain state \(chainstate\) are saved in the `regtest` subdirectory of the Bitcoin Core configuration directory. You can safely delete the `regtest` subdirectory and restart Bitcoin Core to start a new regtest. \(See the [Developer Examples Introduction](https://developer.bitcoin.org/examples/index.html) for default configuration directory locations on various operating systems. Always back up mainnet wallets before performing dangerous operations such as deleting.\)
+
+Reference:
+
+{% embed url="https://developer.bitcoin.org/examples/testing.html\#regtest-mode" %}
 
 ### ❓ How can I generate / find the public key for a Bitcoin address?
 
