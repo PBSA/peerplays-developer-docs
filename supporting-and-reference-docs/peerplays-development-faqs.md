@@ -93,7 +93,7 @@ add_sidechain_address <account> <sidechain> <deposit_public_key> <withdraw_publi
 Command Example:
 
 ```text
-add_sidechain_address myaccount123 bitcoin 
+add_sidechain_address myaccount123 bitcoin 03c8d1c33727788ca1f61e13bdeca0127047527a0880c816056b4015d6e2d36c1e 025cee805793fd94ca1933cc28ef9c065addd0e256195f1a541be0cd21867ac1c5 1EToWbQDvEwwie6jYsuM7WkZnh7rCn5Ecu true
 ```
 
 Reference:
