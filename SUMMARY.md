@@ -61,6 +61,7 @@
 
 ## Supporting & Reference Docs
 
+* [Peerplays Development FAQs](supporting-and-reference-docs/peerplays-development-faqs.md)
 * [Sidechain Operator Node \(SON\) Development](supporting-and-reference-docs/sidechain-operator-node-development/README.md)
   * [Generic Sidechain Docs](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/README.md)
     * [Quick joining GLADIATOR](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/quick-joining-gladiator.md)
