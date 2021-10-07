@@ -137,6 +137,10 @@
 * [Sidechain Flow Diagram \(HIVE coin\)](supporting-and-reference-docs/sidechain-flow-diagram-hive.md)
 * [Sidechain Flow Diagram \(Bitcoin\)](supporting-and-reference-docs/sidechain-flow-diagram-bitcoin.md)
 
+## Development Workflow Docs
+
+* [Development Workflow](development-workflow-docs/development-workflow.md)
+
 ## Other Documentation
 
 ---
