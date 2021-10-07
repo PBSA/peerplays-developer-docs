@@ -17,7 +17,7 @@ NFTs are rapidly growing in terms of scope and scale. New kinds of users are fin
   * login / logout
   * create new
 * Profile
-  * manage profile / app settings \(user's profile\)
+  * manage profile / app settings, user help tickets, messages \(user's profile\)
   * view NFTs owned & on offer, public info \(other user's profile\)
 * My NFTs
   * multiple NFTs owned by user
@@ -28,6 +28,16 @@ NFTs are rapidly growing in terms of scope and scale. New kinds of users are fin
   * single NFT view
 * NFT Market List
   * multiple NFTs on offer
+* Knowledgebase / Support
+  * FAQs
+  * user support
+  * help docs / how-to's
+* Admin Panel
+  * dashboard
+  * user help tickets
+  * messaging system
+  * flagged users / content
+  * logs
 
 ## 3. User Personas
 
@@ -82,6 +92,7 @@ NFTs are rapidly growing in terms of scope and scale. New kinds of users are fin
     * Being alerted to and moderating inappropriate content and user behavior.
     * Elevated abilities to edit content, soft/hard ban users, and communicate with users.
     * Need to view/search detailed information, extended metadata, logs, etc. not commonly available to users \(perhaps in an admin panel\).
+    * Tracking of user issues and providing user support.
 
 ## 4. User Stories
 
@@ -168,4 +179,16 @@ As an **NFT Collector**...
 | 7.3 | the ability to set an NFT as a "favorite" or to "watch" it | I can buy it as soon as it's for sale / auction. |
 | 7.4 | notifications about certain NFTs | I won't miss an opportunity to buy a collectable. |
 | 7.5 | to see information about the authenticity, rarity, authorship, etc. | I know I have an original copy with a certain rarity, etc. |
+
+### 4.8. Story collection 8
+
+As an **NFT Store Admin**...
+
+| Story \# | I want... | so that... |
+| :--- | :--- | :--- |
+| 8.1 | An admin panel with a dashboard and pages dedicated to detailed information | I have all the information I need displayed in a way that makes my job easy. |
+| 8.2 | To view all the flagged users and content | I can moderate user behavior and site content and make good decisions to improve the user experience. |
+| 8.3 | To be able to communicate with users in the dapp | I can notify and work with users to help moderate content and collaborate on resolving issues. |
+| 8.4 | my admin account to be obviously marked as an admin account in comments, messages, and the profile page | users understand I have elevated privileges due to the responsibilities I have to moderate the site. |
+| 8.5 | A ticketing system for user support | I can track and resolve user issues. |
 
