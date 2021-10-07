@@ -54,7 +54,7 @@ References:
 
 ### What are the blockchain logs when a successful GPOS Vesting is done?
 
-Yes, after a few months we finally found the answer. Sadly, Mike is on vacations right now so I'm afraid we are not able to provide the answer at this point.
+
 
 ## Faucet
 
