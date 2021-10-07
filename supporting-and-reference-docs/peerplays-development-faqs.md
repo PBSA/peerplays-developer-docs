@@ -70,7 +70,35 @@ References:
 
 ### ❓ What is the cli\_command to generate a Bitcoin deposit address in the Peerplays blockchain?
 
+Command Definition:
 
+{% code title="return type, namespace, & method" %}
+```cpp
+signed_transaction graphene::wallet::wallet_api::add_sidechain_address(
+    string account,
+    sidechain_type sidechain,
+    string deposit_public_key,
+    string withdraw_public_key,
+    string withdraw_address,
+    bool broadcast);
+```
+{% endcode %}
+
+Command Structure:
+
+```text
+add_sidechain_address <account> <sidechain> <deposit_public_key> <withdraw_public_key> <withdraw_address> true
+```
+
+Command Example:
+
+```text
+add_sidechain_address myaccount123 bitcoin 
+```
+
+Reference:
+
+{% embed url="https://infra.peerplays.tech/the-basics/using-the-cli-wallet/cli-commands-for-sons\#2-sidechains-cli-command-reference" %}
 
 ### ❓ If a Bitcoin deposit address is created for a Peerplays address \(account\) what are the logs in the Peerplays blockchain?
 
