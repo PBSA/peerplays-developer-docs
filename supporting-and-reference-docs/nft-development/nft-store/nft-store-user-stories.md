@@ -70,12 +70,18 @@ NFTs are rapidly growing in terms of scope and scale. New kinds of users are fin
     * Finding knowledge on the workings of the NFT Store.
 * **NFT Collector**
   * Main Motivation: Finding specific NFTs to collect and hold.
-  * Other Motivation:
   * Concerns:
     * Finding authenticity, rarity, authorship, and transactional information on specific NFTs.
     * Finding information about related NFTs \(collections, sets, etc.\)
     * Robust feature-set to view a display of their NFTs.
     * Detailed view of single NFTs.
+* **NFT Store Admin**
+  * Main Motivation: General management of the NFT Store.
+  * Other Motivation: User and Content moderation.
+  * Concerns:
+    * Being alerted to and moderating inappropriate content and user behavior.
+    * Elevated abilities to edit content, soft/hard ban users, and communicate with users.
+    * Need to view/search detailed information, extended metadata, logs, etc. not commonly available to users \(perhaps in an admin panel\).
 
 ## 4. User Stories
 
