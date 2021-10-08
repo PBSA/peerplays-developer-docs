@@ -173,3 +173,75 @@ And look for logs when receiving **Create Account** requests, with **200** statu
 37.252.95.183 - - [06/Oct/2021 17:55:30] "POST /api/v1/accounts HTTP/1.1" 200 -
 ```
 
+## Peerplays DEX
+
+### ❓ How do I setup a local DEX UI project?
+
+This works with a Faucet and a local QA environment \(create account & login\).
+
+First, pull the DEX repository from [here](https://gitlab.com/PBSA/peerplays-dex/-/tree/develop).
+
+After setting up the project, update the following variables in .env file:
+
+```text
+FAUCET_URL='http://<IP_ADDRESS>:5000/api/v1/accounts'
+BLOCKCHAIN_ENDPOINTS='ws://<IP_ADDRESS>:8090/api'
+```
+
+{% hint style="info" %}
+**IP\_ADDRESS** should be **127.0.0.1** or **localhost** when running it directly on your local machine.
+{% endhint %}
+
+## Peerplays QA Environment
+
+### ❓ How do I transfer funds between accounts in a Peerplays QA Environment network?
+
+In the QA environment setup by instructions in [here](https://gitlab.com/PBSA/tools-libs/peerplays-utils/-/tree/master/peerplays-qa-environment), execute commands in Peerplays01 container with the following:
+
+```text
+docker exec -it peerplaysqaenvironment_peerplays01_1 /bin/bash
+```
+
+Then running into account’s wallet:
+
+```text
+./cli_wallet list_account_balances <ACCOUNT_NAME>
+For example: ./cli_wallet list_account_balances armin
+```
+
+Unlock the wallet with the default password \(which is "password"\):
+
+```text
+unlock password
+```
+
+Get the private key for active key \(public key\):
+
+```text
+get_private_key_from_password "<ACCOUNT_NAME>" active "<ACCOUNT_PASSWORD>"
+```
+
+{% hint style="info" %}
+ACCOUNT\_PASSWORD is the password defined when creating account in DEX UI.
+{% endhint %}
+
+Import the private key returned from previous step:
+
+```text
+import_key <ACCOUNT_NAME> <PRIVATE_KEY>
+For example:
+import_key armin 5JckQ6g57P9YyyumHCRj1cNbHTiMEUVA2HjVDJqXDDPYizEaAMu
+```
+
+Finally transfer with the following:
+
+```text
+transfer <FROM_ACCOUNT_NAME> <TO_ACCOUNT_NAME> <AMOUNT> TEST "" true 
+For example: transfer armin nathan 10 TEST "" true
+```
+
+{% hint style="info" %}
+memo key should be empty string for it to work.  
+With list\_core\_accounts command you can check all account’s balances.
+{% endhint %}
+
