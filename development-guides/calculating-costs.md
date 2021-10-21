@@ -18,7 +18,9 @@ Then you can use your combined list to easily calculate the total transaction co
 
 An example of the combined list of Operation IDs, Operation Names, and their Fees:
 
-{% file src="../.gitbook/assets/peerplays-operations.xlsx" caption="Peerplays Operations with Fees" %}
+{% file src="../.gitbook/assets/peerplays-operations.xlsx" %}
+Peerplays Operations with Fees
+{% endfile %}
 
 {% hint style="info" %}
 PPY has a precision of 5. So the numbers listed in the `get_global_properties` function are in Satoshi. That is to say, to convert this number to nominal units, a decimal point is added 5 places from the right.
@@ -32,9 +34,9 @@ Some examples:
 
 ### 1.1. get\_global\_properties
 
-This function returns the blockchain’s slowly-changing settings \(like the fees for each operation\). 
+This function returns the blockchain’s slowly-changing settings (like the fees for each operation).&#x20;
 
-This object contains all of the properties of the blockchain that are fixed or that change only once per maintenance interval \(daily\) such as the current list of witnesses, committee\_members, block interval, etc.
+This object contains all of the properties of the blockchain that are fixed or that change only once per maintenance interval (daily) such as the current list of witnesses, committee\_members, block interval, etc.
 
 {% code title="return type, namespace, & method" %}
 ```cpp
@@ -46,8 +48,8 @@ global_property_object graphene::wallet::wallet_api::get_global_properties()cons
 {% tab title="Function Call" %}
 Calling this function is simple:
 
-{% code title="In the cli\_wallet..." %}
-```text
+{% code title="In the cli_wallet..." %}
+```
 get_global_properties
 ```
 {% endcode %}
@@ -56,7 +58,7 @@ get_global_properties
 {% tab title="Return" %}
 The `global_property_object` is returned:
 
-```text
+```
 get_global_properties
 {
   "id": "2.0.0",
@@ -147,21 +149,20 @@ To calculate the total cost for this, you'll find the transaction fees for each 
 
 Using `get_global_properties` and the list of operation ID's you find the following transaction fees:
 
-1. Operation \#85 -&gt; `custom_account_authority_create_operation` -&gt; Fee = 1PPY & Kb of Data = 1PPY
-2. Operation \#92 -&gt; `nft_metadata_create_operation` -&gt; Fee = 1PPY & Kb of Data = 1PPY
-3. Operation \#94 -&gt; `nft_mint_operation` -&gt; Fee = 1PPY & Kb of Data = 1PPY
+1. Operation #85 -> `custom_account_authority_create_operation` -> Fee = 1PPY & Kb of Data = 1PPY
+2. Operation #92 -> `nft_metadata_create_operation` -> Fee = 1PPY & Kb of Data = 1PPY
+3. Operation #94 -> `nft_mint_operation` -> Fee = 1PPY & Kb of Data = 1PPY
 
-You will need to create the custom permissions once: 1 PPY \(the fee\) + 1 PPY \(for 1 Kb worth of data\). Then you will need to create the NFT metadata once: 1 PPY \(the fee\) + 1 PPY \(for 1 Kb worth of data\). Last you will need to mint the 50,000 NFTs, which issues them to the accounts that will ultimately own them: 50,000 PPY \(the fee\) + 50,000 PPY \(for 1 Kb worth of data\).
+You will need to create the custom permissions once: 1 PPY (the fee) + 1 PPY (for 1 Kb worth of data). Then you will need to create the NFT metadata once: 1 PPY (the fee) + 1 PPY (for 1 Kb worth of data). Last you will need to mint the 50,000 NFTs, which issues them to the accounts that will ultimately own them: 50,000 PPY (the fee) + 50,000 PPY (for 1 Kb worth of data).
 
 {% hint style="info" %}
-A Kb \(Kilobyte\) of data can accommodate about 1/2 page worth of text. So unless you have a lot of information to apply to your NFTs, the 1 PPY for a Kb of data should cover most use cases!
+A Kb (Kilobyte) of data can accommodate about 1/2 page worth of text. So unless you have a lot of information to apply to your NFTs, the 1 PPY for a Kb of data should cover most use cases!
 {% endhint %}
 
 When added all together, you get:
 
-1 + 1 + 1 + 1 + 50,000 + 50,000 = **100,004 PPY** cost in transaction fees to accomplish your goal.
+1 + 1 + 1 + 1 + 50,000 + 50,000 = **100,004 PPY **cost in transaction fees to accomplish your goal.
 
 This could represent 50,000 movie tickets, 50,000 shares of a company, or even 50,000 college degrees!
 
-> Remember the 5 "P's"... Proper planning prevents poor performance!
-
+> Remember the 5 "P's"... Proper planning prevents poor performance!&#x20;

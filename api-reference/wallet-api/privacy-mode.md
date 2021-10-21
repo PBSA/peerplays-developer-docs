@@ -42,7 +42,7 @@ string graphene::wallet::wallet_api::get_key_label(
 {% endtab %}
 
 {% tab title="Return" %}
-The label if already set by [`set_key_label()`](privacy-mode.md#set_key_label), or an empty string if not set
+The label if already set by [`set_key_label()`](https://app.gitbook.com/s/-McxsyggfxkblmD-4Tzy/api-reference/wallet-api/privacy-mode.md#set\_key\_label), or an empty string if not set
 {% endtab %}
 {% endtabs %}
 
@@ -260,4 +260,3 @@ wallet_api
 A blind receipt.
 {% endtab %}
 {% endtabs %}
-

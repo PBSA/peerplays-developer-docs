@@ -1,5 +1,4 @@
 ---
-title: Peerplays Dex Requirements Specification
 description: >-
   The Peerplays Decentralized Exchange (DEX) platform design requirements
   specification.
@@ -9,7 +8,7 @@ description: >-
 
 ## 1. Introduction
 
-This requirements specification \(RS\) describes the high-level requirements for the initial release of the Peerplays Decentralized Exchange platform \(DEX\). This document is intended to be used by the members of the project team who will implement and verify the correct functioning of the system. Unless otherwise noted, all requirements specified here are committed for the initial release.
+This requirements specification (RS) describes the high-level requirements for the initial release of the Peerplays Decentralized Exchange platform (DEX). This document is intended to be used by the members of the project team who will implement and verify the correct functioning of the system. Unless otherwise noted, all requirements specified here are committed for the initial release.
 
 ### 1.1. Purpose
 
@@ -19,16 +18,16 @@ The purpose of this RS is to cover the high-level outline and resulting requirem
 
 For the purpose of traceability, the following codes will be used in this RS:
 
-| Code | Meaning |
-| :--- | :--- |
-| **OE-\#** | Operating Environment Requirement |
-| **CO-\#** | Constraint |
-| **DE-\#** | Dependency |
-| **IL-\#** | Interface Layer Requirement |
-| **CL-\#** | Chain Layer Requirement |
-| **AC-\#** | Application Component Requirement |
-| **EC-\#** | Exchange Component Requirement |
-| **WC-\#** | Wallet Component Requirement |
+| Code     | Meaning                           |
+| -------- | --------------------------------- |
+| **OE-#** | Operating Environment Requirement |
+| **CO-#** | Constraint                        |
+| **DE-#** | Dependency                        |
+| **IL-#** | Interface Layer Requirement       |
+| **CL-#** | Chain Layer Requirement           |
+| **AC-#** | Application Component Requirement |
+| **EC-#** | Exchange Component Requirement    |
+| **WC-#** | Wallet Component Requirement      |
 
 The keyword `shall` indicates a requirement statement.
 
@@ -41,14 +40,14 @@ The DEX will permit Peerplays users to:
 * use the following wallet functions
   * create an account
   * send / receive Peerplays assets
-  * deposit / withdraw sidechain assets \(BTC, ETH, etc.\)
+  * deposit / withdraw sidechain assets (BTC, ETH, etc.)
   * use GPOS vesting
-  * governance voting \(witnesses, SONs, advisors\)
+  * governance voting (witnesses, SONs, advisors)
   * create CATs
   * view blockchain status
 
 {% hint style="info" %}
-**Peerplays assets** in the context of this RS are any on-chain asset. This includes native Peerplays assets like the PPY coin, Peerplays NFTs, and CATs. This also includes assets that have originated off-chain that have been transferred onto the Peerplays chain through the services of Peerplays SONs. These external \(sidechain\) assets include Peerplays versions of BTC, HIVE, or ETH and even Peerplays versions of NFTs living on the Ethereum chain. The external assets are backed by their counterparts, locked in a Peerplays controlled account on their native chains.
+**Peerplays assets** in the context of this RS are any on-chain asset. This includes native Peerplays assets like the PPY coin, Peerplays NFTs, and CATs. This also includes assets that have originated off-chain that have been transferred onto the Peerplays chain through the services of Peerplays SONs. These external (sidechain) assets include Peerplays versions of BTC, HIVE, or ETH and even Peerplays versions of NFTs living on the Ethereum chain. The external assets are backed by their counterparts, locked in a Peerplays controlled account on their native chains.
 {% endhint %}
 
 ## 2. Overall Description
@@ -59,37 +58,37 @@ The design for the DEX seamlessly integrates application, asset exchange, and wa
 
 ![](../../.gitbook/assets/peerplays-dex-pages-map.png)
 
-_FIG 1. Peerplays_ DEX _Application High-Level Overview \(Page Map\)_
+_FIG 1. Peerplays _DEX _Application High-Level Overview (Page Map)_
 
-The structure of the DEX will be based on two layers, the interface \(UI\) layer, and the chain layer. The interface layer consists of the UI/UX design elements and interfaces with the chain layer to perform actions on behalf of the user. The chain layer consists of the blockchain and API. It provides business logic, object models, and storage.
+The structure of the DEX will be based on two layers, the interface (UI) layer, and the chain layer. The interface layer consists of the UI/UX design elements and interfaces with the chain layer to perform actions on behalf of the user. The chain layer consists of the blockchain and API. It provides business logic, object models, and storage.
 
 ![](../../.gitbook/assets/peerplays-dex-pages-layers.png)
 
-_FIG 2. Peerplays_ DEX _Two Layer Structure_
+_FIG 2. Peerplays _DEX _Two Layer Structure_
 
 ### 2.2. User Classes and Characteristics
 
-| User class | Description |
-| :--- | :--- |
-| User | A user is an entity that accesses the DEX . A user with a Peerplays account has the intention of using the DEX to manage their account and Peerplays assets. A user without a Peerplays account has the intention of using the DEX to create a new account. A user \(with or without an account\) may also be interested in accessing the DEX to view information on the status of the blockchain, markets, etc. |
+| User class | Description                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| User       | A user is an entity that accesses the DEX . A user with a Peerplays account has the intention of using the DEX to manage their account and Peerplays assets. A user without a Peerplays account has the intention of using the DEX to create a new account. A user (with or without an account) may also be interested in accessing the DEX to view information on the status of the blockchain, markets, etc. |
 
 ### 2.3. Operating Environment
 
-**OE-1:** The DEX shall operate correctly with the following web browsers \(and platforms\):
+**OE-1:** The DEX shall operate correctly with the following web browsers (and platforms):
 
-| Browser | Platforms |
-| :--- | :--- |
+| Browser       | Platforms                                         |
+| ------------- | ------------------------------------------------- |
 | Google Chrome | Ubuntu GNU Linux, Windows 10, Android, macOS, iOS |
-| Firefox | Ubuntu GNU Linux, Windows 10, Android, macOS, iOS |
-| Brave | Ubuntu GNU Linux, Windows 10, Android, macOS, iOS |
-| Safari | macOS, iOS |
+| Firefox       | Ubuntu GNU Linux, Windows 10, Android, macOS, iOS |
+| Brave         | Ubuntu GNU Linux, Windows 10, Android, macOS, iOS |
+| Safari        | macOS, iOS                                        |
 
-**OE-2:** The DEX shall operate correctly at the minimum resolution of 1334-by-750-pixel resolution at 326 ppi onward \(iPhone SE resolution\).
+**OE-2:** The DEX shall operate correctly at the minimum resolution of 1334-by-750-pixel resolution at 326 ppi onward (iPhone SE resolution).
 
 **OE-3:** The DEX shall permit user access by desktop computer, Android, iOS, and Windows smartphones and tablets.
 
 {% hint style="info" %}
-**OE-4:** In later versions of the DEX , the DEX shall operate as both a hosted version and a stand-alone app \(i.e. Electron App\).
+**OE-4:** In later versions of the DEX , the DEX shall operate as both a hosted version and a stand-alone app (i.e. Electron App).
 {% endhint %}
 
 ### 2.4. Design and Implementation Constraints
@@ -122,7 +121,7 @@ The interface layer interfaces with the chain layer. Users never interact direct
 
 ![](../../.gitbook/assets/peerplays-dex-pages-interface.png)
 
-_FIG 3. Peerplays_ DEX _Interface Layer_
+_FIG 3. Peerplays _DEX _Interface Layer_
 
 **Requirements**
 
@@ -170,7 +169,7 @@ In a traditional web app, the chain layer would be like the server-side code and
 
 ![](../../.gitbook/assets/peerplays-dex-pages-chain.png)
 
-_FIG 4. Peerplays_ DEX _Chain Layer_
+_FIG 4. Peerplays _DEX _Chain Layer_
 
 **Requirements**
 
@@ -210,12 +209,12 @@ Lower level requirements specification documents will contain functional specifi
 
 **Requirements**
 
-**AC-1:** The application component UI shall provide navigation to the following pages \(or page fragments\) which contain features as listed below:
+**AC-1:** The application component UI shall provide navigation to the following pages (or page fragments) which contain features as listed below:
 
-* Site Header \(page fragment\)
+* Site Header (page fragment)
   * app navigation
-* Site Body \(page fragment, container for app pages\)
-* Site Footer \(page fragment\)
+* Site Body (page fragment, container for app pages)
+* Site Footer (page fragment)
 * Home Page
   * marketing content
 * Application Settings Page
@@ -223,8 +222,8 @@ Lower level requirements specification documents will contain functional specifi
   * view private keys
   * wallet settings
   * exchange settings
-* Login Page \(stand-alone page, no header/footer\)
-* Create Account Page \(stand-alone page, no header/footer\)
+* Login Page (stand-alone page, no header/footer)
+* Create Account Page (stand-alone page, no header/footer)
   * account creation
 
 #### 3.2.2. Exchange Component
@@ -253,7 +252,7 @@ The exchange component handles all decentralized exchange related functions. Thi
 * quick trade
 * NFT auction / sale listings
 * trade slippage protection
-* Peerplays Automatic Market Maker \(AMM\)
+* Peerplays Automatic Market Maker (AMM)
 * viewing and managing price charts
 
 {% hint style="info" %}
@@ -283,11 +282,11 @@ Lower level requirements specification documents will contain functional specifi
   * price / volume statistics
 * Asset Explorer
   * advanced asset search
-  * asset info \(single asset information page\)
+  * asset info (single asset information page)
 * NFT Listings
   * NFT auction / sales listings
 
-**3.2.2.2. Automated Market Maker \(AMM\)**
+**3.2.2.2. Automated Market Maker (AMM)**
 
 **Description**
 
@@ -299,7 +298,7 @@ Something like a hybrid between Uniswap and a traditional exchange order book, t
 
 ![](../../.gitbook/assets/peerplays-dex-amm.png)
 
-_FIG 5. Peerplays_ DEX _Automated Market Maker_
+_FIG 5. Peerplays _DEX _Automated Market Maker_
 
 In a traditional exchange, an order book is filled with the orders of buyers and sellers in a given market. Orders are filled when buyers are willing to pay what the sellers are asking for, or sellers are willing to take what buyers are bidding. Liquidity in this case is entirely dependent on the supply provided by the buyers and sellers.
 
@@ -309,13 +308,13 @@ Peerplays AMM combines the two systems to make an exchange system supported by s
 
 **Requirements**
 
-**EC-2:** The AMM shall manage its own limit orders for each market \(trading pair\) based on LP supply comparison.
+**EC-2:** The AMM shall manage its own limit orders for each market (trading pair) based on LP supply comparison.
 
 **EC-3:** The AMM shall execute transactions on the chain in accordance with its operating algorithms.
 
 **EC-4:** The AMM shall adjust all its positions based on changes in available supply in the LPs to preserve liquidity.
 
-**3.2.2.3. Exchange Liquidity Pools \(LPs\)**
+**3.2.2.3. Exchange Liquidity Pools (LPs)**
 
 **Description**
 
@@ -350,7 +349,7 @@ The wallet module handles all user account related functions. This includes:
 * viewing a user's asset balances
 * sending and receiving assets
 * voting functions
-* vesting \(staking\) functions
+* vesting (staking) functions
 * creating, viewing, and managing a user's NFTs
 * searching and viewing other user's NFTs
 * creating, viewing, and managing a user's CATs
@@ -396,7 +395,7 @@ Lower level requirements specification documents will contain functional specifi
   * create NFT
   * NFT Explorer
     * advanced NFT search
-    * NFT Info \(single NFT page\)
+    * NFT Info (single NFT page)
 * CAT Manager
   * user CATs list
   * CAT templates
@@ -405,23 +404,22 @@ Lower level requirements specification documents will contain functional specifi
   * CAT governance
   * CAT Explorer
     * advanced CAT search
-    * CAT Info \(single CAT page\)
+    * CAT Info (single CAT page)
 
 ## 4. Appendix A: Glossary
 
-| Term | Meaning | Notes / References |
-| :--- | :--- | :--- |
-| RS | Requirement Specification | - |
-| DEX | Decentralized Exchange | - |
-| NFT\(s\) | Non-Fungible Token\(s\) | - |
-| GPOS | Gamified Proof of Stake | - |
-| CAT\(s\) | Community Asset Token\(s\) | - |
-| UI | User Interface | - |
-| UX | User Experience | - |
-| AMM | Automated Market Maker | - |
-| LP\(s\) | Liquidity Pool\(s\) | - |
+| Term   | Meaning                   | Notes / References |
+| ------ | ------------------------- | ------------------ |
+| RS     | Requirement Specification | -                  |
+| DEX    | Decentralized Exchange    | -                  |
+| NFT(s) | Non-Fungible Token(s)     | -                  |
+| GPOS   | Gamified Proof of Stake   | -                  |
+| CAT(s) | Community Asset Token(s)  | -                  |
+| UI     | User Interface            | -                  |
+| UX     | User Experience           | -                  |
+| AMM    | Automated Market Maker    | -                  |
+| LP(s)  | Liquidity Pool(s)         | -                  |
 
 ## 5. Appendix B: References
 
-[Tailwind CSS](https://tailwindcss.com/)
-
+[Tailwind CSS](https://tailwindcss.com)

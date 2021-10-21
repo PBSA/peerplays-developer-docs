@@ -1,5 +1,4 @@
 ---
-title: Intro to Permissions
 description: >-
   A brief explanation of role-based & resource permissions for Peerplays
   objects.
@@ -15,13 +14,13 @@ There are three functions available in the CLI Wallet to produce permission sett
 2. **`create_custom_account_authority`**
 3. **`create_account_role`**
 
-The first two functions deal with creating Hierarchical Role-based Permissions \(HRP\). The third is used to provide resource permissions with account roles.
+The first two functions deal with creating Hierarchical Role-based Permissions (HRP). The third is used to provide resource permissions with account roles.
 
 HRP is a feature of the Peerplays blockchain which helps to increase the security of user accounts. Users don’t have to use their `active` and `owner` keys for everything they do on the chain. Instead, they can create role based custom permissions and map them to different keys other than `active` and `owner` keys. They can then use these custom keys to sign transactions.
 
-As opposed to HRP mentioned above, resource permissions are controlled by the owner of a resource \(such as NFT metadata\). These are similar to IAM permissions in an AWS Cloud environment.
+As opposed to HRP mentioned above, resource permissions are controlled by the owner of a resource (such as NFT metadata). These are similar to IAM permissions in an AWS Cloud environment.
 
-## 2. Hierarchical Role-based Permissions \(HRP\)
+## 2. Hierarchical Role-based Permissions (HRP)
 
 To create a custom HRP, the first step is to create the custom permission. Then the custom permission will be mapped to the actual operations present on the blockchain by creating a related custom account authority.
 
@@ -47,20 +46,20 @@ signed_transaction graphene::wallet::wallet_api::create_custom_permission(
 {% tab title="Function Call" %}
 The basic structure of the `create_custom_permission` function looks like this:
 
-{% code title="When using the cli\_wallet..." %}
-```text
+{% code title="When using the cli_wallet..." %}
+```
 create_custom_permission <owner> <permission_name> <auth> true
 ```
 {% endcode %}
 
-#### Parameters <a id="parameters"></a>
+#### Parameters <a href="parameters" id="parameters"></a>
 
-| name | data type | description | details |
-| :--- | :--- | :--- | :--- |
-| owner | string | The name or id of the account who is creating the permission. | n/a |
-| permission\_name | string | The name of the permission. | n/a |
-| auth | authority | This is a JSON object which describes an account authority. See below for details. | a JSON object |
-| broadcast | bool | `true` or `false`, whether or not you want to broadcast the transaction. | n/a |
+| name             | data type | description                                                                        | details       |
+| ---------------- | --------- | ---------------------------------------------------------------------------------- | ------------- |
+| owner            | string    | The name or id of the account who is creating the permission.                      | n/a           |
+| permission\_name | string    | The name of the permission.                                                        | n/a           |
+| auth             | authority | This is a JSON object which describes an account authority. See below for details. | a JSON object |
+| broadcast        | bool      | `true` or `false`, whether or not you want to broadcast the transaction.           | n/a           |
 
 The `auth` parameter is a JSON object which looks like this:
 
@@ -81,7 +80,7 @@ This represents an authority structure, `account_auths` represents the amount of
 
 In this example, either `1.2.52` can sign with their active key or `TEST71ADtL4fzjGKErk9nQJrABmCPUR8QCjkCUNfdmgY5yDzQGhwto` can be used to sign a transaction successfully because they each have a weight of 1, and only 1 is required by the threshold.
 
-#### Example Call <a id="example-call"></a>
+#### Example Call <a href="example-call" id="example-call"></a>
 
 ```cpp
 create_custom_permission account01 perm1 { "weight_threshold": 1,  "account_auths": [["1.2.52",1]], "key_auths": [["TEST71ADtL4fzjGKErk9nQJrABmCPUR8QCjkCUNfdmgY5yDzQGhwto",1]], "address_auths": [] } true
@@ -104,17 +103,17 @@ signed_transaction graphene::wallet::wallet_api::get_custom_permissions(
 {% tab title="Function Call" %}
 The basic structure of the `get_custom_permission` function looks like this:
 
-{% code title="When using the cli\_wallet..." %}
-```text
+{% code title="When using the cli_wallet..." %}
+```
 get_custom_permissions <owner>
 ```
 {% endcode %}
 
-#### Parameters <a id="parameters"></a>
+#### Parameters <a href="parameters" id="parameters"></a>
 
-| name | data type | description | details |
-| :--- | :--- | :--- | :--- |
-| owner | string | The name or id of the account for which we'd like to see the list of created custom permissions. | n/a |
+| name  | data type | description                                                                                      | details |
+| ----- | --------- | ------------------------------------------------------------------------------------------------ | ------- |
+| owner | string    | The name or id of the account for which we'd like to see the list of created custom permissions. | n/a     |
 
 #### Example Call
 
@@ -142,20 +141,20 @@ signed_transaction graphene::wallet::wallet_api::update_custom_permission(
 {% tab title="Function Call" %}
 The basic structure of the `update_custom_permission` function looks like this:
 
-{% code title="When using the cli\_wallet..." %}
-```text
+{% code title="When using the cli_wallet..." %}
+```
 update_custom_permissions <owner> <permission_id> <new_auth> true
 ```
 {% endcode %}
 
-#### Parameters <a id="parameters"></a>
+#### Parameters <a href="parameters" id="parameters"></a>
 
-| name | data type | description | details |
-| :--- | :--- | :--- | :--- |
-| owner | string | The name or id of the account who is updating the permission. | n/a |
-| permission\_id | custom\_permission\_id\_type | The ID of the custom permission we're intending to edit. | n/a |
-| new\_auth | authority | Just like [create\_custom\_permission](introduction-to-permissions.md#2-1-create_custom_permission), this is a JSON object which represents an account authority. | n/a |
-| broadcast | bool | `true` or `false`, whether or not you want to broadcast the transaction. | n/a |
+| name           | data type                    | description                                                                                                                                                         | details |
+| -------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| owner          | string                       | The name or id of the account who is updating the permission.                                                                                                       | n/a     |
+| permission\_id | custom\_permission\_id\_type | The ID of the custom permission we're intending to edit.                                                                                                            | n/a     |
+| new\_auth      | authority                    | Just like [create\_custom\_permission](introduction-to-permissions.md#2-1-create\_custom\_permission), this is a JSON object which represents an account authority. | n/a     |
+| broadcast      | bool                         | `true` or `false`, whether or not you want to broadcast the transaction.                                                                                            | n/a     |
 
 #### Example Call
 
@@ -168,12 +167,12 @@ Here we removed the `key_auths` and added `1.2.53` with weight 1, which is equal
 {% endtabs %}
 
 {% hint style="danger" %}
-The new authority object will **replace** the old authority object using this function call. Make sure that the authority object that you supply here is set exactly as you'd like.
+The new authority object will **replace **the old authority object using this function call. Make sure that the authority object that you supply here is set exactly as you'd like.
 {% endhint %}
 
 ### 2.4. create\_custom\_account\_authority
 
-Creating a custom authority maps the created [custom permissions](introduction-to-permissions.md#2-1-create_custom_permission) with the actual operations present on the blockchain. It also has expiry time by when this custom permission is no longer valid on any given account and operation combination.
+Creating a custom authority maps the created [custom permissions](introduction-to-permissions.md#2-1-create\_custom\_permission) with the actual operations present on the blockchain. It also has expiry time by when this custom permission is no longer valid on any given account and operation combination.
 
 {% code title="return type, namespace, & method" %}
 ```cpp
@@ -191,22 +190,22 @@ signed_transaction graphene::wallet::wallet_api::create_custom_account_authority
 {% tab title="Function Call" %}
 The basic structure of the `create_custom_account_authority` function looks like this:
 
-{% code title="When using the cli\_wallet..." %}
-```text
+{% code title="When using the cli_wallet..." %}
+```
 create_custom_account_authority <owner> <permission_id> <operation_type> <valid_from> <valid_to> true
 ```
 {% endcode %}
 
-#### Parameters <a id="parameters"></a>
+#### Parameters <a href="parameters" id="parameters"></a>
 
-| name | data type | description | details |
-| :--- | :--- | :--- | :--- |
-| owner | string | The name or id of the account who is creating the account authority. | n/a |
-| permission\_id | custom\_permission\_id\_type | The ID of the custom permission we're intending to edit. | n/a |
-| operation\_type | int | This is the ID of any particular operation. IDs are [available here](../supporting-and-reference-docs/operation-ids-list.md). | n/a |
-| valid\_from | time\_point\_sec | The timestamp when the permission begins to be valid. See below for what a valid timestamp looks like. | n/a |
-| valid\_to | time\_point\_sec | The timestamp when the permission stops being valid. See below for what a valid timestamp looks like. | n/a |
-| broadcast | bool | `true` or `false`, whether or not you want to broadcast the transaction. | n/a |
+| name            | data type                    | description                                                                                                                   | details |
+| --------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------- |
+| owner           | string                       | The name or id of the account who is creating the account authority.                                                          | n/a     |
+| permission\_id  | custom\_permission\_id\_type | The ID of the custom permission we're intending to edit.                                                                      | n/a     |
+| operation\_type | int                          | This is the ID of any particular operation. IDs are [available here](../supporting-and-reference-docs/operation-ids-list.md). | n/a     |
+| valid\_from     | time\_point\_sec             | The timestamp when the permission begins to be valid. See below for what a valid timestamp looks like.                        | n/a     |
+| valid\_to       | time\_point\_sec             | The timestamp when the permission stops being valid. See below for what a valid timestamp looks like.                         | n/a     |
+| broadcast       | bool                         | `true` or `false`, whether or not you want to broadcast the transaction.                                                      | n/a     |
 
 A valid timestamp looks like this: `"2019-11-22T18:30:00"`
 
@@ -239,21 +238,21 @@ signed_transaction graphene::wallet::wallet_api::update_custom_account_authority
 {% tab title="Function Call" %}
 The basic structure of the `update_custom_account_authority` function looks like this:
 
-{% code title="When using the cli\_wallet..." %}
-```text
+{% code title="When using the cli_wallet..." %}
+```
 update_custom_account_authority <owner> <auth_id> <new_valid_from> <new_valid_to> true
 ```
 {% endcode %}
 
-#### Parameters <a id="parameters"></a>
+#### Parameters <a href="parameters" id="parameters"></a>
 
-| name | data type | description | details |
-| :--- | :--- | :--- | :--- |
-| owner | string | The name or id of the account who is updating the account authority. | n/a |
-| auth\_id | custom\_account\_authority\_id\_type | The ID of the custom account authority we're intending to edit. | n/a |
-| new\_valid\_from | time\_point\_sec | The timestamp when the permission begins to be valid. See below for what a valid timestamp looks like. | n/a |
-| new\_valid\_to | time\_point\_sec | The timestamp when the permission stops being valid. See below for what a valid timestamp looks like. | n/a |
-| broadcast | bool | `true` or `false`, whether or not you want to broadcast the transaction. | n/a |
+| name             | data type                            | description                                                                                            | details |
+| ---------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------- |
+| owner            | string                               | The name or id of the account who is updating the account authority.                                   | n/a     |
+| auth\_id         | custom\_account\_authority\_id\_type | The ID of the custom account authority we're intending to edit.                                        | n/a     |
+| new\_valid\_from | time\_point\_sec                     | The timestamp when the permission begins to be valid. See below for what a valid timestamp looks like. | n/a     |
+| new\_valid\_to   | time\_point\_sec                     | The timestamp when the permission stops being valid. See below for what a valid timestamp looks like.  | n/a     |
+| broadcast        | bool                                 | `true` or `false`, whether or not you want to broadcast the transaction.                               | n/a     |
 
 A valid timestamp looks like this: `"2019-11-22T18:30:00"`
 
@@ -288,19 +287,19 @@ signed_transaction graphene::wallet::wallet_api::delete_custom_permission(
 {% tab title="Function Call" %}
 The basic structure of the `delete_custom_permission` function looks like this:
 
-{% code title="When using the cli\_wallet..." %}
-```text
+{% code title="When using the cli_wallet..." %}
+```
 delete_custom_permission <owner> <permission_id> true
 ```
 {% endcode %}
 
-#### Parameters <a id="parameters"></a>
+#### Parameters <a href="parameters" id="parameters"></a>
 
-| name | data type | description | details |
-| :--- | :--- | :--- | :--- |
-| owner | string | The name or id of the account who is deleting the permission. | n/a |
-| permission\_id | custom\_permission\_id\_type | The ID of the custom permission we're intending to delete. | n/a |
-| broadcast | bool | `true` or `false`, whether or not you want to broadcast the transaction. | n/a |
+| name           | data type                    | description                                                              | details |
+| -------------- | ---------------------------- | ------------------------------------------------------------------------ | ------- |
+| owner          | string                       | The name or id of the account who is deleting the permission.            | n/a     |
+| permission\_id | custom\_permission\_id\_type | The ID of the custom permission we're intending to delete.               | n/a     |
+| broadcast      | bool                         | `true` or `false`, whether or not you want to broadcast the transaction. | n/a     |
 
 #### Example Call
 
@@ -327,19 +326,19 @@ signed_transaction graphene::wallet::wallet_api::delete_custom_account_authority
 {% tab title="Function Call" %}
 The basic structure of the `delete_custom_account_authority` function looks like this:
 
-{% code title="When using the cli\_wallet..." %}
-```text
+{% code title="When using the cli_wallet..." %}
+```
 delete_custom_account_authority <owner> <auth_id> true
 ```
 {% endcode %}
 
-#### Parameters <a id="parameters"></a>
+#### Parameters <a href="parameters" id="parameters"></a>
 
-| name | data type | description | details |
-| :--- | :--- | :--- | :--- |
-| owner | string | The name or id of the account who is deleting the account authority. | n/a |
-| auth\_id | custom\_account\_authority\_id\_type | The ID of the custom account authority we're intending to delete. | n/a |
-| broadcast | bool | `true` or `false`, whether or not you want to broadcast the transaction. | n/a |
+| name      | data type                            | description                                                              | details |
+| --------- | ------------------------------------ | ------------------------------------------------------------------------ | ------- |
+| owner     | string                               | The name or id of the account who is deleting the account authority.     | n/a     |
+| auth\_id  | custom\_account\_authority\_id\_type | The ID of the custom account authority we're intending to delete.        | n/a     |
+| broadcast | bool                                 | `true` or `false`, whether or not you want to broadcast the transaction. | n/a     |
 
 #### Example Call
 
@@ -378,81 +377,23 @@ signed_transaction graphene::wallet::wallet_api::create_account_role(
 {% tab title="Function Call" %}
 The basic structure of the `create_account_role` function looks like this:
 
-{% code title="When using the cli\_wallet..." %}
-```text
+{% code title="When using the cli_wallet..." %}
+```
 create_account_role <owner_account_id_or_name> <name> <metadata> <allowed_operations> <whitelisted_accounts> <valid_to> true
 ```
 {% endcode %}
 
-#### Parameters <a id="parameters"></a>
+#### Parameters <a href="parameters" id="parameters"></a>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">name</th>
-      <th style="text-align:left">data type</th>
-      <th style="text-align:left">description</th>
-      <th style="text-align:left">details</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">owner_account_id_or_name</td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">The name or id of the account who is creating the account role.</td>
-      <td
-      style="text-align:left">n/a</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">name</td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">The name of the account role. For example, <code>&quot;Movie Interstellar Permissions&quot;</code>
-      </td>
-      <td style="text-align:left">n/a</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">metadata</td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">Metadata for additional info. For example, this could be a JSON object
-        or and external URL with info.</td>
-      <td style="text-align:left">n/a</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">allowed_operations</td>
-      <td style="text-align:left">flat_set&lt;int&gt;</td>
-      <td style="text-align:left">An array of numbers which represent all the operations that this role
-        allows. IDs are <a href="../supporting-and-reference-docs/operation-ids-list.md">available here</a>.</td>
-      <td
-      style="text-align:left">n/a</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">whitelisted_accounts</td>
-      <td style="text-align:left">flat_set&lt;account_id_type&gt;</td>
-      <td style="text-align:left">An array of account IDs for the accounts that belong to this role and
-        are therefore granted the allowed_operations for the resource.</td>
-      <td
-      style="text-align:left">n/a</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">valid_to</td>
-      <td style="text-align:left">time_point_sec</td>
-      <td style="text-align:left">
-        <p>The time at which the role no longer provides the allowed_operations to
-          its whitelisted_accounts.</p>
-        <p>Note: <code>valid_from</code> is automatically set to the time the account
-          role was created.</p>
-      </td>
-      <td style="text-align:left">n/a</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">broadcast</td>
-      <td style="text-align:left">bool</td>
-      <td style="text-align:left"><code>true</code> or <code>false</code>, whether or not you want to broadcast
-        the transaction.</td>
-      <td style="text-align:left">n/a</td>
-    </tr>
-  </tbody>
-</table>
+| name                         | data type                     | description                                                                                                                                                                                                 | details |
+| ---------------------------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| owner\_account\_id\_or\_name | string                        | The name or id of the account who is creating the account role.                                                                                                                                             | n/a     |
+| name                         | string                        | The name of the account role. For example, `"Movie Interstellar Permissions"`                                                                                                                               | n/a     |
+| metadata                     | string                        | Metadata for additional info. For example, this could be a JSON object or and external URL with info.                                                                                                       | n/a     |
+| allowed\_operations          | flat\_set\<int>               | An array of numbers which represent all the operations that this role allows. IDs are [available here](../supporting-and-reference-docs/operation-ids-list.md).                                             | n/a     |
+| whitelisted\_accounts        | flat\_set\<account\_id\_type> | An array of account IDs for the accounts that belong to this role and are therefore granted the allowed\_operations for the resource.                                                                       | n/a     |
+| valid\_to                    | time\_point\_sec              | <p>The time at which the role no longer provides the allowed_operations to its whitelisted_accounts.</p><p>Note: <code>valid_from</code> is automatically set to the time the account role was created.</p> | n/a     |
+| broadcast                    | bool                          | `true` or `false`, whether or not you want to broadcast the transaction.                                                                                                                                    | n/a     |
 
 A valid timestamp looks like this: `"2020-09-04T13:43:39"`
 
@@ -481,17 +422,17 @@ signed_transaction graphene::wallet::wallet_api::get_account_roles_by_owner(
 {% tab title="Function Call" %}
 The basic structure of the `get_account_roles_by_owner` function looks like this:
 
-{% code title="When using the cli\_wallet..." %}
-```text
+{% code title="When using the cli_wallet..." %}
+```
 get_account_roles_by_owner <owner_account_id_or_name>
 ```
 {% endcode %}
 
-#### Parameters <a id="parameters"></a>
+#### Parameters <a href="parameters" id="parameters"></a>
 
-| name | data type | description | details |
-| :--- | :--- | :--- | :--- |
-| owner\_account\_id\_or\_name | string | The name or id of the account for which we'd like to see the list of created account roles. | n/a |
+| name                         | data type | description                                                                                 | details |
+| ---------------------------- | --------- | ------------------------------------------------------------------------------------------- | ------- |
+| owner\_account\_id\_or\_name | string    | The name or id of the account for which we'd like to see the list of created account roles. | n/a     |
 
 #### Example Call
 
@@ -525,101 +466,26 @@ signed_transaction graphene::wallet::wallet_api::update_account_role(
 {% tab title="Function Call" %}
 The basic structure of the `update_account_role` function looks like this:
 
-{% code title="When using the cli\_wallet..." %}
-```text
+{% code title="When using the cli_wallet..." %}
+```
 update_account_role <owner_account_id_or_name> <role_id> <name> <metadata> <operations_to_add> <operations_to_remove> <accounts_to_add> <accounts_to_remove> <valid_to> true
 ```
 {% endcode %}
 
-#### Parameters <a id="parameters"></a>
+#### Parameters <a href="parameters" id="parameters"></a>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">name</th>
-      <th style="text-align:left">data type</th>
-      <th style="text-align:left">description</th>
-      <th style="text-align:left">details</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">owner_account_id_or_name</td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">The name or id of the account who is updating the account role.</td>
-      <td
-      style="text-align:left">n/a</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">role_id</td>
-      <td style="text-align:left">account_role_id_type</td>
-      <td style="text-align:left">The ID of the account role we&apos;re intending to update.</td>
-      <td style="text-align:left">n/a</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">name</td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">The name of the account role. For example, <code>&quot;Movie Interstellar Permissions&quot;</code>
-      </td>
-      <td style="text-align:left">n/a</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">metadata</td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">Metadata for additional info. For example, this could be a JSON object
-        or and external URL with info.</td>
-      <td style="text-align:left">n/a</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">operations_to_add</td>
-      <td style="text-align:left">flat_set&lt;int&gt;</td>
-      <td style="text-align:left">An array of numbers which represent all the operations that should be
-        added to the role. IDs are <a href="../supporting-and-reference-docs/operation-ids-list.md">available here</a>.</td>
-      <td
-      style="text-align:left">n/a</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">operations_to_remove</td>
-      <td style="text-align:left">flat_set&lt;int&gt;</td>
-      <td style="text-align:left">An array of numbers which represent all the operations that should be
-        removed from the role. IDs are <a href="../supporting-and-reference-docs/operation-ids-list.md">available here</a>.</td>
-      <td
-      style="text-align:left">n/a</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">accounts_to_add</td>
-      <td style="text-align:left">flat_set&lt;account_id_type&gt;</td>
-      <td style="text-align:left">An array of account IDs for the accounts that should be added to the role.</td>
-      <td
-      style="text-align:left">n/a</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">accounts_to_remove</td>
-      <td style="text-align:left">flat_set&lt;account_id_type&gt;</td>
-      <td style="text-align:left">An array of account IDs for the accounts that should be removed from the
-        role.</td>
-      <td style="text-align:left">n/a</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">valid_to</td>
-      <td style="text-align:left">time_point_sec</td>
-      <td style="text-align:left">
-        <p>The time at which the role no longer provides the allowed_operations to
-          its whitelisted_accounts.</p>
-        <p>Note: <code>valid_from</code> is automatically set to the time the account
-          role was created.</p>
-      </td>
-      <td style="text-align:left">n/a</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">broadcast</td>
-      <td style="text-align:left">bool</td>
-      <td style="text-align:left"><code>true</code> or <code>false</code>, whether or not you want to broadcast
-        the transaction.</td>
-      <td style="text-align:left">n/a</td>
-    </tr>
-  </tbody>
-</table>
+| name                         | data type                     | description                                                                                                                                                                                                 | details |
+| ---------------------------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| owner\_account\_id\_or\_name | string                        | The name or id of the account who is updating the account role.                                                                                                                                             | n/a     |
+| role\_id                     | account\_role\_id\_type       | The ID of the account role we're intending to update.                                                                                                                                                       | n/a     |
+| name                         | string                        | The name of the account role. For example, `"Movie Interstellar Permissions"`                                                                                                                               | n/a     |
+| metadata                     | string                        | Metadata for additional info. For example, this could be a JSON object or and external URL with info.                                                                                                       | n/a     |
+| operations\_to\_add          | flat\_set\<int>               | An array of numbers which represent all the operations that should be added to the role. IDs are [available here](../supporting-and-reference-docs/operation-ids-list.md).                                  | n/a     |
+| operations\_to\_remove       | flat\_set\<int>               | An array of numbers which represent all the operations that should be removed from the role. IDs are [available here](../supporting-and-reference-docs/operation-ids-list.md).                              | n/a     |
+| accounts\_to\_add            | flat\_set\<account\_id\_type> | An array of account IDs for the accounts that should be added to the role.                                                                                                                                  | n/a     |
+| accounts\_to\_remove         | flat\_set\<account\_id\_type> | An array of account IDs for the accounts that should be removed from the role.                                                                                                                              | n/a     |
+| valid\_to                    | time\_point\_sec              | <p>The time at which the role no longer provides the allowed_operations to its whitelisted_accounts.</p><p>Note: <code>valid_from</code> is automatically set to the time the account role was created.</p> | n/a     |
+| broadcast                    | bool                          | `true` or `false`, whether or not you want to broadcast the transaction.                                                                                                                                    | n/a     |
 
 A valid timestamp looks like this: `"2020-09-04T13:43:39"`
 
@@ -660,19 +526,19 @@ signed_transaction graphene::wallet::wallet_api::delete_account_role(
 {% tab title="Function Call" %}
 The basic structure of the `delete_account_role` function looks like this:
 
-{% code title="When using the cli\_wallet..." %}
-```text
+{% code title="When using the cli_wallet..." %}
+```
 delete_account_role <owner_account_id_or_name> <role_id> true
 ```
 {% endcode %}
 
-#### Parameters <a id="parameters"></a>
+#### Parameters <a href="parameters" id="parameters"></a>
 
-| name | data type | description | details |
-| :--- | :--- | :--- | :--- |
-| owner\_account\_id\_or\_name | string | The name or id of the account who is deleting the account role. | n/a |
-| role\_id | account\_role\_id\_type | The ID of the account role we're intending to delete. | n/a |
-| broadcast | bool | `true` or `false`, whether or not you want to broadcast the transaction. | n/a |
+| name                         | data type               | description                                                              | details |
+| ---------------------------- | ----------------------- | ------------------------------------------------------------------------ | ------- |
+| owner\_account\_id\_or\_name | string                  | The name or id of the account who is deleting the account role.          | n/a     |
+| role\_id                     | account\_role\_id\_type | The ID of the account role we're intending to delete.                    | n/a     |
+| broadcast                    | bool                    | `true` or `false`, whether or not you want to broadcast the transaction. | n/a     |
 
 #### Example Call
 
@@ -685,4 +551,3 @@ delete_account_role account01 1.32.0 true
 ## 4. Related Documents
 
 The functions listed in this guide will cost transaction fees. To calculate how much PPY you'll need to make these transactions and meet your development goals, please see the [Calculating Costs](calculating-costs.md) guide.
-

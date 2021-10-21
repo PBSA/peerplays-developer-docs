@@ -31,7 +31,7 @@ signed_transaction graphene::wallet::wallet_api::sell_asset(
 {% tabs %}
 {% tab title="Parameters" %}
 * **`seller_account`**: the account providing the asset being sold, and which will receive the proceeds of the sale.
-* **`amount_to_sell`**: the amount of the asset being sold to sell \(in nominal units, for example 0.5 for half of a PPY\)
+* **`amount_to_sell`**: the amount of the asset being sold to sell (in nominal units, for example 0.5 for half of a PPY)
 * **`symbol_to_sell`**: the name or id of the asset to sell
 * **`min_to_receive`**: the minimum amount you are willing to receive in return for selling the entire amount\_to\_sell
 * **`symbol_to_receive`**: the name or id of the asset you wish to receive
@@ -51,7 +51,7 @@ Borrow an asset or update the debt/collateral ratio for the loan.
 
 This is the first step in shorting an asset.
 
-Call [`sell_asset()`](trading-calls.md#sell_asset) to complete the short.
+Call [`sell_asset()`](https://app.gitbook.com/s/-McxsyggfxkblmD-4Tzy/api-reference/wallet-api/trading-calls.md#sell\_asset) to complete the short.
 
 ```cpp
 signed_transaction graphene::
@@ -127,7 +127,7 @@ The signed transaction settling the named asset.
 
 ### get\_market\_history
 
-Get OHLCV \(Open, High, Low, Close, & Volume\) data of a trading pair in a time range.
+Get OHLCV (Open, High, Low, Close, & Volume) data of a trading pair in a time range.
 
 ```cpp
 vector<bucket_object> graphene::wallet::wallet_api::get_market_history(
@@ -177,7 +177,7 @@ The limit orders, ordered from least price to greatest.
 
 ### get\_call\_orders
 
-Get call orders \(aka margin positions\) for a given asset.
+Get call orders (aka margin positions) for a given asset.
 
 ```cpp
 vector<call_order_object> graphene::wallet::wallet_api::get_call_orders(
@@ -216,4 +216,3 @@ vector<force_settlement_object> graphene::wallet::wallet_api::get_settle_orders(
 The settle orders, ordered from earliest settlement date to latest
 {% endtab %}
 {% endtabs %}
-

@@ -17,7 +17,7 @@ vector<extended_asset_object> graphene::wallet::wallet_api::list_assets(
 {% tabs %}
 {% tab title="Parameters" %}
 * **`lowerbound`**: the symbol of the first asset to include in the list.
-* **`limit`**: the maximum number of assets to return \(max: 100\)
+* **`limit`**: the maximum number of assets to return (max: 100)
 {% endtab %}
 
 {% tab title="Return" %}
@@ -29,7 +29,7 @@ The list of asset objects, ordered by symbol.
 
 Creates a new user-issued or market-issued asset.
 
-Many options can be changed later using [`update_asset()`](asset-calls.md#update_asset).
+Many options can be changed later using [`update_asset()`](asset-calls.md#update\_asset).
 
 {% hint style="warning" %}
 **Note**: Right now this function is difficult to use because you must provide raw JSON data structures for the options objects, and those include prices and asset ids.
@@ -93,7 +93,7 @@ Update the options specific to a BitAsset.
 
 BitAssets have some options which are not relevant to other asset types. This operation is used to update those options as an existing BitAsset.
 
-**See** [update\_asset\(\)](asset-calls.md#update_asset)
+**See** [update\_asset()](asset-calls.md#update\_asset)
 
 ```cpp
 signed_transaction graphene::wallet::wallet_api::update_bitasset(
@@ -151,7 +151,7 @@ The feed object in this command contains three prices:
 * A short price limit,
 * A settlement price
 
-The call limit price is structured as \(collateral asset\) / \(debt asset\) and the short limit price is structured as \(asset for sale\) / \(collateral asset\).
+The call limit price is structured as (collateral asset) / (debt asset) and the short limit price is structured as (asset for sale) / (collateral asset).
 
 {% hint style="warning" %}
 **Note**: The asset IDs are opposite to each other, so if we’re publishing a feed for BTC, the call limit price will be PPY/BTC and the short limit price will be BTC/PPY.
@@ -228,7 +228,7 @@ The information about the asset stored in the block chain.
 
 ### **get\_bitasset\_data**
 
-Returns the BitAsset-specific data for a given asset. Market-issued asset’s behavior are determined both by their “BitAsset Data” and their basic asset data, as returned by [`get_asset()`](asset-calls.md#get_asset).
+Returns the BitAsset-specific data for a given asset. Market-issued asset’s behavior are determined both by their “BitAsset Data” and their basic asset data, as returned by [`get_asset()`](asset-calls.md#get\_asset).
 
 ```cpp
 asset_bitasset_data_object graphene::wallet::wallet_api::get_bitasset_data(
@@ -249,7 +249,7 @@ The BitAsset-specific data for this asset
 
 Pay into the fee pool for the given asset.
 
-User-issued assets can optionally have a pool of the core asset which is automatically used to pay transaction fees for any transaction using that asset \(using the asset’s core exchange rate\).
+User-issued assets can optionally have a pool of the core asset which is automatically used to pay transaction fees for any transaction using that asset (using the asset’s core exchange rate).
 
 This command allows anyone to deposit the core asset into this fee pool.
 
@@ -281,7 +281,7 @@ Burns an amount of given asset.
 This command burns an amount of given asset to reduce the amount in circulation.
 
 {% hint style="warning" %}
-**Note:** You can't burn market-issued assets.
+**Note: **You can't burn market-issued assets.
 {% endhint %}
 
 ```cpp
@@ -307,16 +307,16 @@ The signed transaction burning the asset
 
 ### global\_settle\_asset
 
-Forces a global settling of the given asset \(black swan or prediction markets\).
+Forces a global settling of the given asset (black swan or prediction markets).
 
 In order to use this operation, `asset_to_settle` must have the `global_settle` flag set
 
-When this operation is executed all open margin positions are called at the settle price. A pool will be formed containing the collateral got from the margin positions. Users owning an amount of the asset may use [`settle_asset()`](trading-calls.md#settle_asset) to claim collateral instantly at the settle price from the pool.
+When this operation is executed all open margin positions are called at the settle price. A pool will be formed containing the collateral got from the margin positions. Users owning an amount of the asset may use [`settle_asset()`](trading-calls.md#settle\_asset) to claim collateral instantly at the settle price from the pool.
 
 If this asset is used as backing for other BitAssets, those BitAssets will not be affected.
 
 {% hint style="warning" %}
-**Note:** This operation is used only by the asset issuer.
+**Note: **This operation is used only by the asset issuer.
 {% endhint %}
 
 ```cpp
@@ -337,4 +337,3 @@ signed_transaction graphene::wallet::wallet_api::global_settle_asset(
 The signed transaction settling the named asset
 {% endtab %}
 {% endtabs %}
-

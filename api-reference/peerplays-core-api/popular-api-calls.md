@@ -78,7 +78,7 @@ signed_transaction graphene::wallet::wallet_api::transfer(
 {% tab title="Parameters" %}
 * **`from`**: the name or id of the account sending the funds
 * **`to`**: the name or id of the account receiving the funds
-* **`amount`**: the amount to send \(in nominal units to send half of a BTS, specify 0.5\)
+* **`amount`**: the amount to send (in nominal units to send half of a BTS, specify 0.5)
 * **`asset_symbol`**: the symbol or id of the asset to send
 * **`memo`**: a memo to attach to the transaction. The memo will be encrypted in the transaction and readable for the receiver. There is no length limit other than the limit imposed by maximum transaction size, but transaction increase with transaction size
 * **`broadcast`**: true to broadcast the transaction on the network
@@ -139,7 +139,7 @@ print(json.dumps(res,indent=4))
 
 ### transfer2
 
-This method works just like transfer, except it always broadcasts and returns the transaction ID \(hash\) along with the signed transaction.
+This method works just like transfer, except it always broadcasts and returns the transaction ID (hash) along with the signed transaction.
 
 ```cpp
 pair<transaction_id_type, signed_transaction> graphene::wallet::wallet_api::transfer2(
@@ -160,7 +160,7 @@ pair<transaction_id_type, signed_transaction> graphene::wallet::wallet_api::tran
 {% endtab %}
 
 {% tab title="Return" %}
-The transaction ID \(hash\) along with the signed transaction transferring funds
+The transaction ID (hash) along with the signed transaction transferring funds
 {% endtab %}
 
 {% tab title="Script" %}
@@ -226,7 +226,7 @@ vector<operation_detail> graphene::wallet::wallet_api::get_account_history(
 {% tabs %}
 {% tab title="Parameters" %}
 * **`name`**: the name or id of the account
-* **`limit`**: the number of entries to return \(starting from the most recent\)
+* **`limit`**: the number of entries to return (starting from the most recent)
 {% endtab %}
 
 {% tab title="Return" %}
@@ -289,7 +289,7 @@ print(json.dumps(res,indent=4))
 
 Returns the blockchain object corresponding to the given id.
 
-This generic function can be used to retrieve any object from the blockchain that is assigned an ID. Certain types of objects have specialized convenience functions to return their objects e.g., assets have [`get_asset()`](asset-api.md), accounts have [`get_account()`](https://dev.bitshares.works/en/master/api/wallet_api.html#classgraphene_1_1wallet_1_1wallet__api_1ae4133a2fe8f63695385c20d327a88ff9), but this function will work for any object.
+This generic function can be used to retrieve any object from the blockchain that is assigned an ID. Certain types of objects have specialized convenience functions to return their objects e.g., assets have [`get_asset()`](https://app.gitbook.com/s/-McxsyggfxkblmD-4Tzy/api-reference/peerplays-core-api/asset-api.md), accounts have [`get_account()`](https://dev.bitshares.works/en/master/api/wallet\_api.html#classgraphene\_1\_1wallet\_1\_1wallet\_\_api\_1ae4133a2fe8f63695385c20d327a88ff9), but this function will work for any object.
 
 ```cpp
 variant graphene::wallet::wallet_api::get_object(
@@ -415,4 +415,3 @@ print(json.dumps(res,indent=4))
 ```
 {% endtab %}
 {% endtabs %}
-

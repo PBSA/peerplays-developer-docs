@@ -20,7 +20,7 @@ vector<operation_history_object> graphene::app::history_api::get_account_history
 {% tab title="Parameters" %}
 * **`account_id_or_name`**: The account ID or name whose history should be queried
 * **`stop`**: ID of the earliest operation to retrieve
-* **`limit`**: Maximum number of operations to retrieve \(must not exceed 100\)
+* **`limit`**: Maximum number of operations to retrieve (must not exceed 100)
 * **`start`**: ID of the most recent operation to retrieve
 {% endtab %}
 
@@ -45,9 +45,9 @@ vector<operation_history_object> graphene::app::history_api::get_account_history
 {% tabs %}
 {% tab title="Parameters" %}
 * **`account_id_or_name`**: The account ID or name whose history should be queried
-* **`operation_type`**: The type of the operation we want to get operations in the account \( 0 = transfer , 1 = limit order create, …\)
+* **`operation_type`**: The type of the operation we want to get operations in the account ( 0 = transfer , 1 = limit order create, …)
 * **`stop`**: ID of the earliest operation to retrieve
-* **`limit`**: Maximum number of operations to retrieve \(must not exceed 100\)
+* **`limit`**: Maximum number of operations to retrieve (must not exceed 100)
 * **`start`**: ID of the most recent operation to retrieve
 {% endtab %}
 
@@ -58,7 +58,7 @@ A list of operations performed by account, ordered from most recent to oldest.
 
 ### get\_relative\_account\_history
 
-Get operations relevant to the specified account referenced by an event numbering specific to the account. The current number of operations for the account can be found in the account statistics \(or use 0 for start\).
+Get operations relevant to the specified account referenced by an event numbering specific to the account. The current number of operations for the account can be found in the account statistics (or use 0 for start).
 
 ```cpp
 vector<operation_history_object> graphene::app::history_api::get_relative_account_history(
@@ -72,7 +72,7 @@ vector<operation_history_object> graphene::app::history_api::get_relative_accoun
 {% tab title="Parameters" %}
 * **`account_id_or_name`**: The account ID or name whose history should be queried
 * **`stop`**: Sequence number of earliest operation. 0 is default and will query ‘limit’ number of operations.
-* **`limit`**: Maximum number of operations to retrieve \(must not exceed 100\)
+* **`limit`**: Maximum number of operations to retrieve (must not exceed 100)
 * **`start`**: Sequence number of the most recent operation to retrieve. 0 is default, which will start querying from the most recent operation.
 {% endtab %}
 
@@ -123,10 +123,10 @@ vector<bucket_object> graphene::app::history_api::get_market_history(
 {% tab title="Parameters" %}
 * **`a`**: Asset symbol or ID in a trading pair
 * **`b`**: The other asset symbol or ID in the trading pair
-* **`bucket_seconds`**: Length of each time bucket in seconds. 
+* **`bucket_seconds`**: Length of each time bucket in seconds.&#x20;
 
 {% hint style="warning" %}
-**Note**: It needs to be within result of [get\_market\_history\_buckets\(\)](account-history-api.md#get_market_history_buckets), otherwise no data will be returned
+**Note**: It needs to be within result of [get\_market\_history\_buckets()](https://app.gitbook.com/s/-McxsyggfxkblmD-4Tzy/api-reference/peerplays-core-api/account-history-api.md#get\_market\_history\_buckets), otherwise no data will be returned
 {% endhint %}
 
 * **`start`**: The start of a time range, E.G. “2018-01-01T00:00:00”
@@ -142,7 +142,7 @@ If there are more than 200 records in the specified time range, the first 200 re
 
 ### get\_market\_history\_buckets
 
-Get OHLCV time bucket lengths supported \(configured\) by this API server.
+Get OHLCV time bucket lengths supported (configured) by this API server.
 
 ```cpp
 flat_set<uint32_t> graphene::app::history_api::get_market_history_buckets()const
@@ -155,4 +155,3 @@ A list of time bucket lengths in seconds.
 For example, if the result contains a number “300” it means this API server supports OHLCV data aggregated in 5-minute buckets.
 {% endtab %}
 {% endtabs %}
-

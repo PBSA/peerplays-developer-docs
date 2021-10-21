@@ -1,5 +1,4 @@
 ---
-title: NFT Store UI High Level Design
 description: The high level design for the NFT Store user interface.
 ---
 
@@ -7,7 +6,7 @@ description: The high level design for the NFT Store user interface.
 
 ## 1. Introduction
 
-NFTs \(Non-Fungible Tokens\) are quickly becoming an integral part of crypto-economies. With Peerplays aimed to become a foundational blockchain, NFTs need to be a large focus of its offerings. Additionally, Peerplays is uniquely suited to overcome many of the worst obstacles of NFT mass adoption: high transaction costs, slow network speeds, and limited storage capacity.
+NFTs (Non-Fungible Tokens) are quickly becoming an integral part of crypto-economies. With Peerplays aimed to become a foundational blockchain, NFTs need to be a large focus of its offerings. Additionally, Peerplays is uniquely suited to overcome many of the worst obstacles of NFT mass adoption: high transaction costs, slow network speeds, and limited storage capacity.
 
 ### 1.1. Project Goal
 
@@ -15,7 +14,7 @@ The overall goal of the Peerplays NFT Store project is to develop a user interfa
 
 ### 1.2. Purpose
 
-The purpose of this High Level Design \(HLD\) document is to provide a concise and combined overview of the separate, more detailed, Low Level Design and Functional Specification documents to facilitate the sharing of information about this system. To find more information about the complete system design, see the Supporting & Reference Docs &gt; [NFT Store](https://devs.peerplays.tech/supporting-and-reference-docs/nft-development/nft-store) docs in the Peerplays Developer Documentation Portal.
+The purpose of this High Level Design (HLD) document is to provide a concise and combined overview of the separate, more detailed, Low Level Design and Functional Specification documents to facilitate the sharing of information about this system. To find more information about the complete system design, see the Supporting & Reference Docs > [NFT Store](https://devs.peerplays.tech/supporting-and-reference-docs/nft-development/nft-store) docs in the Peerplays Developer Documentation Portal.
 
 ## 2. NFT Store UI Site Map
 
@@ -36,7 +35,7 @@ The NFT Store objects could be thought of like this:
 * The NFT Store contains many `Creators`.
 * A **`Creator`** can own many `Galleries`, `Collections`, and `NFTs`.
 * A **`Gallery`** can contain many `Collections` and `NFTs`.
-* A **`Collection`** can contain many `NFTs`. 
+* A **`Collection`** can contain many `NFTs`.&#x20;
 
 Figure 3 is a visual representation of the points above. The NFT Store is structured this way to provide a framework that is built with two important concepts at its core:
 
@@ -69,7 +68,7 @@ class nft_creator_object : public abstract_object<nft_creator_object>
 ```
 
 {% hint style="info" %}
-App settings like notification and display settings will need to be stored off-chain in local \(in browser\) storage. This is to prevent needless blockchain transactions.
+App settings like notification and display settings will need to be stored off-chain in local (in browser) storage. This is to prevent needless blockchain transactions.
 {% endhint %}
 
 ### 4.3. Galleries
@@ -128,50 +127,12 @@ Additional fields that might be standard in the NFT Store, such as the NFT descr
 
 ### 4.6. Some Examples
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Example</th>
-      <th style="text-align:left">Creator</th>
-      <th style="text-align:left">Gallery</th>
-      <th style="text-align:left">Collection</th>
-      <th style="text-align:left">NFT</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">
-        <p>Clothing Shop in a Mall</p>
-        <p>(Real life analogy)</p>
-      </td>
-      <td style="text-align:left">GAP</td>
-      <td style="text-align:left">GAP Store#1125</td>
-      <td style="text-align:left">Baby Clothes</td>
-      <td style="text-align:left">Baby Boys Faded Jeans size 2T</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">NFT Store</td>
-      <td style="text-align:left">Hiltos</td>
-      <td style="text-align:left">Collectable Cards</td>
-      <td style="text-align:left">Horse Race Card Game</td>
-      <td style="text-align:left">Black Beauty first edition</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">NFT Store</td>
-      <td style="text-align:left">Hiltos</td>
-      <td style="text-align:left">Collectable Cards</td>
-      <td style="text-align:left">Blockchain RPG Card Game</td>
-      <td style="text-align:left">Longsword +2</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">NFT Store</td>
-      <td style="text-align:left">Hiltos</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">My First NFT just for fun!</td>
-    </tr>
-  </tbody>
-</table>
+| Example                                                  | Creator | Gallery           | Collection               | NFT                           |
+| -------------------------------------------------------- | ------- | ----------------- | ------------------------ | ----------------------------- |
+| <p>Clothing Shop in a Mall</p><p>(Real life analogy)</p> | GAP     | GAP Store#1125    | Baby Clothes             | Baby Boys Faded Jeans size 2T |
+| NFT Store                                                | Hiltos  | Collectable Cards | Horse Race Card Game     | Black Beauty first edition    |
+| NFT Store                                                | Hiltos  | Collectable Cards | Blockchain RPG Card Game | Longsword +2                  |
+| NFT Store                                                | Hiltos  |                   |                          | My First NFT just for fun!    |
 
 ## 5. User Classifications
 
@@ -203,7 +164,7 @@ The page body contains the content of the specific page.
 
 The site footer contains marketing content, social media site links, broader scope of navigation, and links to legal documents such as privacy policy and terms of service, if required.
 
-All object lists \(NFTs, Creators, Transactions, Galleries, Collections, etc.\) will provide the basic functions for various view options:
+All object lists (NFTs, Creators, Transactions, Galleries, Collections, etc.) will provide the basic functions for various view options:
 
 * List view / grid view / detail view
 * sorting / filtering / searching
@@ -213,7 +174,7 @@ All object lists \(NFTs, Creators, Transactions, Galleries, Collections, etc.\) 
 
 #### 7.1.1. The NFT Store Homepage
 
-The NFT Store homepage, or landing page, is the page at the root domain that enjoyers will first visit. This page is used to provide initial site navigation, marketing content, featured content, starting points for enjoyers, and helpful resources. The homepage can include a call to action, search bar, list of available categories, and the login function. The color scheme and graphical design of the homepage \(and **all** NFT store pages\) should align with Peerplays branding guidelines.
+The NFT Store homepage, or landing page, is the page at the root domain that enjoyers will first visit. This page is used to provide initial site navigation, marketing content, featured content, starting points for enjoyers, and helpful resources. The homepage can include a call to action, search bar, list of available categories, and the login function. The color scheme and graphical design of the homepage (and **all** NFT store pages) should align with Peerplays branding guidelines.
 
 #### 7.1.2. Login / Logout
 
@@ -232,8 +193,8 @@ When logged in, an enjoyer can view and edit their own profile and settings.
 Public profile fields the enjoyer can edit:
 
 * Publicly displayed username
-* Description / Bio \(free text field\)
-* Profile pictures \(avatar, banner, background, etc.\)
+* Description / Bio (free text field)
+* Profile pictures (avatar, banner, background, etc.)
 * Social media profile links
 
 Email notification settings include:
@@ -254,18 +215,18 @@ Display settings include:
 
 #### 7.2.2. Other User's Profiles
 
-It's also possible to view the profiles of other enjoyers. This displays their owned NFTs, NFT Collections, NFT Stores, account activity, public profile info, and activity relating to the logged in enjoyer \(if any\).
+It's also possible to view the profiles of other enjoyers. This displays their owned NFTs, NFT Collections, NFT Stores, account activity, public profile info, and activity relating to the logged in enjoyer (if any).
 
 #### 7.2.3. Transactions List
 
 Transaction lists should be available on the profiles of creators. These will list transaction histories from the perspective of the creator rather than the perspective of the NFT. This should provide the same information available in other transaction lists, like:
 
-* transaction type \(transfer, sold, auctioned, minted\)
+* transaction type (transfer, sold, auctioned, minted)
 * transaction participants
 * transaction date, block number
-* transaction item \(the NFT\)
+* transaction item (the NFT)
 * transaction price, if applicable
-* transaction currency \(PPY, BTC, USD\)
+* transaction currency (PPY, BTC, USD)
 
 ### 7.3 NFT Pages
 
@@ -283,46 +244,46 @@ Creating an NFT using the CLI Wallet program is a multi-step process. This proce
    1. the name of the NFTs that will be created with this metadata
    2. the symbol of the NFTs that will be created with this metadata
    3. the URI of the NFTs that will be created with this metadata
-   4. the account name of the revenue partner \(who gets royalties on all sales\)
-   5. the revenue split amount \(the percentage of the sales that go to the revenue partner\)
+   4. the account name of the revenue partner (who gets royalties on all sales)
+   5. the revenue split amount (the percentage of the sales that go to the revenue partner)
    6. if the minted NFTs are transferable
-   7. if the minted NFTs are sell-able \(or auction-able\)
+   7. if the minted NFTs are sell-able (or auction-able)
    8. the Account Role id from step 1
 3. And finally, **create the NFT**. This requires...
    1. the account of the owner of the Metadata from step 2
    2. the Metadata id from step 2
    3. the owner of the minted NFT
-   4. the approved account of the minted NFT \(usually the owner\)
+   4. the approved account of the minted NFT (usually the owner)
    5. the URI of this specific minted NFT
 
 This requires three operations on the blockchain and a lot of information gathering. The workflow steps can be recreated, and the required information simplified, as a single GUI page in the NFT Store. The necessary details can be entered by the creator on one page. Then the workflow can follow the appropriate steps, in order, behind the scenes.
 
-To maintain user-friendliness, the NFT Store UI can combine the concepts of the Account Role, NFT Metadata, and NFT minting operations into a unified "NFT Template" or similar idea. The NFT Store can also provide pre-populated input fields \(drop-downs, radio buttons, etc.\) with valid data to avoid data validation issues, malicious inputs, and messy / accidental inputs. 
+To maintain user-friendliness, the NFT Store UI can combine the concepts of the Account Role, NFT Metadata, and NFT minting operations into a unified "NFT Template" or similar idea. The NFT Store can also provide pre-populated input fields (drop-downs, radio buttons, etc.) with valid data to avoid data validation issues, malicious inputs, and messy / accidental inputs.&#x20;
 
 #### 7.3.2. Editing an Existing NFT
 
 Editing an NFT or set of NFTs can also be a single page. Similar to creating an NFT, editing an NFT can be presented as editing a unified "NFT Template" or similar. Special care must be given to educating creators as to how editing NFTs can effect people who own minted NFTs from their metadata. This concept is very different from Ethereum based NFTs! For example, Account Roles do expire and may need to be updated later. Also, revenue share and permission settings on the metadata can be changed.
 
-#### 7.3.3. The Creator's Owned NFTs \(My NFTs\)
+#### 7.3.3. The Creator's Owned NFTs (My NFTs)
 
 A list of owned NFTs must be provided for the creator and others to view. This list helps the creator manage their NFTs and others to browse. From this list creators can quickly get basic info about their NFTs, list them for sale/auction, kick off a search for similar NFTs, and mark their favorite NFTs.
 
 Specifically, the list view should offer the following for each item in the list:
 
-* NFT name \(or symbol\)
+* NFT name (or symbol)
 * the creator's nickname and link to their profile
-* collection name  with link to the collection \(if applicable\)
+* collection name  with link to the collection (if applicable)
 * function to favorite / un-favorite
 * a thumbnail image
 * link to the details page for this NFT
 * a quick menu:
-  * List it for sale / auction \(if owned by the logged in creator\)
-  * Buy it now / make a bid \(if owned by another creator\)
+  * List it for sale / auction (if owned by the logged in creator)
+  * Buy it now / make a bid (if owned by another creator)
   * Search for similar NFTs
 
-#### 7.3.4. NFTs On Offer \(for sale / auction\)
+#### 7.3.4. NFTs On Offer (for sale / auction)
 
-The list of NFTs on offer is one of the most important pages of the NFT Store. It displays all the NFTs that are currently on offer \(for sale or for auction\). This page shows all NFTs together as a generic NFT Store gallery. Creators, galleries, and collections become facets of the sort, filter, and search functions of this page. Enjoyers browsing the NFTs on offer page can also use commonly found NFT metadata parameters to customize their search.
+The list of NFTs on offer is one of the most important pages of the NFT Store. It displays all the NFTs that are currently on offer (for sale or for auction). This page shows all NFTs together as a generic NFT Store gallery. Creators, galleries, and collections become facets of the sort, filter, and search functions of this page. Enjoyers browsing the NFTs on offer page can also use commonly found NFT metadata parameters to customize their search.
 
 #### 7.3.5. NFT Details Page
 
@@ -332,19 +293,19 @@ The NFT Details page will provide all the NFT's information, including but not l
 * NFT symbol
 * NFT description
 * NFT category
-* Creator name\(NFT metadata owner\)
+* Creator name(NFT metadata owner)
   * avatar icon
-* Owner name\(NFT instance owner\)
+* Owner name(NFT instance owner)
   * avatar icon
 * NFT URI
-* NFT image, video, music, 3D model, etc. \(the payload\)
+* NFT image, video, music, 3D model, etc. (the payload)
 * if the NFT has unlock-able data
-* stake NFT info \(if applicable\)
+* stake NFT info (if applicable)
   * NFT age and maturity date
   * claimed rewards / unclaimed rewards
   * voting power
   * stake quantity and currency
-  * Peerplays community \(if applicable\)
+  * Peerplays community (if applicable)
 * revenue partner
 * revenue split
 * if transfers are allowed
@@ -355,20 +316,20 @@ The NFT Details page will provide all the NFT's information, including but not l
 * account role accounts
 * account role custom metadata
 * when the account role expires
-* NFT custom metadata \(custom parameters\)
+* NFT custom metadata (custom parameters)
 * if the NFT belongs to a collection, and which one
-* if the NFT belongs \(directly\) to a gallery, and which one
+* if the NFT belongs (directly) to a gallery, and which one
 
 This page should be equipped to display the intended payload of the NFT. For example, if the NFT contains a video, the video should be displayed in a video player.
 
 In addition to the NFT specific information, pricing and other market information should be available. This should include:
 
 * lifetime transactions of this NFT
-  * transaction type \(transfer, sold, auctioned, minted\)
+  * transaction type (transfer, sold, auctioned, minted)
   * transaction participants
   * transaction date, block number
   * transaction price, if applicable
-  * transaction currency \(PPY, BTC, USD\)
+  * transaction currency (PPY, BTC, USD)
 * Price & volume history
 * Estimated value
 * Estimated popularity
@@ -388,9 +349,9 @@ A variety of functions should also be available on this page as well:
 
 #### 7.4.1. Creating a New Collection / Gallery
 
-**Collections** can be created to group related NFTs together. A creator can give the collection a title, description, a banner and thumbnail image, and select its appropriate categories. This is like a display you would find in a supermarket for a brand of candy bar. There may be multiple flavors but they are all the same brand and have the same marketing message.
+**Collections **can be created to group related NFTs together. A creator can give the collection a title, description, a banner and thumbnail image, and select its appropriate categories. This is like a display you would find in a supermarket for a brand of candy bar. There may be multiple flavors but they are all the same brand and have the same marketing message.
 
-**Galleries** can be created to group similar collections and/or distinct NFTs. A creator can give the gallery its own title, description, banner and thumbnail image. Since galleries are the top level of hierarchy, they don't get categories. They can contain collections and NFTs with multiple different categories. Continuing the supermarket analogy, a gallery would represent a whole department within the store. This is like the whole candy isle with all its different brands and marketing messages.
+**Galleries **can be created to group similar collections and/or distinct NFTs. A creator can give the gallery its own title, description, banner and thumbnail image. Since galleries are the top level of hierarchy, they don't get categories. They can contain collections and NFTs with multiple different categories. Continuing the supermarket analogy, a gallery would represent a whole department within the store. This is like the whole candy isle with all its different brands and marketing messages.
 
 #### 7.4.2. Editing an Existing Collection / Gallery
 
@@ -400,13 +361,13 @@ NFTs can be added and removed from collections.
 
 NFTs and collections can be added and removed from galleries.
 
-#### 7.4.3. The Creator's Collections / Galleries \(My Collections / My Galleries\)
+#### 7.4.3. The Creator's Collections / Galleries (My Collections / My Galleries)
 
 These pages display the collections or galleries owned by a given creator. Much like the list of NFTs, basic information should be displayed about each item in the list.
 
 * title
 * images
-* categories \(for collections\)
+* categories (for collections)
 * owner name
 * number of contained NFTs
 
@@ -419,9 +380,8 @@ The collection or gallery details page would be the display of the collection or
 Links to help documents should be provided from the navigation menu. Pages within the NFT Store can also be available to support NFT Store branding on help documents. Documents should provide help in a variety of formats, such as:
 
 * FAQs
-* User Guides on specific topics \(like creating an NFT, buying an NFT, wallet info, etc.\)
-* Conceptual guides \(like What is an NFT, Why I should buy an NFT, etc.\)
-* Security information \(like known NFT scams and how to avoid them, reporting bad activity, etc.\)
-* Video guides \(use universal design theory, like providing captions or transcripts, etc.\)
-* P2P help forums or Stack Overflow-like Q&A portals
-
+* User Guides on specific topics (like creating an NFT, buying an NFT, wallet info, etc.)
+* Conceptual guides (like What is an NFT, Why I should buy an NFT, etc.)
+* Security information (like known NFT scams and how to avoid them, reporting bad activity, etc.)
+* Video guides (use universal design theory, like providing captions or transcripts, etc.)
+* P2P help forums or Stack Overflow-like Q\&A portals

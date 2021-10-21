@@ -2,19 +2,19 @@
 
 ## 1. Introduction
 
-The goal of every Peerplays **dApp** developer is to develop applications using the rock solid transaction capabilities, tamper proof immutability, and impenetrable security offered by the Peerplays blockchain platform.
+The goal of every Peerplays **dApp **developer is to develop applications using the rock solid transaction capabilities, tamper proof immutability, and impenetrable security offered by the Peerplays blockchain platform.
 
 While these are compelling reasons for developers to use blockchain technology, the need for end-to-end application development knowledge along with traditional enterprise backed software development methods create entry barriers for developers.
 
-A Blockchain Middleware System \(BMS\) platform with various components will be built by the **PBSA** to address these unique challenges. Our goal is to expose general purpose APIs which can be accessed in a language and platform agnostic way and thus make it possible for developers of varying skill sets to create applications on the blockchain.
+A Blockchain Middleware System (BMS) platform with various components will be built by the **PBSA **to address these unique challenges. Our goal is to expose general purpose APIs which can be accessed in a language and platform agnostic way and thus make it possible for developers of varying skill sets to create applications on the blockchain.
 
-![\(Figure 1: High-level design topology of a dApp\)](../../.gitbook/assets/index.png)
+![(Figure 1: High-level design topology of a dApp)](../../.gitbook/assets/index.png)
 
 ## 2. Identity Management
 
 User and identity management is a major part in any application development. Blockchains bring challenges with their unique security constraints. The public key cryptography based account access provided by the Peerplays blockchain is secure compared to a username and password based authentication. But this method makes it challenging or even next to impossible for laymen to create and use dApps. A common alternative proposed is using cryptocurrency wallets. This doesn't really solve the on-boarding challenge as a tiny set of the internet browsing population use cryptocurrency wallets.
 
-To ensure faster and smoother on-boarding of users, Peerplays is thus creating an identity and access management \(**IdAM**\) and **SSO** platform which helps anyone with an email address, Facebook, or Google account to easily create an account on the Peerplays blockchain. For tech-savvy users the traditional blockchain mechanism will be used to create the accounts.
+To ensure faster and smoother on-boarding of users, Peerplays is thus creating an identity and access management (**IdAM**) and **SSO **platform which helps anyone with an email address, Facebook, or Google account to easily create an account on the Peerplays blockchain. For tech-savvy users the traditional blockchain mechanism will be used to create the accounts.
 
 In addition to the account creation, Peerplays will also provide simpler mechanisms for dApp developers to create and provision dApps and configure various dApp level permissions.
 
@@ -31,7 +31,7 @@ The components:
 * dApp provisioning
 * dApp Permissions
 * unlinking third party services
-* Multi-Factor Authentication \(**MFA**\)
+* Multi-Factor Authentication (**MFA**)
 * Anti-Phishing features
 
 #### **3.1.1. Account creation**
@@ -50,9 +50,9 @@ Developers must be given a simple interface wherein they can create the dApp, as
 
 The blockchain level permissions capabilities should be used to create permissions. The permissions must map users to dApps, assets, and operations based on various conditions. The conditions can be generic and configurable via the PeerID user interface.
 
-The blockchain will expose a generic interface to validate / verify with any external validator. The dApp can perform the calls with external services like a **KYC** verification application to receive a call back and then set relevant attributes to a given user.
+The blockchain will expose a generic interface to validate / verify with any external validator. The dApp can perform the calls with external services like a **KYC **verification application to receive a call back and then set relevant attributes to a given user.
 
-PeerID should allow limiting users based on conditions set in the blockchain which are based on external validators \(services like KYC, geo-location, etc.\) The external conditions can be properties like is\_member\_of\_facebook, is\_MFA\_enabled, etc.
+PeerID should allow limiting users based on conditions set in the blockchain which are based on external validators (services like KYC, geo-location, etc.) The external conditions can be properties like is\_member\_of\_facebook, is\_MFA\_enabled, etc.
 
 #### **3.1.5. Miscellaneous features**
 
@@ -72,9 +72,9 @@ These features will be low priority, phase II features that will ensure addition
   * Google id
 * A user shall be able to change their password
 * A user shall be able to import or export their Peerplays keys
-* A password recovery \(forgot password\) option shall be provided
+* A password recovery (forgot password) option shall be provided
 
-#### 3.2.2. dApp provisioning <a id="1.5.dApp-provisioning"></a>
+#### 3.2.2. dApp provisioning <a href="1.5.dapp-provisioning" id="1.5.dapp-provisioning"></a>
 
 1. The first step of dApp creation is to create a corresponding blockchain account for the dApp. A simple UI shall be provided for creating the dApp account.
 
@@ -88,19 +88,17 @@ Aspects provisioned for the dApp account:
 
 ## 4. Glossary
 
-**dApp** - Decentralized Application. Just like a typical computer application, but with no centralized database, host, or distribution.
+**dApp **- Decentralized Application. Just like a typical computer application, but with no centralized database, host, or distribution.
 
-**PBSA** - Peerplays Blockchain Standards Association - For more information, see [pbsa.info](https://pbsa.info/).
+**PBSA **- Peerplays Blockchain Standards Association - For more information, see [pbsa.info](https://pbsa.info).
 
-**IdAM** - Identity and Access Management - A framework of policies and technologies for ensuring that the right users have the appropriate access to technology resources.
+**IdAM **- Identity and Access Management - A framework of policies and technologies for ensuring that the right users have the appropriate access to technology resources.
 
-**SSO** - Single Sign-On - An authentication scheme that allows a user to log in with a single set of credentials to any of several related, yet independent, applications. True single sign-on allows the user to log in once and access services without re-entering authentication factors.
+**SSO **- Single Sign-On - An authentication scheme that allows a user to log in with a single set of credentials to any of several related, yet independent, applications. True single sign-on allows the user to log in once and access services without re-entering authentication factors.
 
-**PeerID** - The IdAM and SSO blockchain middleware for the Peerplays blockchain.
+**PeerID **- The IdAM and SSO blockchain middleware for the Peerplays blockchain.
 
-**MFA** - Multi-Factor Authentication \(encompassing **two-factor authentication**, or **2FA**, along with similar terms\) -  An authentication method in which a user is granted access to an application only after successfully presenting two or more pieces of evidence \(or factors\) to an authentication mechanism.
+**MFA **- Multi-Factor Authentication (encompassing **two-factor authentication**, or **2FA**, along with similar terms) -  An authentication method in which a user is granted access to an application only after successfully presenting two or more pieces of evidence (or factors) to an authentication mechanism.
 
-**KYC** - Know Your Customer \(or Client\) -  Guidelines in financial services that require organizations to make an effort to verify the identity, suitability, and risks involved with maintaining a business relationship.
-
-
+**KYC **- Know Your Customer (or Client) -  Guidelines in financial services that require organizations to make an effort to verify the identity, suitability, and risks involved with maintaining a business relationship.
 

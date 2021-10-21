@@ -46,7 +46,7 @@
 * [NFT Minting](development-guides/nft-minting.md)
 * [Calculating Costs](development-guides/calculating-costs.md)
 
-## The Cookbook <a id="cookbook"></a>
+## The Cookbook <a href="cookbook" id="cookbook"></a>
 
 * [NFTs for Staking Creator Tokens](cookbook/nfts-for-staking-creator-tokens.md)
 
@@ -62,7 +62,7 @@
 ## Supporting & Reference Docs
 
 * [Peerplays Development FAQs](supporting-and-reference-docs/peerplays-development-faqs.md)
-* [Sidechain Operator Node \(SON\) Development](supporting-and-reference-docs/sidechain-operator-node-development/README.md)
+* [Sidechain Operator Node (SON) Development](supporting-and-reference-docs/sidechain-operator-node-development/README.md)
   * [Generic Sidechain Docs](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/README.md)
     * [Quick joining GLADIATOR](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/quick-joining-gladiator.md)
     * [Changes to Peerplaysjs-lib](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/changes-to-peerplaysjs-lib.md)
@@ -87,7 +87,7 @@
       * [son-objects-and-operators](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/low-level-designs/son-objects-and-operators.md)
       * [son-rewards-lld](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/low-level-designs/son-rewards-lld.md)
       * [son-voting-lld](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/low-level-designs/son-voting-lld.md)
-      * [son-wallet-list\_sons-lld](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/low-level-designs/son-wallet-list_sons-lld.md)
+      * [son-wallet-list\_sons-lld](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/low-level-designs/son-wallet-list\_sons-lld.md)
       * [creation of a multi-sig bitcoin address lld](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/low-level-designs/untitled-1.md)
       * [claiming initial son vesting lld](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/low-level-designs/untitled-2.md)
       * [changeover and SON maintenance scenarios lld](supporting-and-reference-docs/sidechain-operator-node-development/generic-sidechain-docs/low-level-designs/untitled.md)
@@ -127,6 +127,9 @@
     * [Login and Account Creation](supporting-and-reference-docs/peerplays-dex-development/functional-specs/login-and-account-creation.md)
     * [User Account Page](supporting-and-reference-docs/peerplays-dex-development/functional-specs/user-account-page.md)
     * [Voting Page](supporting-and-reference-docs/peerplays-dex-development/functional-specs/voting-page.md)
+* [SPK Network](supporting-and-reference-docs/spk-network/README.md)
+  * [Functional Specs](supporting-and-reference-docs/spk-network/functional-specs/README.md)
+    * [Initial Claimdrop Functional Specification](supporting-and-reference-docs/spk-network/functional-specs/initial-claimdrop-functional-specification.md)
 * [NFT Development](supporting-and-reference-docs/nft-development/README.md)
   * [NFT Store](supporting-and-reference-docs/nft-development/nft-store/README.md)
     * [NFT Store User Stories](supporting-and-reference-docs/nft-development/nft-store/nft-store-user-stories.md)
@@ -134,8 +137,8 @@
   * [Django-NFT](supporting-and-reference-docs/nft-development/django-nft/README.md)
     * [Requirements Specification](supporting-and-reference-docs/nft-development/django-nft/requirements-specification.md)
 * [Operation IDs List](supporting-and-reference-docs/operation-ids-list.md)
-* [Sidechain Flow Diagram \(HIVE coin\)](supporting-and-reference-docs/sidechain-flow-diagram-hive.md)
-* [Sidechain Flow Diagram \(Bitcoin\)](supporting-and-reference-docs/sidechain-flow-diagram-bitcoin.md)
+* [Sidechain Flow Diagram (HIVE coin)](supporting-and-reference-docs/sidechain-flow-diagram-hive.md)
+* [Sidechain Flow Diagram (Bitcoin)](supporting-and-reference-docs/sidechain-flow-diagram-bitcoin.md)
 
 ## Development Workflow Docs
 
@@ -143,9 +146,8 @@
 
 ## Other Documentation
 
----
+***
 
 * [Docs Home](https://peerplays.tech)
 * [Community Docs](https://community.peerplays.tech)
 * [Infrastructure Docs](https://infra.peerplays.tech)
-

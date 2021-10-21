@@ -2,11 +2,11 @@
 
 ## Bitcoin-SON
 
-### ❓ How can I generate Bitcoin addresses?
+### :question: How can I generate Bitcoin addresses?
 
 Command:
 
-```text
+```
 ./bitcoin-cli -rpcuser=1 -rpcpassword=1 -rpcwallet=default getnewaddress
 ```
 
@@ -16,27 +16,27 @@ References:
 
 {% embed url="https://developer.bitcoin.org/reference/rpc/getnewaddress.html" %}
 
-### ❓ How to get TEST BTC on the REGTEST network?
+### :question: How to get TEST BTC on the REGTEST network?
 
 From developer.bitcoin.org...
 
-> For situations where interaction with random peers and blocks is unnecessary or unwanted, Bitcoin Core’s regression test mode \(regtest mode\) lets you instantly create a brand-new private block chain with the same basic rules as testnet—but one major difference: you choose when to create new blocks, so you have complete control over the environment.
+> For situations where interaction with random peers and blocks is unnecessary or unwanted, Bitcoin Core’s regression test mode (regtest mode) lets you instantly create a brand-new private block chain with the same basic rules as testnet—but one major difference: you choose when to create new blocks, so you have complete control over the environment.
 >
 > Many developers consider regtest mode the preferred way to develop new applications. The following example will let you create a regtest environment after you first [configure bitcoind](https://developer.bitcoin.org/examples/index.html).
 
-```text
+```
 bitcoind -regtest -daemon
 ```
 
-> Start `bitcoind` in regtest mode to create a private block chain.
+> &#x20;Start `bitcoind` in regtest mode to create a private block chain.
 
-```text
+```
 bitcoin-cli -regtest generatetoaddress 101 $(bitcoin-cli -regtest getnewaddress)
 ```
 
-> Generate 101 blocks using a special [RPC](https://developer.bitcoin.org/reference/rpc/index.html) which is only available in regtest mode. This takes less than a second on a generic PC. Because this is a new block chain using Bitcoin’s default rules, the first blocks pay a block reward of 50 bitcoins. Unlike mainnet, in regtest mode only the first 150 blocks pay a reward of 50 bitcoins. However, a block must have 100 confirmations before that reward can be spent, so we generate 101 blocks to get access to the coinbase transaction from block \#1.
+> Generate 101 blocks using a special [RPC](https://developer.bitcoin.org/reference/rpc/index.html) which is only available in regtest mode. This takes less than a second on a generic PC. Because this is a new block chain using Bitcoin’s default rules, the first blocks pay a block reward of 50 bitcoins. Unlike mainnet, in regtest mode only the first 150 blocks pay a reward of 50 bitcoins. However, a block must have 100 confirmations before that reward can be spent, so we generate 101 blocks to get access to the coinbase transaction from block #1.
 
-```text
+```
 bitcoin-cli -regtest getbalance
 ```
 
@@ -44,17 +44,17 @@ bitcoin-cli -regtest getbalance
 >
 > You can now use Bitcoin Core [RPCs](https://developer.bitcoin.org/reference/rpc/index.html) prefixed with `bitcoin-cli -regtest`.
 >
-> Regtest wallets and block chain state \(chainstate\) are saved in the `regtest` subdirectory of the Bitcoin Core configuration directory. You can safely delete the `regtest` subdirectory and restart Bitcoin Core to start a new regtest. \(See the [Developer Examples Introduction](https://developer.bitcoin.org/examples/index.html) for default configuration directory locations on various operating systems. Always back up mainnet wallets before performing dangerous operations such as deleting.\)
+> Regtest wallets and block chain state (chainstate) are saved in the `regtest` subdirectory of the Bitcoin Core configuration directory. You can safely delete the `regtest` subdirectory and restart Bitcoin Core to start a new regtest. (See the [Developer Examples Introduction](https://developer.bitcoin.org/examples/index.html) for default configuration directory locations on various operating systems. Always back up mainnet wallets before performing dangerous operations such as deleting.)
 
 Reference:
 
-{% embed url="https://developer.bitcoin.org/examples/testing.html\#regtest-mode" %}
+{% embed url="https://developer.bitcoin.org/examples/testing.html#regtest-mode" %}
 
-### ❓ How can I generate / find the public key for a Bitcoin address?
+### :question: How can I generate / find the public key for a Bitcoin address?
 
 Command:
 
-```text
+```
 ./bitcoin-cli -rpcuser=1 -rpcpassword=1 -rpcwallet=default getaddressinfo "address"
 ```
 
@@ -64,11 +64,11 @@ References:
 
 {% embed url="https://developer.bitcoin.org/reference/rpc/getaddressinfo.html" %}
 
-### ❓ If funds are deposited to a Bitcoin address, will there be logs?
+### :question: If funds are deposited to a Bitcoin address, will there be logs?
 
 
 
-### ❓ What is the cli\_command to generate a Bitcoin deposit address in the Peerplays blockchain?
+### :question: What is the cli\_command to generate a Bitcoin deposit address in the Peerplays blockchain?
 
 Command Definition:
 
@@ -86,41 +86,41 @@ signed_transaction graphene::wallet::wallet_api::add_sidechain_address(
 
 Command Structure:
 
-```text
+```
 add_sidechain_address <account> <sidechain> <deposit_public_key> <withdraw_public_key> <withdraw_address> true
 ```
 
 Command Example:
 
-```text
+```
 add_sidechain_address myaccount123 bitcoin 03c8d1c33727788ca1f61e13bdeca0127047527a0880c816056b4015d6e2d36c1e 025cee805793fd94ca1933cc28ef9c065addd0e256195f1a541be0cd21867ac1c5 1EToWbQDvEwwie6jYsuM7WkZnh7rCn5Ecu true
 ```
 
 Reference:
 
-{% embed url="https://infra.peerplays.tech/the-basics/using-the-cli-wallet/cli-commands-for-sons\#2-sidechains-cli-command-reference" %}
+{% embed url="https://infra.peerplays.tech/the-basics/using-the-cli-wallet/cli-commands-for-sons#2-sidechains-cli-command-reference" %}
 
-### ❓ If a Bitcoin deposit address is created for a Peerplays address \(account\) what are the logs in the Peerplays blockchain?
-
-
-
-### ❓ How to run a Peerplays blockchain node with RPC debugging turned on?
+### :question: If a Bitcoin deposit address is created for a Peerplays address (account) what are the logs in the Peerplays blockchain?
 
 
 
-## Gamified Proof of Stake \(GPOS\)
+### :question: How to run a Peerplays blockchain node with RPC debugging turned on?
 
-### ❓ What are the blockchain logs when a successful GPOS Vesting is done?
+
+
+## Gamified Proof of Stake (GPOS)
+
+### :question: What are the blockchain logs when a successful GPOS Vesting is done?
 
 
 
 ## Faucet
 
-### ❓ What are the logs in faucet when an account is successfully created?
+### :question: What are the logs in faucet when an account is successfully created?
 
 One can use **Curl** command or **POSTMAN** in order to create a new account in the Faucet. With **Curl** you can do the following:
 
-```text
+```
 curl -X POST http://<IP_ADDRESS>:<PORT_NUMBER>/api/v1/accounts 
 -H 'content-type: application/json' 
 -d '{
@@ -134,14 +134,14 @@ curl -X POST http://<IP_ADDRESS>:<PORT_NUMBER>/api/v1/accounts
 ```
 
 {% hint style="info" %}
-**IP\_ADDRESS** should be **127.0.0.1** or **localhost** when running it directly in a VM or on your local machine.
+**IP\_ADDRESS** should be **127.0.0.1 **or** localhost** when running it directly in a VM or on your local machine.
 
 **`owner_key`**, **`active_key`**, **`memo_key`** should start with **TEST** on testnet, and it should be **PPY** on mainnet.
 {% endhint %}
 
 If the result of the above is successful, there should be output like this:
 
-```text
+```
 {
 	"account": {
 		"active_key": "TEST5TPTziKkLexhVKsQKtSpo4bAv5RnB8oXcG4sMHEwCcTf3r7dqE",
@@ -153,71 +153,71 @@ If the result of the above is successful, there should be output like this:
 }
 ```
 
-And in case of any error, it will be following \(i.e. duplicate account\):
+And in case of any error, it will be following (i.e. duplicate account):
 
-```text
+```
 {"error":{"base":["Account exists"]}}
 ```
 
 You can also track the logs in **Faucet** container, with the following command:
 
-```text
+```
 docker logs --follow <Faucet-Container-ID>
 For example: docker logs --follow 47c101add138
 ```
 
 And look for logs when receiving **Create Account** requests, with **200** status code as a result.
 
-```text
+```
 37.252.95.183 - - [06/Oct/2021 17:55:29] "OPTIONS /api/v1/accounts HTTP/1.1" 200 -
 37.252.95.183 - - [06/Oct/2021 17:55:30] "POST /api/v1/accounts HTTP/1.1" 200 -
 ```
 
 ## Peerplays DEX
 
-### ❓ How do I setup a local DEX UI project?
+### :question: How do I setup a local DEX UI project?
 
-This works with a Faucet and a local QA environment \(create account & login\).
+This works with a Faucet and a local QA environment (create account & login).
 
 First, pull the DEX repository from [here](https://gitlab.com/PBSA/peerplays-dex/-/tree/develop).
 
 After setting up the project, update the following variables in .env file:
 
-```text
+```
 FAUCET_URL='http://<IP_ADDRESS>:5000/api/v1/accounts'
 BLOCKCHAIN_ENDPOINTS='ws://<IP_ADDRESS>:8090/api'
 ```
 
 {% hint style="info" %}
-**IP\_ADDRESS** should be **127.0.0.1** or **localhost** when running it directly on your local machine.
+**IP\_ADDRESS **should be **127.0.0.1** or **localhost **when running it directly on your local machine.
 {% endhint %}
 
 ## Peerplays QA Environment
 
-### ❓ How do I transfer funds between accounts in a Peerplays QA Environment network?
+### :question: How do I transfer funds between accounts in a Peerplays QA Environment network?
 
 In the QA environment setup by instructions in [here](https://gitlab.com/PBSA/tools-libs/peerplays-utils/-/tree/master/peerplays-qa-environment), execute commands in Peerplays01 container with the following:
 
-```text
+```
 docker exec -it peerplaysqaenvironment_peerplays01_1 /bin/bash
 ```
 
 Then running into account’s wallet:
 
-```text
+```
 ./cli_wallet list_account_balances <ACCOUNT_NAME>
 For example: ./cli_wallet list_account_balances armin
 ```
 
-Unlock the wallet with the default password \(which is "password"\):
+Unlock the wallet with the default password (which is "password"):
 
-```text
+```
 unlock password
 ```
 
-Get the private key for active key \(public key\):
+Get the private key for active key (public key):
 
-```text
+```
 get_private_key_from_password "<ACCOUNT_NAME>" active "<ACCOUNT_PASSWORD>"
 ```
 
@@ -227,7 +227,7 @@ ACCOUNT\_PASSWORD is the password defined when creating account in DEX UI.
 
 Import the private key returned from previous step:
 
-```text
+```
 import_key <ACCOUNT_NAME> <PRIVATE_KEY>
 For example:
 import_key armin 5JckQ6g57P9YyyumHCRj1cNbHTiMEUVA2HjVDJqXDDPYizEaAMu
@@ -235,13 +235,12 @@ import_key armin 5JckQ6g57P9YyyumHCRj1cNbHTiMEUVA2HjVDJqXDDPYizEaAMu
 
 Finally transfer with the following:
 
-```text
+```
 transfer <FROM_ACCOUNT_NAME> <TO_ACCOUNT_NAME> <AMOUNT> TEST "" true 
 For example: transfer armin nathan 10 TEST "" true
 ```
 
 {% hint style="info" %}
-memo key should be empty string for it to work.  
+memo key should be empty string for it to work.\
 With list\_core\_accounts command you can check all account’s balances.
 {% endhint %}
-
