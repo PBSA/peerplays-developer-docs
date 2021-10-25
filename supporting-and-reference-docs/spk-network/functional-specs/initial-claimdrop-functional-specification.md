@@ -132,6 +132,15 @@ The app will provide a user-friendly experience with the single purpose of allow
 
 These tokens are being distributed through a claimdrop mechanism to holders of HIVE and HP. Participants of the Hive blockchain require a way to claim these tokens. Peerplays accounts must also be provided for claiming these tokens as the SPK Network tokens will be native to the Peerplays blockchain. The initial claimdrop is scheduled for January 2022. After the initial claimdrop, subsequent monthly claimdrops will occur for a limited time. Last, tokens left unclaimed after the claimdrop period is over will be distributed so as not to lock up the tokens.
 
+Some details about the claimdrop:
+
+| Item                             | Description                                                                     |
+| -------------------------------- | ------------------------------------------------------------------------------- |
+| Total LARYNX Tokens              | This will be equal to the number of HIVE and HIVE POWER at the time of snapshot |
+| HBD and claimdrop                | HBD is not considered for claimdrop                                             |
+| Ratio                            | Each HIVE or HIVE POWER will get 1 LARYNX                                       |
+| Are there any accounts excluded? | At this point we have excluded the Hive DAO account and the `null` account      |
+
 ## 6. Design Diagrams
 
 ### 6.1. Images
@@ -202,44 +211,39 @@ Requirements specific to the items outlined in this functional specification are
 
 ### 7.6. App Claim Page
 
-Every Hive blockchain user who is not in a blacklist will be able to claim LARNYX miner tokens. At the begining only `null` account will be present in the blacklist.
+Every Hive blockchain user who is not in a blacklist will be able to claim LARNYX miner tokens. At the beginning only `null` account will be present in the blacklist.
 
+**ICD-19 Special accounts and blacklist**
 
+A list of accounts will be maintained for special accounts and blacklisted accounts. The special accounts, like the Hive DAO account, will be exclused from the claimdrop. A blacklist will be maintained which also excludes the listed accounts from the claimdrop. This is a precautionary feature. Initially only the `null` account of the Hive blockchain will be added to the blacklist.
 
-**ICD-19 Special accounts and backlist**
-
-&#x20;A list of accounts will be maintained as special accounts and a blacklist will be mainted.  The special acconts like the Hive DAO account will be exclused from the claim drop. A blacklist will be maintained and accounts part of the blackli At this point this a precautionary feature and only the `null` account of the Hive blockchain will be added to the blocklist
-
-* If someone enters a blacklisted account, the error message "You have entered a blacklisted account \[blacklisted-account-name] and no additional information is available"
-* The accounts added to the blacklist will be permanent no method to remove or edit them will be available
+* If a Hive account is added as a blacklisted account, an error message shall be displayed when authenticaton is attempted with the account: "You have entered a blacklisted account \[blacklisted-account-name]. No additional information is available."
+* The accounts added to the blacklist shall be permanent. No method to remove or edit them will be available.
 
 
 
 * **ICD-20** shall display a process indicator which shows the steps of the claim process and where the user is within the process.
-*   **ICD-21** given the current process step the user is on, display the following:
-
-    * If not signed in, display:
-      * message prompting the user to authenticate their Hive account
-      * a button to begin any authentication workflow
-      * the remaining time left to initiate a claim
-    * If signed in, but the user has not claimed any tokens, display:
-      * the user's Hive username and profile picture
-      * the user's snapshot balances
-      * tokens available to claim
-      * a button to initiate a claim during the claimdrop period. \[claim-drop-button]&#x20;
-      * the claim drop button will be active only during the claim drop period
-      * the remaining time left to initiate a claim
-    * If signed in, and the user has claimed some tokens, display:
-      * the user's Hive username and profile picture
-      * the user's snapshot balances
-      * the user's previous claims if any, with timestamps
-      * the user's account information for the Hive and Peerplays blockchains
-
-
+* **ICD-21** given the current process step the user is on, the app shall  display the following:
+  * If not signed in, display:
+    * message prompting the user to authenticate their Hive account
+    * a button to begin any authentication workflow
+    * the remaining time left to initiate a claim
+  * If signed in, but the user has not claimed any tokens, display:
+    * the user's Hive username and profile picture
+    * the user's snapshot balances
+    * tokens available to claim
+    * a button to initiate a claim during the claimdrop period. \[claim-drop-button]&#x20;
+    * the claim drop button will be active only during the claim drop period
+    * the remaining time left to initiate a claim
+  * If signed in, and the user has claimed some tokens, display:
+    * the user's Hive username and profile picture
+    * the user's snapshot balances
+    * the user's previous claims if any, with timestamps
+    * the user's account information for the Hive and Peerplays blockchains
 
 ### 7.7. App Help Page
 
-* **ICD-21** shall display navigation to all available support channels, such as:
+* **ICD-22** shall display navigation to all available support channels, such as:
   * FAQs
   * How-To Guides
   * Support Contact Info
