@@ -206,12 +206,12 @@ Every Hive blockchain user who is not in a blacklist will be able to claim LARNY
 
 
 
-**ICD-19 Blacklist**
+**ICD-19 Special accounts and backlist**
 
-&#x20;A list of accounts will be added to the blacklist and prevented from the claimdrop. At this point this a precautionary feature and only the `null` account of the Hive blockchain will be added to the blocklist
+&#x20;A list of accounts will be maintained as special accounts and a blacklist will be mainted.  The special acconts like the Hive DAO account will be exclused from the claim drop. A blacklist will be maintained and accounts part of the blackli At this point this a precautionary feature and only the `null` account of the Hive blockchain will be added to the blocklist
 
 * If someone enters a blacklisted account, the error message "You have entered a blacklisted account \[blacklisted-account-name] and no additional information is available"
-* The accounts added to the blacklist will be permananent no method to remove or edit them will be available
+* The accounts added to the blacklist will be permanent no method to remove or edit them will be available
 
 
 
