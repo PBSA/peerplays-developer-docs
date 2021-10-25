@@ -202,23 +202,40 @@ Requirements specific to the items outlined in this functional specification are
 
 ### 7.6. App Claim Page
 
-* **ICD-19** shall display a process indicator which shows the steps of the claim process and where the user is within the process.
-* **ICD-20** given the current process step the user is on, display the following:
-  * If not signed in, display:
-    * message prompting the user to authenticate their Hive account
-    * a button to begin any authentication workflow
-    * the remaining time left to initiate a claim
-  * If signed in, but the user has not claimed any tokens, display:
-    * the user's Hive username and profile picture
-    * the user's snapshot balances
-    * tokens available to claim
-    * a button to initiate a claim
-    * the remaining time left to initiate a claim
-  * If signed in, and the user has claimed some tokens, display:
-    * the user's Hive username and profile picture
-    * the user's snapshot balances
-    * the user's previous claims, with timestamps
-    * the user's account information for the Hive and Peerplays blockchains
+Every Hive blockchain user who is not in a blacklist will be able to claim LARNYX miner tokens. At the begining only `null` account will be present in the blacklist.
+
+
+
+**ICD-19 Blacklist**
+
+&#x20;A list of accounts will be added to the blacklist and prevented from the claimdrop. At this point this a precautionary feature and only the `null` account of the Hive blockchain will be added to the blocklist
+
+* If someone enters a blacklisted account, the error message "You have entered a blacklisted account \[blacklisted-account-name] and no additional information is available"
+* The accounts added to the blacklist will be permananent no method to remove or edit them will be available
+
+
+
+* **ICD-20** shall display a process indicator which shows the steps of the claim process and where the user is within the process.
+*   **ICD-21** given the current process step the user is on, display the following:
+
+    * If not signed in, display:
+      * message prompting the user to authenticate their Hive account
+      * a button to begin any authentication workflow
+      * the remaining time left to initiate a claim
+    * If signed in, but the user has not claimed any tokens, display:
+      * the user's Hive username and profile picture
+      * the user's snapshot balances
+      * tokens available to claim
+      * a button to initiate a claim during the claimdrop period. \[claim-drop-button]&#x20;
+      * the claim drop button will be active only during the claim drop period
+      * the remaining time left to initiate a claim
+    * If signed in, and the user has claimed some tokens, display:
+      * the user's Hive username and profile picture
+      * the user's snapshot balances
+      * the user's previous claims if any, with timestamps
+      * the user's account information for the Hive and Peerplays blockchains
+
+
 
 ### 7.7. App Help Page
 
