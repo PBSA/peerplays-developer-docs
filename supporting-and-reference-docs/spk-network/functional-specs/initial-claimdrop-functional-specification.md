@@ -134,12 +134,14 @@ These tokens are being distributed through a claimdrop mechanism to holders of H
 
 Some details about the claimdrop:
 
-| Item                             | Description                                                                     |
-| -------------------------------- | ------------------------------------------------------------------------------- |
-| Total LARYNX Tokens              | This will be equal to the number of HIVE and HIVE POWER at the time of snapshot |
-| HBD and claimdrop                | HBD is not considered for claimdrop                                             |
-| Ratio                            | Each HIVE or HIVE POWER will get 1 LARYNX                                       |
-| Are there any accounts excluded? | At this point we have excluded the Hive DAO account and the `null` account      |
+#### 5.1 LARNYX token tokenomics
+
+| Item                             | Description                                                                           |
+| -------------------------------- | ------------------------------------------------------------------------------------- |
+| Total LARYNX Tokens              | This will be equal to the total number of HIVE and HIVE POWER at the time of snapshot |
+| HBD and claimdrop                | HBD is not considered for claimdrop                                                   |
+| Ratio                            | Each HIVE or HIVE POWER will get 1 LARYNX                                             |
+| Are there any accounts excluded? | At this point we have excluded the Hive DAO account and the `null` account            |
 
 ## 6. Design Diagrams
 
