@@ -129,6 +129,7 @@
     * [Voting Page](supporting-and-reference-docs/peerplays-dex-development/functional-specs/voting-page.md)
 * [SPK Network](supporting-and-reference-docs/spk-network/README.md)
   * [Functional Specs](supporting-and-reference-docs/spk-network/functional-specs/README.md)
+    * [Claimdrop Snapshot Functional Specification](supporting-and-reference-docs/spk-network/functional-specs/claimdrop-snapshot-functional-specification.md)
     * [Initial Claimdrop Functional Specification](supporting-and-reference-docs/spk-network/functional-specs/initial-claimdrop-functional-specification.md)
 * [NFT Development](supporting-and-reference-docs/nft-development/README.md)
   * [NFT Store](supporting-and-reference-docs/nft-development/nft-store/README.md)
