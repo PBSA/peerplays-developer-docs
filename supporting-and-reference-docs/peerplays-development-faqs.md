@@ -244,3 +244,7 @@ For example: transfer armin nathan 10 TEST "" true
 memo key should be empty string for it to work.\
 With list\_core\_accounts command you can check all account’s balances.
 {% endhint %}
+
+### ❓How to ensure QA environment is healthy ? <a href="how-do-i-transfer-funds-between-accounts-in-a-peerplays-qa-environment-network" id="how-do-i-transfer-funds-between-accounts-in-a-peerplays-qa-environment-network"></a>
+
+If you are getting "Generated block..." and "Scheduled SON..." messages, and SON last active timestamps are updated regularly, SON network is working as expected. To get last active timestamp, first use get\_object 1.33.X (ids are 1.33.0, 1.33.1, ... 1.33.6), statistic object id will be there, and then use get\_object statistic\_object\_id (I believe ids are 2.25.0, 2.25.1, ... 2.25.6). All timestamps should be in a last few minutes.
