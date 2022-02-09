@@ -136,7 +136,41 @@ Additional fields that might be standard in the NFT Store, such as the NFT descr
 
 ## 5. User Classifications
 
-Several [user personas](https://devs.peerplays.tech/supporting-and-reference-docs/nft-development/nft-store/nft-store-user-stories#3-user-personas) have been identified to facilitate the development of the NFT Store design. While the personas demonstrate how people of various backgrounds may interact with the system, all users within the NFT Store will have the same features available to them. As such, only one type of user exists in the NFT Store, the NFT Store **creator**. They are named "creators" because the purpose of using the NFT store is to create.
+Several [user personas](https://devs.peerplays.tech/supporting-and-reference-docs/nft-development/nft-store/nft-store-user-stories#3-user-personas) have been identified to facilitate the development of the NFT Store design. While the personas demonstrate how people of various backgrounds may interact with the system, three main user classes represent the discrete roles users in the system can have. These user classes are as follows:
+
+* Client
+* Tenant(s)
+* Enjoyer(s)
+
+These classes represent a hierarchy of system permissions:
+
+![Figure 4. The hierarchy of user class permissions.](../../../.gitbook/assets/nft-store-arch-hierarchy.drawio.png)
+
+### 5.1. Client
+
+The Client is the system owner. This is the individual or organization who downloads, configures, installs, and operates an instance of the NFT Store software. The Client has set out to meet a specific goal using the NFT Store system. As such, they can customize the configuration to suit their own business goals. Depending on the configuration, the Client can operate the NFT Store as a solution to many different use cases.
+
+Allowing no tenancy, the Client takes on the role of the (only) Tenant. This means the Client is the only NFT producing account in the instance. This is effectively an online retail store.
+
+If the Client allows a few select Tenants, they can set up a strictly controlled marketplace. This is useful for curated or niche markets like commodities markets, dropshipping, affiliate marketing, or dealer sales. There are many use cases for this type of configuration and is best for complex or multi-party businesses.
+
+Lastly the Client can allow all users to be Tenants automatically. This would create an open market where all users can freely produce NFTs.
+
+See Figure 5 below for an example showing how permissions could work.
+
+### 5.2. Tenant
+
+A Tenant is a user which can produce NFTs. These users need to be able to manage their NFT permissions and their store front. Tenants create, mint, sell, and auction NFTs.
+
+### 5.3. Enjoyer
+
+Enjoyers (customers) have the lowest level of permissions. Enjoyers can bid on or buy NFTs from Tenants. Enjoyers can create a profile and manage the NFTs they own. Depending on the configuration set by the Client, and the NFT permissions granted by the Tenant, the Enjoyer may be able to participate in a secondary market by selling or trading the NFTs they bought earlier.
+
+The Enjoyer is the base role in the system. All logged in users have Enjoyer level permissions as a minimum.
+
+### 5.4. Permissions Diagram
+
+![Figure 5. Permissions Architecture for Tenant Onboarding](../../../.gitbook/assets/nft-store-arch-permissions.drawio.png)
 
 ## 6. System Security
 
