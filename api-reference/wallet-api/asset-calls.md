@@ -281,7 +281,7 @@ Burns an amount of given asset.
 This command burns an amount of given asset to reduce the amount in circulation.
 
 {% hint style="warning" %}
-**Note: **You can't burn market-issued assets.
+**Note:** You can't burn market-issued assets.
 {% endhint %}
 
 ```cpp
@@ -316,7 +316,7 @@ When this operation is executed all open margin positions are called at the sett
 If this asset is used as backing for other BitAssets, those BitAssets will not be affected.
 
 {% hint style="warning" %}
-**Note: **This operation is used only by the asset issuer.
+**Note:** This operation is used only by the asset issuer.
 {% endhint %}
 
 ```cpp

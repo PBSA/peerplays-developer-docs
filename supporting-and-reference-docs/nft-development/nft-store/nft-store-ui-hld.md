@@ -349,9 +349,9 @@ A variety of functions should also be available on this page as well:
 
 #### 7.4.1. Creating a New Collection / Gallery
 
-**Collections **can be created to group related NFTs together. A creator can give the collection a title, description, a banner and thumbnail image, and select its appropriate categories. This is like a display you would find in a supermarket for a brand of candy bar. There may be multiple flavors but they are all the same brand and have the same marketing message.
+**Collections** can be created to group related NFTs together. A creator can give the collection a title, description, a banner and thumbnail image, and select its appropriate categories. This is like a display you would find in a supermarket for a brand of candy bar. There may be multiple flavors but they are all the same brand and have the same marketing message.
 
-**Galleries **can be created to group similar collections and/or distinct NFTs. A creator can give the gallery its own title, description, banner and thumbnail image. Since galleries are the top level of hierarchy, they don't get categories. They can contain collections and NFTs with multiple different categories. Continuing the supermarket analogy, a gallery would represent a whole department within the store. This is like the whole candy isle with all its different brands and marketing messages.
+**Galleries** can be created to group similar collections and/or distinct NFTs. A creator can give the gallery its own title, description, banner and thumbnail image. Since galleries are the top level of hierarchy, they don't get categories. They can contain collections and NFTs with multiple different categories. Continuing the supermarket analogy, a gallery would represent a whole department within the store. This is like the whole candy isle with all its different brands and marketing messages.
 
 #### 7.4.2. Editing an Existing Collection / Gallery
 

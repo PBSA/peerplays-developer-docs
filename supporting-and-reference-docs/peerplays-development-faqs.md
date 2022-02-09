@@ -134,7 +134,7 @@ curl -X POST http://<IP_ADDRESS>:<PORT_NUMBER>/api/v1/accounts
 ```
 
 {% hint style="info" %}
-**IP\_ADDRESS** should be **127.0.0.1 **or** localhost** when running it directly in a VM or on your local machine.
+**IP\_ADDRESS** should be **127.0.0.1** or **localhost** when running it directly in a VM or on your local machine.
 
 **`owner_key`**, **`active_key`**, **`memo_key`** should start with **TEST** on testnet, and it should be **PPY** on mainnet.
 {% endhint %}
@@ -189,7 +189,7 @@ BLOCKCHAIN_ENDPOINTS='ws://<IP_ADDRESS>:8090/api'
 ```
 
 {% hint style="info" %}
-**IP\_ADDRESS **should be **127.0.0.1** or **localhost **when running it directly on your local machine.
+**IP\_ADDRESS** should be **127.0.0.1** or **localhost** when running it directly on your local machine.
 {% endhint %}
 
 ## Peerplays QA Environment
@@ -245,6 +245,6 @@ memo key should be empty string for it to work.\
 With list\_core\_accounts command you can check all account’s balances.
 {% endhint %}
 
-### ❓How to ensure QA environment is healthy ? <a href="how-do-i-transfer-funds-between-accounts-in-a-peerplays-qa-environment-network" id="how-do-i-transfer-funds-between-accounts-in-a-peerplays-qa-environment-network"></a>
+### ❓How to ensure QA environment is healthy ? <a href="#how-do-i-transfer-funds-between-accounts-in-a-peerplays-qa-environment-network" id="how-do-i-transfer-funds-between-accounts-in-a-peerplays-qa-environment-network"></a>
 
 If you are getting "Generated block..." and "Scheduled SON..." messages, and SON last active timestamps are updated regularly, SON network is working as expected. To get last active timestamp, first use get\_object 1.33.X (ids are 1.33.0, 1.33.1, ... 1.33.6), statistic object id will be there, and then use get\_object statistic\_object\_id (I believe ids are 2.25.0, 2.25.1, ... 2.25.6). All timestamps should be in a last few minutes.

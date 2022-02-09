@@ -58,13 +58,13 @@ The design for the DEX seamlessly integrates application, asset exchange, and wa
 
 ![](../../.gitbook/assets/peerplays-dex-pages-map.png)
 
-_FIG 1. Peerplays _DEX _Application High-Level Overview (Page Map)_
+_FIG 1. Peerplays_ DEX _Application High-Level Overview (Page Map)_
 
 The structure of the DEX will be based on two layers, the interface (UI) layer, and the chain layer. The interface layer consists of the UI/UX design elements and interfaces with the chain layer to perform actions on behalf of the user. The chain layer consists of the blockchain and API. It provides business logic, object models, and storage.
 
 ![](../../.gitbook/assets/peerplays-dex-pages-layers.png)
 
-_FIG 2. Peerplays _DEX _Two Layer Structure_
+_FIG 2. Peerplays_ DEX _Two Layer Structure_
 
 ### 2.2. User Classes and Characteristics
 
@@ -121,7 +121,7 @@ The interface layer interfaces with the chain layer. Users never interact direct
 
 ![](../../.gitbook/assets/peerplays-dex-pages-interface.png)
 
-_FIG 3. Peerplays _DEX _Interface Layer_
+_FIG 3. Peerplays_ DEX _Interface Layer_
 
 **Requirements**
 
@@ -169,7 +169,7 @@ In a traditional web app, the chain layer would be like the server-side code and
 
 ![](../../.gitbook/assets/peerplays-dex-pages-chain.png)
 
-_FIG 4. Peerplays _DEX _Chain Layer_
+_FIG 4. Peerplays_ DEX _Chain Layer_
 
 **Requirements**
 
@@ -298,7 +298,7 @@ Something like a hybrid between Uniswap and a traditional exchange order book, t
 
 ![](../../.gitbook/assets/peerplays-dex-amm.png)
 
-_FIG 5. Peerplays _DEX _Automated Market Maker_
+_FIG 5. Peerplays_ DEX _Automated Market Maker_
 
 In a traditional exchange, an order book is filled with the orders of buyers and sellers in a given market. Orders are filled when buyers are willing to pay what the sellers are asking for, or sellers are willing to take what buyers are bidding. Liquidity in this case is entirely dependent on the supply provided by the buyers and sellers.
 

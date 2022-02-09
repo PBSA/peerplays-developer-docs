@@ -161,7 +161,7 @@ A Kb (Kilobyte) of data can accommodate about 1/2 page worth of text. So unless 
 
 When added all together, you get:
 
-1 + 1 + 1 + 1 + 50,000 + 50,000 = **100,004 PPY **cost in transaction fees to accomplish your goal.
+1 + 1 + 1 + 1 + 50,000 + 50,000 = **100,004 PPY** cost in transaction fees to accomplish your goal.
 
 This could represent 50,000 movie tickets, 50,000 shares of a company, or even 50,000 college degrees!
 

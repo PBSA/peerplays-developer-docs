@@ -52,7 +52,7 @@ create_custom_permission <owner> <permission_name> <auth> true
 ```
 {% endcode %}
 
-#### Parameters <a href="parameters" id="parameters"></a>
+#### Parameters <a href="#parameters" id="parameters"></a>
 
 | name             | data type | description                                                                        | details       |
 | ---------------- | --------- | ---------------------------------------------------------------------------------- | ------------- |
@@ -80,7 +80,7 @@ This represents an authority structure, `account_auths` represents the amount of
 
 In this example, either `1.2.52` can sign with their active key or `TEST71ADtL4fzjGKErk9nQJrABmCPUR8QCjkCUNfdmgY5yDzQGhwto` can be used to sign a transaction successfully because they each have a weight of 1, and only 1 is required by the threshold.
 
-#### Example Call <a href="example-call" id="example-call"></a>
+#### Example Call <a href="#example-call" id="example-call"></a>
 
 ```cpp
 create_custom_permission account01 perm1 { "weight_threshold": 1,  "account_auths": [["1.2.52",1]], "key_auths": [["TEST71ADtL4fzjGKErk9nQJrABmCPUR8QCjkCUNfdmgY5yDzQGhwto",1]], "address_auths": [] } true
@@ -109,7 +109,7 @@ get_custom_permissions <owner>
 ```
 {% endcode %}
 
-#### Parameters <a href="parameters" id="parameters"></a>
+#### Parameters <a href="#parameters" id="parameters"></a>
 
 | name  | data type | description                                                                                      | details |
 | ----- | --------- | ------------------------------------------------------------------------------------------------ | ------- |
@@ -147,7 +147,7 @@ update_custom_permissions <owner> <permission_id> <new_auth> true
 ```
 {% endcode %}
 
-#### Parameters <a href="parameters" id="parameters"></a>
+#### Parameters <a href="#parameters" id="parameters"></a>
 
 | name           | data type                    | description                                                                                                                                                         | details |
 | -------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
@@ -167,7 +167,7 @@ Here we removed the `key_auths` and added `1.2.53` with weight 1, which is equal
 {% endtabs %}
 
 {% hint style="danger" %}
-The new authority object will **replace **the old authority object using this function call. Make sure that the authority object that you supply here is set exactly as you'd like.
+The new authority object will **replace** the old authority object using this function call. Make sure that the authority object that you supply here is set exactly as you'd like.
 {% endhint %}
 
 ### 2.4. create\_custom\_account\_authority
@@ -196,7 +196,7 @@ create_custom_account_authority <owner> <permission_id> <operation_type> <valid_
 ```
 {% endcode %}
 
-#### Parameters <a href="parameters" id="parameters"></a>
+#### Parameters <a href="#parameters" id="parameters"></a>
 
 | name            | data type                    | description                                                                                                                   | details |
 | --------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------- |
@@ -244,7 +244,7 @@ update_custom_account_authority <owner> <auth_id> <new_valid_from> <new_valid_to
 ```
 {% endcode %}
 
-#### Parameters <a href="parameters" id="parameters"></a>
+#### Parameters <a href="#parameters" id="parameters"></a>
 
 | name             | data type                            | description                                                                                            | details |
 | ---------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------- |
@@ -293,7 +293,7 @@ delete_custom_permission <owner> <permission_id> true
 ```
 {% endcode %}
 
-#### Parameters <a href="parameters" id="parameters"></a>
+#### Parameters <a href="#parameters" id="parameters"></a>
 
 | name           | data type                    | description                                                              | details |
 | -------------- | ---------------------------- | ------------------------------------------------------------------------ | ------- |
@@ -332,7 +332,7 @@ delete_custom_account_authority <owner> <auth_id> true
 ```
 {% endcode %}
 
-#### Parameters <a href="parameters" id="parameters"></a>
+#### Parameters <a href="#parameters" id="parameters"></a>
 
 | name      | data type                            | description                                                              | details |
 | --------- | ------------------------------------ | ------------------------------------------------------------------------ | ------- |
@@ -383,7 +383,7 @@ create_account_role <owner_account_id_or_name> <name> <metadata> <allowed_operat
 ```
 {% endcode %}
 
-#### Parameters <a href="parameters" id="parameters"></a>
+#### Parameters <a href="#parameters" id="parameters"></a>
 
 | name                         | data type                     | description                                                                                                                                                                                                 | details |
 | ---------------------------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
@@ -428,7 +428,7 @@ get_account_roles_by_owner <owner_account_id_or_name>
 ```
 {% endcode %}
 
-#### Parameters <a href="parameters" id="parameters"></a>
+#### Parameters <a href="#parameters" id="parameters"></a>
 
 | name                         | data type | description                                                                                 | details |
 | ---------------------------- | --------- | ------------------------------------------------------------------------------------------- | ------- |
@@ -472,7 +472,7 @@ update_account_role <owner_account_id_or_name> <role_id> <name> <metadata> <oper
 ```
 {% endcode %}
 
-#### Parameters <a href="parameters" id="parameters"></a>
+#### Parameters <a href="#parameters" id="parameters"></a>
 
 | name                         | data type                     | description                                                                                                                                                                                                 | details |
 | ---------------------------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
@@ -532,7 +532,7 @@ delete_account_role <owner_account_id_or_name> <role_id> true
 ```
 {% endcode %}
 
-#### Parameters <a href="parameters" id="parameters"></a>
+#### Parameters <a href="#parameters" id="parameters"></a>
 
 | name                         | data type               | description                                                              | details |
 | ---------------------------- | ----------------------- | ------------------------------------------------------------------------ | ------- |

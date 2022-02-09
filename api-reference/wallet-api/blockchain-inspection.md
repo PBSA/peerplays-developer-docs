@@ -55,7 +55,7 @@ The global properties.
 
 ### get\_dynamic\_global\_properties
 
-Returns the block chain’s rapidly-changing properties. The returned object contains information that changes every block interval such as the head block number, the next witness, etc. **See **[`get_global_properties()`](blockchain-inspection.md#get\_global\_properties) for less-frequently changing properties.
+Returns the block chain’s rapidly-changing properties. The returned object contains information that changes every block interval such as the head block number, the next witness, etc. **See** [`get_global_properties()`](blockchain-inspection.md#get\_global\_properties) for less-frequently changing properties.
 
 ```cpp
 dynamic_global_property_object graphene::wallet::wallet_api::get_dynamic_global_properties()const
