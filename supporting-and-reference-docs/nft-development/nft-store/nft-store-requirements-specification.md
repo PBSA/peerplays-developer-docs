@@ -12,12 +12,6 @@ The purpose of this RS is to cover the high-level outline and resulting requirem
 
 For the purpose of traceability, the following codes will be used in this RS:
 
-|   |   |   |
-| - | - | - |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-
 | Code      | Meaning                           |
 | --------- | --------------------------------- |
 | **OPE-#** | Operating Environment Requirement |
