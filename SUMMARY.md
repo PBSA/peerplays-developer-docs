@@ -46,7 +46,7 @@
 * [NFT Minting](development-guides/nft-minting.md)
 * [Calculating Costs](development-guides/calculating-costs.md)
 
-## The Cookbook <a href="cookbook" id="cookbook"></a>
+## The Cookbook <a href="#cookbook" id="cookbook"></a>
 
 * [NFTs for Staking Creator Tokens](cookbook/nfts-for-staking-creator-tokens.md)
 
@@ -135,6 +135,7 @@
   * [NFT Store](supporting-and-reference-docs/nft-development/nft-store/README.md)
     * [NFT Store User Stories](supporting-and-reference-docs/nft-development/nft-store/nft-store-user-stories.md)
     * [NFT Store UI HLD](supporting-and-reference-docs/nft-development/nft-store/nft-store-ui-hld.md)
+    * [NFT Store Requirements Specification](supporting-and-reference-docs/nft-development/nft-store/nft-store-requirements-specification.md)
   * [Django-NFT](supporting-and-reference-docs/nft-development/django-nft/README.md)
     * [Requirements Specification](supporting-and-reference-docs/nft-development/django-nft/requirements-specification.md)
 * [Operation IDs List](supporting-and-reference-docs/operation-ids-list.md)
