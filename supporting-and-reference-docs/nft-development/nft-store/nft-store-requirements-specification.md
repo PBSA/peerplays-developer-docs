@@ -86,12 +86,12 @@ User types are how we label the relationship between an entity and the system. T
 
 User roles are broad sets of entitlements (permissions) that help facilitate the management of users and their abilities in the system. While the management of user entitlements can be very granular (even atomic), the use of roles satisfies the majority of marketplace use cases and maintains user-friendliness of administering the system at scale.
 
-| User role | Example Entitlements                                                                                                                                                                                                                                                                                                                                                                 | Notes                                                                                                                                                                                                                                                 |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Browser   | <p>- <strong>view</strong>: profiles, galleries, collections, NFTs, transactions<br>- <strong>create account</strong><br>- <strong>log in</strong><br>- <strong>search</strong></p>                                                                                                                                                                                                  | Visitors can only have the browser role. It's essentially a "read only" role which allows for new accounts and logging in.                                                                                                                            |
-| Enjoyer   | <p>- everything browser has, plus...<br>- <strong>bid on / buy NFT</strong><br>- <strong>create</strong>: profile, galleries, collections<br>- <strong>trade, auction, sell NFT</strong>: in secondary market, if allowed by NFT metadata owner<br>- <strong>use wallet</strong><br>- <strong>submit support ticket</strong><br>- <strong>flag content for admin review</strong></p> | Peers are automatically granted the enjoyer role (at minimum). This role is the base level that allows for interaction with the system.                                                                                                               |
-| Tenant    | <p>- everything enjoyer has, plus...<br>- <strong>create</strong>: NFT metadata<br>- <strong>mint NFTs</strong><br>- <strong>sell / auction NFTs</strong><br>- <strong>manage NFT metadata</strong></p>                                                                                                                                                                              | Peers can be granted the tenant role if approved by a Peer in the client role. Auto-tenancy can be configured in the admin dashboard which will grant all new Peers the tenant role automatically. This role is used for producing and managing NFTs. |
-| Client    | <p>- everything tenant has, plus...<br>- <strong>admin dashboard</strong><br>- <strong>NFT Store configuration</strong><br>- <strong>NFT Store management</strong><br>- <strong>NFT Store reports</strong><br>- <strong>NFT Store support tickets</strong></p>                                                                                                                       | Peers can be granted the client role if approved by a Peer in the client role. This role is used to manage the NFT Store as a whole.                                                                                                                  |
+| User role | Example Entitlements                                                                                                                                                                                                                                                                                                                                                                                                                          | Notes                                                                                                                                                                                                                                                 |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Browser   | <p>- <strong>view</strong>: profiles, galleries, collections, NFTs, transactions<br>- <strong>create account</strong><br>- <strong>log in</strong><br>- <strong>search</strong></p>                                                                                                                                                                                                                                                           | Visitors can only have the browser role. It's essentially a "read only" role which allows for new accounts and logging in.                                                                                                                            |
+| Enjoyer   | <p>- everything browser has, plus...<br>- <strong>bid on / buy NFT</strong><br>- <strong>create</strong>: profile, galleries, collections<br>- <strong>trade, auction, sell NFT</strong>: in secondary market, if allowed by NFT metadata owner<br>- <strong>use wallet</strong><br>- <strong>submit support ticket</strong><br>- <strong>flag content for admin review</strong><br><strong></strong>- <strong>apply for tenancy</strong></p> | Peers are automatically granted the enjoyer role (at minimum). This role is the base level that allows for interaction with the system.                                                                                                               |
+| Tenant    | <p>- everything enjoyer has, plus...<br>- <strong>create</strong>: NFT metadata<br>- <strong>mint NFTs</strong><br>- <strong>sell / auction NFTs</strong><br>- <strong>manage NFT metadata</strong></p>                                                                                                                                                                                                                                       | Peers can be granted the tenant role if approved by a Peer in the client role. Auto-tenancy can be configured in the admin dashboard which will grant all new Peers the tenant role automatically. This role is used for producing and managing NFTs. |
+| Client    | <p>- everything tenant has, plus...<br>- <strong>admin dashboard</strong><br>- <strong>NFT Store configuration</strong><br>- <strong>NFT Store management</strong><br>- <strong>NFT Store reports</strong><br>- <strong>NFT Store support tickets</strong></p>                                                                                                                                                                                | Peers can be granted the client role if approved by a Peer in the client role. This role is used to manage the NFT Store as a whole.                                                                                                                  |
 
 {% hint style="info" %}
 **Note**: See section 3.2.3. (ADM-8) for system security requirements.
@@ -120,6 +120,10 @@ User roles are broad sets of entitlements (permissions) that help facilitate the
 **CON-2:** Design elements shall maintain a standard look and feel based on Peerplays brand guidelines.
 
 **CON-3:** The NFT Store UI shall be built with a responsive UI design.
+
+**CON-4**: The NFT Store implementation shall satisfy the regulatory requirements for each jurisdiction for which is it intended to operate within. At a minimum, this includes the European Union (EU), Canada, and the United States (US).
+
+**CON-5**: The NFT Store implementation shall publicly host all necessary legal and/or contractual documents. This may include, but is not limited to: privacy policy, terms of use/service, cookies disclosure, GDPR related forms/material, risk disclosures, etc.
 
 ### 2.5. Dependencies and Assumptions
 
@@ -183,6 +187,7 @@ The requirements below are for the overall NFT Store UI which contains the heade
   * My Collections
   * My Favorites
   * App Settings
+  * Apply for Tenancy
 
 **APP-4:** The app component shall allow user input in relevant form fields to perform the functions of the related feature.
 
@@ -252,7 +257,7 @@ The requirements below are for the overall NFT Store UI which contains the heade
 * peer support
   * help docs
   * support tickets
-* account pages
+* account page
   * my profile
   * my galleries
   * my collections
@@ -344,6 +349,8 @@ Lower level FS documents will contain detailed requirements for the above featur
 * NFT Store support tickets
   * support tickets
   * tenancy applications
+* NFT Store regulatory compliance
+  * GDPR compliance
 
 {% hint style="info" %}
 Lower level FS documents will contain detailed requirements for the above features.
@@ -360,7 +367,7 @@ Lower level FS documents will contain detailed requirements for the above featur
   * admin navigation
   * notifications
   * log in / out
-  * user session management
+  * admin session management
   * system messages
 * admin body (page fragment)
   * admin content (pages)
@@ -400,7 +407,7 @@ PeerID will need to be integrated into the NFT Store by using its API. This Peer
 
 **PID-7:** The PeerID integration shall provide an API gateway to transact on the Peerplays blockchain on behalf of NFT Store peers.
 
-**3.2.6. System Components**
+#### **3.2.6. System Components**
 
 **Description**
 
