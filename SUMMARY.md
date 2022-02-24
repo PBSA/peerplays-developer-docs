@@ -136,6 +136,8 @@
     * [NFT Store User Stories](supporting-and-reference-docs/nft-development/nft-store/nft-store-user-stories.md)
     * [NFT Store UI HLD](supporting-and-reference-docs/nft-development/nft-store/nft-store-ui-hld.md)
     * [NFT Store Requirements Specification](supporting-and-reference-docs/nft-development/nft-store/nft-store-requirements-specification.md)
+    * [Functional Specifications](supporting-and-reference-docs/nft-development/nft-store/functional-specifications/README.md)
+      * [APP-FS01 App Header](supporting-and-reference-docs/nft-development/nft-store/functional-specifications/app-fs01-app-header.md)
   * [Django-NFT](supporting-and-reference-docs/nft-development/django-nft/README.md)
     * [Requirements Specification](supporting-and-reference-docs/nft-development/django-nft/requirements-specification.md)
 * [Operation IDs List](supporting-and-reference-docs/operation-ids-list.md)
