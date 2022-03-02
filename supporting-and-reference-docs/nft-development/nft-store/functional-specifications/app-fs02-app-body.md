@@ -55,7 +55,7 @@ The following terms are used to describe specific users of the application:
 The following terms are used to describe levels of user entitlement within the application:
 
 * A `browser` is view only (except for account creation and logging in) and used for visitors.
-* An `enjoyer` can interact with the market, including buying NFTs, but can’t make new NFTs.
+* An `enjoyer` can interact with the market, including buying and optionally re-selling NFTs, but can’t make new NFTs.
 * A `tenant` can create NFTs and sell them in addition to what the enjoyer can do.
 * A `client` is an administrator level user with all entitlements.
 
