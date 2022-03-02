@@ -216,7 +216,7 @@ The app header, in the context of system messages:
 
 **APP-FS01-32:** shall allow users to temporarily dismiss system messages until they revisit the application.
 
-### 7.10 Other Requirements
+### 7.10. Other Requirements
 
 The app header:
 

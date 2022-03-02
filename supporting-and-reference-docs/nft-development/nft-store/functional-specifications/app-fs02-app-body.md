@@ -81,7 +81,7 @@ The three figures above represent different possible responsive design breakpoin
 
 The thick red lines along the left and right sides of the figures above represent standard gutters of 24px for desktop and tablet devices, and 12px for mobile devices. The dotted red lines show the use of key-lines which align UI elements for a cohesive look across different sections of content.
 
-Moving between screens of different sizes, we can transform the content to better fit the new screen size. The figures above show examples of transformations that are listed in requirement `APP-FS02-1` in section 7.2 of this document.
+Moving between screens of different sizes, we can transform the content to better fit the new screen size. The figures above show examples of transformations that are listed in requirement `APP-FS02-10` in section 7.2 of this document.
 
 ## 7. Requirements
 
