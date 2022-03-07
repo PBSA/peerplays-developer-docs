@@ -140,6 +140,8 @@
       * [APP-FS01 App Header](supporting-and-reference-docs/nft-development/nft-store/functional-specifications/app-fs01-app-header.md)
       * [APP-FS02 App Body](supporting-and-reference-docs/nft-development/nft-store/functional-specifications/app-fs02-app-body.md)
       * [APP-FS03 App Footer](supporting-and-reference-docs/nft-development/nft-store/functional-specifications/app-fs03-app-footer.md)
+      * [APP-FS04 App Navigation](supporting-and-reference-docs/nft-development/nft-store/functional-specifications/app-fs04-app-navigation.md)
+    * [App Page List](supporting-and-reference-docs/nft-development/nft-store/app-page-list.md)
   * [Django-NFT](supporting-and-reference-docs/nft-development/django-nft/README.md)
     * [Requirements Specification](supporting-and-reference-docs/nft-development/django-nft/requirements-specification.md)
 * [Operation IDs List](supporting-and-reference-docs/operation-ids-list.md)

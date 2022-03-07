@@ -50,7 +50,7 @@ For the purpose of traceability, the following code(s) will be used in this func
 
 **The keyword `shall` indicates a requirement statement.**
 
-The keywords `may`, `could`, and `should` are not requirements but rather indicate items related to requirements that should be considered.
+The keywords `may`, `could`, and `should` are not requirements but rather indicate items related to requirements that are worthy of consideration.
 
 The following terms are used to describe specific users of the application:
 
