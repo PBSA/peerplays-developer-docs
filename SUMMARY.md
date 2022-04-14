@@ -143,6 +143,7 @@
       * [APP-FS04 App Navigation](supporting-and-reference-docs/nft-development/nft-store/functional-specifications/app-fs04-app-navigation.md)
       * [APP-FS05 Wallet Functions](supporting-and-reference-docs/nft-development/nft-store/functional-specifications/app-fs05-wallet-functions.md)
       * [APP-FS06 App Home Page](supporting-and-reference-docs/nft-development/nft-store/functional-specifications/app-fs06-app-home-page.md)
+      * [APP-FS07 Account Page](supporting-and-reference-docs/nft-development/nft-store/functional-specifications/app-fs07-account-page.md)
     * [App Page List](supporting-and-reference-docs/nft-development/nft-store/app-page-list.md)
     * [Requirement Traceability Matrix](supporting-and-reference-docs/nft-development/nft-store/requirement-traceability-matrix.md)
   * [Django-NFT](supporting-and-reference-docs/nft-development/django-nft/README.md)
