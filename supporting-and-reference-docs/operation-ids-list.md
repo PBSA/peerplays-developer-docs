@@ -2,7 +2,7 @@
 
 Here is a mapping of the Peerplays Operations and their IDs:
 
-```text
+```
 ID | Operation Name
 0	transfer_operation
 1	limit_order_create_operation
@@ -124,11 +124,15 @@ ID | Operation Name
 117	sidechain_transaction_sign_operation
 118	sidechain_transaction_send_operation
 119	sidechain_transaction_settle_operation
+120     nft_lottery_token_purchase_operation,
+121     nft_lottery_reward_operation,
+122     nft_lottery_end_operation,
+123     random_number_store_operation
 ```
 
 #### Download
 
-{% file src="../.gitbook/assets/peerplays-operations-ids.xlsx" caption="List of Peerplays Operation IDs" %}
-
-
+{% file src="../.gitbook/assets/Peerplays-Operations-IDs.xlsx" %}
+List of Peerplays Operation IDs
+{% endfile %}
 
