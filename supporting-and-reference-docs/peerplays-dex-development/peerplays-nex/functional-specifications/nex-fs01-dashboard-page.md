@@ -6,12 +6,6 @@ description: >-
 
 # NEX-FS01 Dashboard Page
 
-## Dashboard Page
-
-FS Code: NEX-FS01 Number: 1 Status: In Progress Tags: App Component, Page, Process
-
-The Peerplays NEX application functional requirements specification for the dashboard page.
-
 ## 1. Purpose
 
 The purpose of this functional specification (FS) document is to detail functional requirements for the Peerplays NEX application (the “app”) relating to the dashboard page from a business and user perspective.
