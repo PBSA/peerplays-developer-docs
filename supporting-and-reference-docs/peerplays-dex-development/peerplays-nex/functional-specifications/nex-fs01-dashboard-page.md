@@ -310,21 +310,30 @@ The dashboard, in the context of asset swaps:
 
 **NEX-FS01-41:** shall display two asset selection fields: one to swap from and one to swap to.
 
-**NEX-FS01-42:** shall display asset icons, asset names (like “Bitcoin”), and asset symbols (like “BTC”) for each asset in the asset selection user controls.
+**NEX-FS01-42:** shall allow the selection of any available asset and PPY. Swaps must be made with the PPY asset, either swapping to PPY or from PPY.
 
-**NEX-FS01-43:** shall display the user’s current balance of the selected asset available for swap.
+**NEX-FS01-43:** shall display asset icons, asset names (like “Bitcoin”), and asset symbols (like “BTC”) for each asset in the asset selection user controls.
 
-**NEX-FS01-44:** shall display the fees (amount and asset) required to complete a swap.
+**NEX-FS01-44:** shall display the user’s current balance of the selected asset available for swap.
 
-**NEX-FS01-45:** shall allow the selection of an amount of asset to swap.
+**NEX-FS01-45:** shall display the fees (amount and asset) required to complete a swap.
 
-**NEX-FS01-46:** shall, while the user updates the amount of asset to swap, change the other amount field to match the current exchange rate. In other words a user can chose either how much to spend of an asset they have, or how much they would like to receive of the asset they are swapping for. Either way, swaps are meant to occur at the current market exchange rate like a fill-or-kill market order.
+**NEX-FS01-46:** shall allow the selection of an amount of asset to swap.
 
-**NEX-FS01-47:** shall display the value of the amounts in the asset selection fields in the user’s preferred currency (an app setting).
+**NEX-FS01-47:** shall, after the user updates the amount of asset to swap, query open orders in the market order book to:
 
-**NEX-FS01-48:** shall only allow positive numbers with decimal places based on the selected asset within the swap amount field. For example, Bitcoin supports 8 decimal places while Hive only supports 3 decimal places.
+* validate that there is liquidity for the trading pair
+* get the current exchange rate for the trading pair
 
-**NEX-FS01-49:** shall perform field input validation which validates the following rules:
+**NEX-FS01-48:** shall indicate to the user if not enough liquidity exists to fulfill the swap and to try again later.
+
+**NEX-FS01-49:** shall, while the user updates the amount of asset to swap, change the other amount field to match the current exchange rate. In other words a user can chose either how much to spend of an asset they have, or how much they would like to receive of the asset they are swapping for. Either way, swaps are meant to occur at the current market exchange rate like a fill-or-kill market order.
+
+**NEX-FS01-50:** shall display the value of the amounts in the asset selection fields in the user’s preferred currency (an app setting).
+
+**NEX-FS01-51:** shall only allow positive numbers with decimal places based on the selected asset within the swap amount field. For example, Bitcoin supports 8 decimal places while Hive only supports 3 decimal places.
+
+**NEX-FS01-52:** shall perform field input validation which validates the following rules:
 
 * Input is not blank
 * Input is a number
@@ -332,41 +341,41 @@ The dashboard, in the context of asset swaps:
 * Input amount is greater than the minimum swap
 * Balance in wallet covers swap amount plus fees
 
-**NEX-FS01-50:** shall clearly indicate to the user when field validation fails and why.
+**NEX-FS01-53:** shall clearly indicate to the user when field validation fails and why.
 
-**NEX-FS01-51:** shall, when necessary, indicate to the user that the Peerplays network is not available for swap transactions.
+**NEX-FS01-54:** shall, when necessary, indicate to the user that the Peerplays network is not available for swap transactions.
 
-**NEX-FS01-52:** shall provide a user control (button) to initiate the swap.
+**NEX-FS01-55:** shall provide a user control (button) to initiate the swap.
 
-**NEX-FS01-53:** shall, once initiated by the user, summarize the swap and ask the user for their confirmation to proceed.
+**NEX-FS01-56:** shall, once initiated by the user, summarize the swap and ask the user for their confirmation to proceed.
 
-**NEX-FS01-54:** shall, once initiated or confirmed by the user, indicate the swap is in process. (loading spinner)
+**NEX-FS01-57:** shall, once initiated or confirmed by the user, indicate the swap is in process. (loading spinner)
 
-**NEX-FS01-55:** shall, once confirmed by the user, submit the swap as a fill-or-kill market order to the Peerplays network.
+**NEX-FS01-58:** shall, once confirmed by the user, submit the swap as a fill-or-kill market order to the Peerplays network.
 
-**NEX-FS01-56:** shall indicate to the user if the swap was successfully (or unsuccessfully) initiated. This could be indicated with a message modal, UI elements like color and icons, etc.
+**NEX-FS01-59:** shall indicate to the user if the swap was successfully (or unsuccessfully) initiated. This could be indicated with a message modal, UI elements like color and icons, etc.
 
-**NEX-FS01-57:** shall, if the swap process fails, explain to the user why the process failed and steps the user can take to fix the issue or learn more about the issue.
+**NEX-FS01-60:** shall, if the swap process fails, explain to the user why the process failed and steps the user can take to fix the issue or learn more about the issue.
 
 ### 8.5. Dashboard market listings function
 
 The dashboard, in the context of market listings:
 
-**NEX-FS01-58:** shall display a list of every trading pair available within the app.
+**NEX-FS01-61:** shall display a list of every trading pair available within the app.
 
-**NEX-FS01-59:** shall display the following information for each trading pair, if available:
+**NEX-FS01-62:** shall display the following information for each trading pair, if available:
 
 * both asset symbols (for example, `BTC/PPY`)
 * the current exchange rate
 * the 24 hour change in exchange rate (`+x.xx%` or `-x.xx%`)
 
-**NEX-FS01-60:** shall display all information in real time (or as close to real time as feasible).
+**NEX-FS01-63:** shall display all information in real time (or as close to real time as feasible).
 
-**NEX-FS01-61:** shall clearly indicate to the user if the 24 hour change in exchange rate is positive or negative, per trading pair, through the use of color, iconography, or symbols.
+**NEX-FS01-64:** shall clearly indicate to the user if the 24 hour change in exchange rate is positive or negative, per trading pair, through the use of color, iconography, or symbols.
 
-**NEX-FS01-62:** shall clearly indicate which trading pair is currently being hovered over by the user.
+**NEX-FS01-65:** shall clearly indicate which trading pair is currently being hovered over by the user.
 
-**NEX-FS01-63:** shall allow a user to click on a trading pair to load that trading pair in the market page.
+**NEX-FS01-66:** shall allow a user to click on a trading pair to load that trading pair in the market page.
 
 ## 9. Appendix A: Glossary
 
