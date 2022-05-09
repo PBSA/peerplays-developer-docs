@@ -73,13 +73,16 @@ The following process overviews assume the example user is authenticated in the 
 
 #### 5.1.1. Depositing BTC
 
-1. The user navigates to the dashboard page’s deposit tab.
-2. The app displays the asset deposit functions.
-3. The user selects the Bitcoin (BTC) asset from a list of assets available for deposit.
-4. The page loads instructions for initiating a BTC deposit to the user’s app account. The page also contains a generated deposit Bitcoin address.
-5. The user clicks an icon to copy the deposit Bitcoin address.
-6. External to the app, the user sends an amount of BTC to the deposit Bitcoin address.
-7. The user returns to the app and is eventually notified in the app when their account receives the BTC.
+1. A visitor (non-logged in user) navigates to the dashboard page’s deposit tab.
+2. The app displays a screen which has multiple available coins from sidechains supported by Peerplays (BTC, HIVE and HBD) shown in a drop down. Selecting an asset populates rest of UI depending on the asset selected.
+3. The visitor invokes the "Login & Generate Bitcoin address" button. Since they are not logged in, this will prompt the visitor to input their Peerplays username and MASTER PASSWORD. (See Adobe XD pages: [1](https://xd.adobe.com/view/84e727ac-fe5c-4c6b-9dd2-d668cec13fc9-d1b4/) & [2](https://xd.adobe.com/view/84e727ac-fe5c-4c6b-9dd2-d668cec13fc9-d1b4/screen/0baa5f25-065c-4827-bb0a-fb8b8d160676/) )
+4. If the visitor already had a Bitcoin deposit address generated, it is shown with an option to copy the address. The page also displays help text or a link to the help text describing the steps to deposit BTC.
+5. If the visitor does not have a Peerplays account, they can navigate to the create account page via a link. ([Adobe XD page 16](https://xd.adobe.com/view/84e727ac-fe5c-4c6b-9dd2-d668cec13fc9-d1b4/screen/3adc0565-1624-476c-8f6e-41f938fb6a03/))
+6. At this point the visitor is logged in and the client side Bitcoin library generates a Bitcoin deposit address & private key. The page displays a link to download the private key as a text file named `Bitcoin_deposit_address_<PeerplaysUserName>.txt` which contains the private key of the newly generated Bitcoin address. ([Adobe XD screen 3](https://xd.adobe.com/view/84e727ac-fe5c-4c6b-9dd2-d668cec13fc9-d1b4/screen/09e75b43-3f15-4ca3-b0c6-9d4254b275a3/)) . The private key will be available only once and is not stored by the NEX software or the blockchain and thus appropriate warning messages are shown to the user instructing them to safely save the secret.
+7. The user is additionally given an option to copy the Bitcoin deposit address. ([Adobe XD screen 3](https://xd.adobe.com/view/84e727ac-fe5c-4c6b-9dd2-d668cec13fc9-d1b4/screen/09e75b43-3f15-4ca3-b0c6-9d4254b275a3/))
+8. Once a user has generated a Bitcoin deposit address, the same address will be shown in the subsequent logins and the options to re-generate will not be presented.
+9. External to the app, the user sends an amount of BTC to the deposit Bitcoin address.
+10. The user returns to the app and is eventually notified in the app when their account receives the BTC.
 
 #### 5.1.2. Depositing HIVE (or HBD)
 
