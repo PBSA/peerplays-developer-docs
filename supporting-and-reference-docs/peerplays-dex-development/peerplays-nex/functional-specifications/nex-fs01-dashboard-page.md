@@ -99,17 +99,19 @@ The following process overviews assume the example user is authenticated in the 
 
 1. The user navigates to the dashboard page’s withdraw tab.
 2. The app displays the asset withdraw functions.
-3. the user selects the Bitcoin (BTC) asset from a list of assets available for withdraw.
-4. The page loads instructions for initiating a BTC withdraw from the user’s app account. The page also contains a withdraw Bitcoin address field.
+3. The user selects the Bitcoin (BTC) asset from a list of assets available for withdraw.
+   1. If the user has not already created a Bitcoin deposit address, the app displays a message to the user explaining they must first create a deposit address. A link to the deposit tab is displayed to the user. (See section 5.1.1. above)
+   2. If the user has already created a Bitcoin deposit address, the app displays the BTC asset withdraw form.
+4. The page loads instructions for initiating a BTC withdraw from the user’s app account. The page also contains a Bitcoin withdraw address field. This field contains a generated withdraw address based on the deposit address generated previously.
+   1. If the user wishes, they can enter another (valid) Bitcoin withdraw address.
 5. The user reviews their wallet BTC balance and enters an appropriate amount of BTC they wish to withdraw.
-6. The user enters a valid Bitcoin account with which they wish to receive their withdrawal.
-7. The app looks up the public key for the Bitcoin account entered by the user.
-8. The user clicks a button to submit the withdrawal.
-9. The app displays a modal to the user asking them to confirm their withdrawal.
-10. The user reviews the withdrawal information and clicks to confirm the withdrawal.
-11. The app processes and submits the withdrawal to the SON network.
-12. The app indicates to the user that the withdrawal has been successfully initiated.
-13. The content displayed in the app is updated to show new available balances, etc.
+6. The app looks up the public key for the Bitcoin withdraw account.
+7. The user clicks a button to submit the withdrawal.
+8. The app displays a modal to the user asking them to confirm their withdrawal.
+9. The user reviews the withdrawal information and clicks to confirm the withdrawal.
+10. The app processes and submits the withdrawal to the SON network.
+11. The app indicates to the user that the withdrawal has been successfully initiated.
+12. The content displayed in the app is updated to show new available balances, etc.
 
 #### 5.2.2. Withdrawing HIVE (or HBD)
 
