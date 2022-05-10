@@ -73,16 +73,13 @@ The following process overviews assume the example user is authenticated in the 
 
 #### 5.1.1. Depositing BTC
 
-1. A visitor (non-logged in user) navigates to the dashboard page’s deposit tab.
-2. The app displays a screen which has multiple available coins from sidechains supported by Peerplays (BTC, HIVE and HBD) shown in a drop down. Selecting an asset populates rest of UI depending on the asset selected.
-3. The visitor invokes the "Login & Generate Bitcoin address" button. Since they are not logged in, this will prompt the visitor to input their Peerplays username and MASTER PASSWORD. (See Adobe XD pages: [1](https://xd.adobe.com/view/84e727ac-fe5c-4c6b-9dd2-d668cec13fc9-d1b4/) & [2](https://xd.adobe.com/view/84e727ac-fe5c-4c6b-9dd2-d668cec13fc9-d1b4/screen/0baa5f25-065c-4827-bb0a-fb8b8d160676/) )
-4. If the visitor already had a Bitcoin deposit address generated, it is shown with an option to copy the address. The page also displays help text or a link to the help text describing the steps to deposit BTC.
-5. If the visitor does not have a Peerplays account, they can navigate to the create account page via a link. ([Adobe XD page 16](https://xd.adobe.com/view/84e727ac-fe5c-4c6b-9dd2-d668cec13fc9-d1b4/screen/3adc0565-1624-476c-8f6e-41f938fb6a03/))
-6. At this point the visitor is logged in and the client side Bitcoin library generates a Bitcoin deposit address & private key. The page displays a link to download the private key as a text file named `Bitcoin_deposit_address_<PeerplaysUserName>.txt` which contains the private key of the newly generated Bitcoin address. ([Adobe XD screen 3](https://xd.adobe.com/view/84e727ac-fe5c-4c6b-9dd2-d668cec13fc9-d1b4/screen/09e75b43-3f15-4ca3-b0c6-9d4254b275a3/)) . The private key will be available only once and is not stored by the NEX software or the blockchain and thus appropriate warning messages are shown to the user instructing them to safely save the secret.
-7. The user is additionally given an option to copy the Bitcoin deposit address. ([Adobe XD screen 3](https://xd.adobe.com/view/84e727ac-fe5c-4c6b-9dd2-d668cec13fc9-d1b4/screen/09e75b43-3f15-4ca3-b0c6-9d4254b275a3/))
-8. Once a user has generated a Bitcoin deposit address, the same address will be shown in the subsequent logins and the options to re-generate will not be presented.
-9. External to the app, the user sends an amount of BTC to the deposit Bitcoin address.
-10. The user returns to the app and is eventually notified in the app when their account receives the BTC.
+1. The user navigates to the dashboard page’s deposit tab.
+2. The app displays the asset deposit functions.
+3. The user selects the Bitcoin (BTC) asset from a list of assets available for deposit.
+4. The page loads instructions for initiating a BTC deposit to the user’s app account. The page also contains a generated deposit Bitcoin address.
+5. The user clicks an icon to copy the deposit Bitcoin address.
+6. External to the app, the user sends an amount of BTC to the deposit Bitcoin address.
+7. The user returns to the app and is eventually notified in the app when their account receives the BTC.
 
 #### 5.1.2. Depositing HIVE (or HBD)
 
@@ -99,19 +96,17 @@ The following process overviews assume the example user is authenticated in the 
 
 1. The user navigates to the dashboard page’s withdraw tab.
 2. The app displays the asset withdraw functions.
-3. The user selects the Bitcoin (BTC) asset from a list of assets available for withdraw.
-   1. If the user has not already created a Bitcoin deposit address, the app displays a message to the user explaining they must first create a deposit address. A link to the deposit tab is displayed to the user. (See section 5.1.1. above)
-   2. If the user has already created a Bitcoin deposit address, the app displays the BTC asset withdraw form.
-4. The page loads instructions for initiating a BTC withdraw from the user’s app account. The page also contains a Bitcoin withdraw address field. This field contains a generated withdraw address based on the deposit address generated previously.
-   1. If the user wishes, they can enter another (valid) Bitcoin withdraw address.
+3. the user selects the Bitcoin (BTC) asset from a list of assets available for withdraw.
+4. The page loads instructions for initiating a BTC withdraw from the user’s app account. The page also contains a withdraw Bitcoin address field.
 5. The user reviews their wallet BTC balance and enters an appropriate amount of BTC they wish to withdraw.
-6. The app looks up the public key for the Bitcoin withdraw account.
-7. The user clicks a button to submit the withdrawal.
-8. The app displays a modal to the user asking them to confirm their withdrawal.
-9. The user reviews the withdrawal information and clicks to confirm the withdrawal.
-10. The app processes and submits the withdrawal to the SON network.
-11. The app indicates to the user that the withdrawal has been successfully initiated.
-12. The content displayed in the app is updated to show new available balances, etc.
+6. The user enters a valid Bitcoin account with which they wish to receive their withdrawal.
+7. The app looks up the public key for the Bitcoin account entered by the user.
+8. The user clicks a button to submit the withdrawal.
+9. The app displays a modal to the user asking them to confirm their withdrawal.
+10. The user reviews the withdrawal information and clicks to confirm the withdrawal.
+11. The app processes and submits the withdrawal to the SON network.
+12. The app indicates to the user that the withdrawal has been successfully initiated.
+13. The content displayed in the app is updated to show new available balances, etc.
 
 #### 5.2.2. Withdrawing HIVE (or HBD)
 
