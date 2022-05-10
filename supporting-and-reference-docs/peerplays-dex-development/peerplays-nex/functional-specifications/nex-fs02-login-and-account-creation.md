@@ -43,6 +43,10 @@ Specific components and features covered in this FS include:
 
 For the purpose of traceability, the following code(s) will be used in this functional specification:
 
+| Code       | Meaning                                          |
+| ---------- | ------------------------------------------------ |
+| NEX-FS02-# | NEX App Requirement - Login and Account Creation |
+
 **The keyword `shall` indicates a requirement statement.**
 
 The keywords `may`, `could`, and `should` are not requirements but rather indicate items related to requirements that are worthy of consideration.
