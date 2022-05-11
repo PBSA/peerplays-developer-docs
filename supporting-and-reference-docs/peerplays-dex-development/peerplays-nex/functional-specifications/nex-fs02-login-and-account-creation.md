@@ -14,7 +14,7 @@ The purpose of this functional specification (FS) document is to detail function
 
 ### 2.1. Parent Document
 
-This document is a child document of the NEX Requirements Specification.
+This document is a child document of the NEX Requirements Specification (NEX-RS).
 
 ### 2.2. Categorization
 

@@ -123,6 +123,7 @@
     * [Functional Specifications](supporting-and-reference-docs/peerplays-dex-development/peerplays-nex/functional-specifications/README.md)
       * [NEX-FS01 Dashboard Page](supporting-and-reference-docs/peerplays-dex-development/peerplays-nex/functional-specifications/nex-fs01-dashboard-page.md)
       * [NEX-FS02 Login and Account Creation](supporting-and-reference-docs/peerplays-dex-development/peerplays-nex/functional-specifications/nex-fs02-login-and-account-creation.md)
+      * [NEX-FS03 Menus and Nav](supporting-and-reference-docs/peerplays-dex-development/peerplays-nex/functional-specifications/nex-fs03-menus-and-nav.md)
   * [Requirements Specification](supporting-and-reference-docs/peerplays-dex-development/requirements-specification.md)
   * [Functional Specs](supporting-and-reference-docs/peerplays-dex-development/functional-specs/README.md)
     * [Asset Info Page and Asset Lists](supporting-and-reference-docs/peerplays-dex-development/functional-specs/asset-info-page-and-asset-lists.md)
