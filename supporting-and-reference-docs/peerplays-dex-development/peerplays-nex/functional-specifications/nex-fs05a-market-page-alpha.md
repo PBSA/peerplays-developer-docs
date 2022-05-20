@@ -271,7 +271,7 @@ The buy / sell controls:
 * the order form is filled in with (successfully) validated inputs.
 * the user has an appropriate amount of assets to satisfy the needs of the order.
 
-**NEX-FS05a-36:** shall, when necessary, indicate to the user that the SONs network is not available for sidechain transactions.
+**NEX-FS05a-36:** shall, when necessary, indicate to the user that the Peerplays network is not available for transactions.
 
 **NEX-FS05a-37:** shall provide user controls (buttons) to initiate buy and sell orders.
 
