@@ -182,4 +182,4 @@ See Appendix B for universal design references.
 
 [Introduction - Ant Design](https://ant.design/docs/spec/introduce#Guidelines-and-Resources)
 
-[Material Design](https://m3.material.io)
+[Material Design](https://m3.material.io/)

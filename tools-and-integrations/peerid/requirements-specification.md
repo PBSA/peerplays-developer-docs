@@ -90,7 +90,7 @@ Aspects provisioned for the dApp account:
 
 **dApp** - Decentralized Application. Just like a typical computer application, but with no centralized database, host, or distribution.
 
-**PBSA** - Peerplays Blockchain Standards Association - For more information, see [pbsa.info](https://pbsa.info).
+**PBSA** - Peerplays Blockchain Standards Association - For more information, see [pbsa.info](https://pbsa.info/).
 
 **IdAM** - Identity and Access Management - A framework of policies and technologies for ensuring that the right users have the appropriate access to technology resources.
 

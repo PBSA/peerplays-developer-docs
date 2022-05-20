@@ -451,6 +451,6 @@ The system components are comprised of the databases, microservices, middleware,
 
 ### 5.3. ExpressCart
 
-* [ExpressCart Website](https://expresscart.markmoffat.com)
+* [ExpressCart Website](https://expresscart.markmoffat.com/)
 * [ExpressCart GitHub Repo](https://github.com/mrvautin/expressCart)
 * [ExpressCart NPM](https://www.npmjs.com/package/express-cart)

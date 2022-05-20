@@ -422,4 +422,4 @@ Lower level requirements specification documents will contain functional specifi
 
 ## 5. Appendix B: References
 
-[Tailwind CSS](https://tailwindcss.com)
+[Tailwind CSS](https://tailwindcss.com/)

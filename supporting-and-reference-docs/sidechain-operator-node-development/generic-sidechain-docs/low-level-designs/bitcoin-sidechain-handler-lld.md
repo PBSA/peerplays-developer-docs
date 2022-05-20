@@ -9,13 +9,13 @@ For general information on sidechain handlers, read:\
 
 ## Block Diagram
 
-Link to [draw.io](http://draw.io) file:
+Link to [draw.io](http://draw.io/) file:
 
 [https://drive.google.com/file/d/1ErmQfeaWa9m67si4hb0RZs54WVYWR0pC/view?usp=sharing](https://drive.google.com/file/d/1ErmQfeaWa9m67si4hb0RZs54WVYWR0pC/view?usp=sharing)
 
 ## Sequence diagram
 
-Link to [draw.io](http://draw.io) file
+Link to [draw.io](http://draw.io/) file
 
 [https://drive.google.com/file/d/17kbez7C1Djaj-2AgyEzQ1Z-5CrSZ5wZE/view?usp=sharing](https://drive.google.com/file/d/17kbez7C1Djaj-2AgyEzQ1Z-5CrSZ5wZE/view?usp=sharing)
 
@@ -61,7 +61,7 @@ zmqpubhashblock is also a good candidate, we will receive the hash of newly crea
 
 ZeroMQ project provides a client library which we can use to connect to a Bitcoin node ZeroMQ interface. The project is alive and well maintained. At the time of writing this document, we are not aware of any problem which would require us to use specific library version, or link it statically into our software.
 
-[https://zeromq.org/](https://zeromq.org)
+[https://zeromq.org/](https://zeromq.org/)
 
 [https://github.com/zeromq/libzmq](https://github.com/zeromq/libzmq)
 

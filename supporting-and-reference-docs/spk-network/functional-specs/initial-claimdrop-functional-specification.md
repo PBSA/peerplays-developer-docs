@@ -65,7 +65,7 @@ To authenticate using the Hive Participant's Hive Posting Key:
 
 #### 4.1.2. Using Hive Keychain
 
-Reference: [Hive Keychain](https://hive-keychain.com)
+Reference: [Hive Keychain](https://hive-keychain.com/)
 
 To authenticate using Hive Keychain:
 

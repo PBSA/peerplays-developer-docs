@@ -14,7 +14,7 @@ This document is intended to outline generic design of sidechain plugin used by 
 
 ## Block Diagram
 
-Link to [Draw.io](http://draw.io) file
+Link to [Draw.io](http://draw.io/) file
 
 [https://drive.google.com/file/d/1BXeRwK\_2PNt6wMnzIl8M6OMRnuM5CumQ/view?usp=sharing](https://drive.google.com/file/d/1BXeRwK\_2PNt6wMnzIl8M6OMRnuM5CumQ/view?usp=sharing)
 
@@ -35,7 +35,7 @@ Link to [Draw.io](http://draw.io) file
 
 ## Sequence diagram
 
-Link to [draw.io](http://draw.io) file
+Link to [draw.io](http://draw.io/) file
 
 [https://drive.google.com/file/d/17kbez7C1Djaj-2AgyEzQ1Z-5CrSZ5wZE/view?usp=sharing](https://drive.google.com/file/d/17kbez7C1Djaj-2AgyEzQ1Z-5CrSZ5wZE/view?usp=sharing)
 
