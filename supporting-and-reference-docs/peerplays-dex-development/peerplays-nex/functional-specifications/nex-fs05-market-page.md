@@ -6,8 +6,6 @@ description: >-
 
 # NEX-FS05 Market Page
 
-
-
 ## 1. Purpose
 
 The purpose of this functional specification (FS) document is to detail functional requirements for the Peerplays NEX application (the “app”) relating to the market page from a business and user perspective.
@@ -94,7 +92,7 @@ To create a market order:
 8. The system clears the widget form fields.
 9. The system initiates the market order on behalf of the user using the supplied field inputs.
 10. The system notifies the user of the successful transaction.
-11. The market order may be filled immediately, partially filled, or remain on the order book until filled or canceled. (See [section 9. Appendix A: Glossary](https://www.notion.so/Market-Page-1ed98665ab3d4361b172157a2eda2b19) for more details on the order types.)
+11. The market order may be filled immediately, partially filled, or remain on the order book until filled or canceled. (See [section 9. Appendix A: Glossary](https://devs.peerplays.tech/supporting-and-reference-docs/peerplays-dex-development/peerplays-nex/functional-specifications/nex-fs05-market-page#9.-appendix-a-glossary) for more details on the order types.)
 12. The order will appear in the order book and the open orders list. Any fulfilled trading (partial and/or full) will appear in the market and user trade history.
 13. The user may cancel any remaining portion of the order from the open orders list.
 
@@ -118,7 +116,7 @@ To create a limit order:
 9. The system clears the widget form fields.
 10. The system initiates the limit order on behalf of the user using the supplied field inputs.
 11. The system notifies the user of the successful transaction.
-12. The limit order may be filled immediately, partially filled, canceled, or remain on the order book until filled, canceled, or timed out depending on the advanced options specified. (See [section 9. Appendix A: Glossary](https://www.notion.so/Market-Page-1ed98665ab3d4361b172157a2eda2b19) for more details on the order types.)
+12. The limit order may be filled immediately, partially filled, canceled, or remain on the order book until filled, canceled, or timed out depending on the advanced options specified. (See [section 9. Appendix A: Glossary](https://devs.peerplays.tech/supporting-and-reference-docs/peerplays-dex-development/peerplays-nex/functional-specifications/nex-fs05-market-page#9.-appendix-a-glossary) for more details on the order types.)
 13. The order will appear in the order book and the open orders list. Any fulfilled trading (partial and/or full) will appear in the market and user trade history.
 14. The user may cancel any remaining portion of the order from the open orders list.
 
@@ -137,7 +135,7 @@ To create a stop-limit order:
 9. The system clears the widget form fields.
 10. The system initiates the stop-limit order on behalf of the user using the supplied field inputs.
 11. The system notifies the user of the successful transaction.
-12. The stop-limit order is triggered only when the stop price is crossed. At that point, a limit order will be created. (See [section 9. Appendix A: Glossary](https://www.notion.so/Market-Page-1ed98665ab3d4361b172157a2eda2b19) for more details on the order types.)
+12. The stop-limit order is triggered only when the stop price is crossed. At that point, a limit order will be created. (See [section 9. Appendix A: Glossary](https://devs.peerplays.tech/supporting-and-reference-docs/peerplays-dex-development/peerplays-nex/functional-specifications/nex-fs05-market-page#9.-appendix-a-glossary) for more details on the order types.)
 13. The order will appear in the order book and the open orders list. Any fulfilled trading (partial and/or full) will appear in the market and user trade history.
 14. The user may cancel any remaining portion of the order from the open orders list.
 
@@ -145,7 +143,7 @@ To create a stop-limit order:
 
 The market page contains in-depth functions to trade assets in Peerplays. This page should contain everything a user needs to understand the current state of the market to make informed decisions about their trades. The market page should provide all the tools a user would use to trade as with any industry standard exchange platform.
 
-A review of modern exchange platforms has helped guide the requirements for the Peerplays NEX market page. See [section 10. Appendix B: Exchange Platforms Reference](https://www.notion.so/Market-Page-1ed98665ab3d4361b172157a2eda2b19) below.
+A review of modern exchange platforms has helped guide the requirements for the Peerplays NEX market page. See [section 10. Appendix B: Exchange Platforms Reference](https://devs.peerplays.tech/supporting-and-reference-docs/peerplays-dex-development/peerplays-nex/functional-specifications/nex-fs05-market-page#10.-appendix-b-exchange-platforms-reference) below.
 
 ## 7. Design Wire-frames
 
