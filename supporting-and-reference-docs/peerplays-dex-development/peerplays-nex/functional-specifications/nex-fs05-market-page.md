@@ -532,6 +532,20 @@ The depth chart:
 
 **NEX-FS05-93:** shall indicate buy orders (green) and sell orders (red).
 
+### 8.12. User Wallet Functions
+
+**NEX-FS05-94:** shall allow the user to initiate an asset deposit (for the quote or base asset).
+
+**NEX-FS05-95:** shall allow the user to initiate an asset withdraw (for the quote or base asset).
+
+### 8.13. Balances Display
+
+**NEX-FS05-96:** shall display the user’s amount of quote asset available to trade (not on orders, etc.)
+
+**NEX-FS05-97:** shall display the user’s amount of base asset available to trade (not on orders, etc.)
+
+**NEX-FS05-98:** shall display accurate information in real-time (updated with order activity.)
+
 ## 9. Appendix A: Glossary
 
 | Term                | Meaning                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
