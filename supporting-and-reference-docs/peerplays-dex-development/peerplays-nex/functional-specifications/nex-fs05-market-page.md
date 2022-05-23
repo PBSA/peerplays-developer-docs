@@ -322,51 +322,82 @@ The buy / sell controls:
 
 **NEX-FS05-36:** shall allow the user to select among market, limit, and stop-limit order types.
 
-**NEX-FS05-37:** shall allow the user to input the order amount (quantity of base asset).
+**NEX-FS05-37:** shall display the user’s amount of assets available for trading (quote asset if buying, base asset if selling).
 
-**NEX-FS05-38:** shall, if the order type is a limit order, allow the user to input the limit price (quote asset) and limit order option:
+**NEX-FS05-38:** shall allow the user to input the order amount (quantity of base asset).
 
-* good-til-canceled
+**NEX-FS05-39:** shall provide convenience controls to the user which allows them to easily adjust the order amount automatically to any percentage of their assets available to trade. For example, supply a slider user input control which allows input from 0% to 100% of their available assets. This slider could even have nodes that allow easy selection of 0%, 25%, 50%, 75%, and 100%, but still allows any whole number percentage in between.
+
+**NEX-FS05-40:** shall, if the order type is a limit order, allow the user to input the limit price (quote asset).
+
+**NEX-FS05-41:** shall, in an “advanced” menu and if the order type is a limit or stop-limit order, allow the user to select a time in force policy option (only one):
+
+* good-til-canceled (default)
 * good-til-time
 * fill-or-kill
 * maker-or-cancel
 * immediate-or-cancel
 
-**NEX-FS05-39:** shall, if the order type is a stop-limit order, allow the user to input the limit price (quote asset) and stop price (quote asset).
+**NEX-FS05-42:** shall, in an “advanced” menu and if the order type is a limit or stop-limit order, allow the user to select an order execution option (only one):
 
-**NEX-FS05-40:** shall display to the user the fees of the order, given the user’s inputs.
+* post only
+* allow taker (default)
 
-**NEX-FS05-41:** shall display to the user the total (quote asset) of the order, given the user’s inputs.
+**NEX-FS05-43:** shall, if the order type is a stop-limit order, allow the user to input the limit price (quote asset) and stop price (quote asset).
 
-**NEX-FS05-42:** shall allow the user to create an order if the following criteria are met:
+**NEX-FS05-44:** shall, if the order type is a limit or stop-limit order, provide convenience controls to the user which allows them to automatically fill the price field with common strategic price points. For example, supply buttons which fill the price of a **buy** order at:
+
+* MID (at the current price)
+* BID (at the bid price)
+* 1% down (1% lower than the current price)
+* 5% down (5% lower than the current price)
+* 10% down (10% lower than the current price)
+
+Another example, supply buttons which fill the price of a **sell** order at:
+
+* MID (at the current price)
+* ASK (at the ask price)
+* 1% up (1% higher than the current price)
+* 5% up (5% higher than the current price)
+* 10% up (10% higher than the current price)
+
+**NEX-FS05-45:** shall display to the user the fees of the order, given the user’s inputs.
+
+**NEX-FS05-46:** shall, if the order is a market order, display to the user the estimated slippage of the order, given the user’s inputs and current market conditions.
+
+**NEX-FS05-47:** shall, if the order is a market order, display to the user the estimated average price (quote asset) of the order, given the user’s inputs and current market conditions.
+
+**NEX-FS05-48:** shall display to the user the total (quote asset) of the order, given the user’s inputs.
+
+**NEX-FS05-49:** shall allow the user to create an order if the following criteria are met:
 
 * the user is logged in.
 * the order form is filled in with (successfully) validated inputs.
 * the user has an appropriate amount of assets to satisfy the needs of the order.
 
-**NEX-FS05-43:** shall, when necessary, indicate to the user that the Peerplays network is not available for transactions.
+**NEX-FS05-50:** shall, when necessary, indicate to the user that the Peerplays network is not available for transactions.
 
-**NEX-FS05-44:** shall provide user controls (buttons) to initiate buy and sell orders.
+**NEX-FS05-51:** shall provide user controls (buttons) to initiate buy and sell orders.
 
-**NEX-FS05-45:** shall, once initiated by the user, summarize the order and ask the user for their confirmation to proceed.
+**NEX-FS05-52:** shall, once initiated by the user, summarize the order and ask the user for their confirmation to proceed.
 
-**NEX-FS05-46:** shall, once initiated or confirmed by the user, indicate order is in process. (loading spinner)
+**NEX-FS05-53:** shall, once initiated or confirmed by the user, indicate order is in process. (loading spinner)
 
-**NEX-FS05-47:** shall, once confirmed by the user, submit the order to the Peerplays network.
+**NEX-FS05-54:** shall, once confirmed by the user, submit the order to the Peerplays network.
 
-**NEX-FS05-48:** shall indicate to the user if the order was successfully (or unsuccessfully) initiated. This could be indicated with a message modal, UI elements like color and icons, etc.
+**NEX-FS05-55:** shall indicate to the user if the order was successfully (or unsuccessfully) initiated. This could be indicated with a message modal, UI elements like color and icons, etc.
 
-**NEX-FS05-49:** shall, if the order initiation process fails, explain to the user why the process failed and steps the user can take to fix the issue or learn more about the issue.
+**NEX-FS05-56:** shall, if the order initiation process fails, explain to the user why the process failed and steps the user can take to fix the issue or learn more about the issue.
 
-**NEX-FS05-50:** shall, upon successful order initiation, add the order to the order book, update the user’s asset balances, add the order to the user’s open orders (for limit orders), etc.
+**NEX-FS05-57:** shall, upon successful order initiation, add the order to the order book, update the user’s asset balances, add the order to the user’s open orders (for limit orders), etc.
 
 ### 8.7. Price Chart
 
 The price chart:
 
-**NEX-FS05-51:** shall display a real-time chart of price data (quote asset) for the selected market.
+**NEX-FS05-58:** shall display a real-time chart of price data (quote asset) for the selected market.
 
-**NEX-FS05-52:** shall include standard price information for the currently selected chart timeframe:
+**NEX-FS05-59:** shall include standard price information for the currently selected chart timeframe:
 
 * open price
 * high price
@@ -378,7 +409,7 @@ The price chart:
 * bid price
 * volume
 
-**NEX-FS05-53:** shall allow the selection of chart timeframe with standard timeframes:
+**NEX-FS05-60:** shall allow the selection of chart timeframe with standard timeframes:
 
 * 1 minute (M1)
 * 5 minutes (M5)
@@ -393,7 +424,7 @@ The price chart:
 * 1 month (M1)
 * may allow the selection of other timeframes, preset or custom.
 
-**NEX-FS05-54:** shall allow the selection of chart historical range with standard ranges:
+**NEX-FS05-61:** shall allow the selection of chart historical range with standard ranges:
 
 * 4 hours (H4)
 * 1 day (D1)
@@ -409,24 +440,24 @@ The price chart:
 * custom range (opens a modal to pick the range)
 * may allow the selection of other ranges, preset or custom.
 
-**NEX-FS05-55:** shall display time along the x-axis and price along the y-axis.
+**NEX-FS05-62:** shall display time along the x-axis and price along the y-axis.
 
-**NEX-FS05-56:** shall allow for zooming the chart in and out.
+**NEX-FS05-63:** shall allow for zooming the chart in and out.
 
-**NEX-FS05-57:** shall allow for adjusting the time scale and price scale.
+**NEX-FS05-64:** shall allow for adjusting the time scale and price scale.
 
-**NEX-FS05-58:** shall allow for dragging the chart to view historical prices.
+**NEX-FS05-65:** shall allow for dragging the chart to view historical prices.
 
-**NEX-FS05-59:** shall allow for viewing individual bar price data. For example, hovering the mouse on a historical price bar for its open, high, low, close, and volume info.
+**NEX-FS05-66:** shall allow for viewing individual bar price data. For example, hovering the mouse on a historical price bar for its open, high, low, close, and volume info.
 
-**NEX-FS05-60:** shall allow the selection of chart type:
+**NEX-FS05-67:** shall allow the selection of chart type:
 
 * candlesticks
 * line chart
 * bar chart
 * may allow the selection of other chart types.
 
-**NEX-FS05-61:** shall allow for adding and removing technical indicators:
+**NEX-FS05-68:** shall allow for adding and removing technical indicators:
 
 * moving averages
 * may allow the selection of other technical indicators.
@@ -435,47 +466,71 @@ The price chart:
 
 The price / volume statistics:
 
-**NEX-FS05-62:** shall display the last price (quote asset) for the selected market pair.
+**NEX-FS05-69:** shall display the last price (quote asset) for the selected market pair.
 
-**NEX-FS05-63:** last price display shall indicate if the last market taker trade was a buy (green) or sell (red).
+**NEX-FS05-70:** last price display shall indicate if the last market taker trade was a buy (green) or sell (red).
 
-**NEX-FS05-64:** last price display shall indicate if the last market taker trade was a buy or sell with icons, arrows, or other design elements as well as color to help facilitate universal design implementation.
+**NEX-FS05-71:** last price display shall indicate if the last market taker trade was a buy or sell with icons, arrows, or other design elements as well as color to help facilitate universal design implementation.
 
-**NEX-FS05-65:** shall display the last price in the user’s preferred currency (user settings).
+**NEX-FS05-72:** shall display the last price in the user’s preferred currency (user settings).
 
-**NEX-FS05-66:** shall display the Bid and Ask prices (quote asset).
+**NEX-FS05-73:** shall display the Bid and Ask prices (quote asset).
 
-**NEX-FS05-67:** shall display the 24-hour price change in terms of raw value and in percentage (quote asset).
+**NEX-FS05-74:** shall display the 24-hour price change in terms of raw value and in percentage (quote asset).
 
-**NEX-FS05-68:** 24-hour price change display, for both the raw value and percentage displays, shall indicate net positive (green), negative (red), or no change (neutral) using colors as well as signs (+ or -).
+**NEX-FS05-75:** the 24-hour price change display, for both the raw value and percentage displays, shall indicate net positive (green), negative (red), or no change (neutral) using colors as well as signs (+ or -).
 
-**NEX-FS05-69:** shall display the 24-hour price range (high and low, in quote asset).
+**NEX-FS05-76:** shall display the 24-hour price range (high and low, in quote asset).
 
-**NEX-FS05-70:** shall display the 24-hour trade volume (quote asset).
+**NEX-FS05-77:** shall display the 24-hour trade volume (quote asset).
 
-**NEX-FS05-71:** shall update the price and volume statistics in real-time based on current market conditions.
+**NEX-FS05-78:** shall update the price and volume statistics in real-time based on current market conditions.
 
-**NEX-FS05-72:** each of the above displays (last price, ask, bid, 24h change, 24h high, 24h low, and 24h volume) shall be labeled.
+**NEX-FS05-79:** each of the above displays (last price, ask, bid, 24h change, 24h high, 24h low, and 24h volume) shall be labeled.
 
 ### 8.9. Market Selector
 
 The market selector:
 
-**NEX-FS05-73:** shall display the currently selected market (trading pair).
+**NEX-FS05-80:** shall display the currently selected market (trading pair).
 
-**NEX-FS05-74:** shall allow the user to select any available market.
+**NEX-FS05-81:** shall allow the user to select any available market.
 
-**NEX-FS05-75:** shall allow the user to flip the base and quote assets of the trading pair. For example, users need to be able to change the selected market from BTC-ETH to ETH-BTC.
+**NEX-FS05-82:** shall allow the user to flip the base and quote assets of the trading pair. For example, users need to be able to change the selected market from BTC-ETH to ETH-BTC.
 
-**NEX-FS05-76:** shall, when a new market is selected by the user, update the page to reflect the selected market. (order book, history, asset balances, prices, etc.)
+**NEX-FS05-83:** shall, when a new market is selected by the user, update the page to reflect the selected market. (order book, history, asset balances, prices, etc.)
 
 ### 8.10. Balances Display
 
 The balances display:
 
-**NEX-FS05-77:** shall display the user's asset balances available for trading relating to the currently selected market.
+**NEX-FS05-84:** shall display the user's asset balances available for trading relating to the currently selected market.
 
-**NEX-FS05-78:** shall update the available balances in the display in real-time when orders are created, filled, partially filled, canceled, or otherwise changed.
+**NEX-FS05-85:** shall update the available balances in the display in real-time when orders are created, filled, partially filled, canceled, or otherwise changed.
+
+### 8.11. Market Depth Chart
+
+The depth chart:
+
+**NEX-FS05-86:** shall update its values in real-time.
+
+**NEX-FS05-87:** shall display two area charts: one for all buy orders, and one for all sell orders.
+
+**NEX-FS05-88:** shall, for buy orders, represent the amount of base asset (Y-axis) on order at each amount of quote asset (X-axis) or lower.
+
+**NEX-FS05-89:** shall, for sell orders, represent the amount of base asset (Y-axis) on order at each amount of quote asset (X-axis) or higher.
+
+**NEX-FS05-90:** shall display the current market (mid market) price.
+
+**NEX-FS05-91:** shall allow the user to zoom the chart in and out.
+
+**NEX-FS05-92:** shall allow the user to hover on the chart to view more specific data:
+
+* amount on order
+* specific price and change from the mid market (percentage)
+* total price
+
+**NEX-FS05-93:** shall indicate buy orders (green) and sell orders (red).
 
 ## 9. Appendix A: Glossary
 
