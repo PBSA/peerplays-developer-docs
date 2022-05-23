@@ -12,18 +12,10 @@ You might do something like the following:
 2. Download the latest copy of the [Operation ID mapping](../supporting-and-reference-docs/operation-ids-list.md#download).
 3. Combine the two lists to get the fee for each operation.
 
-Then you can use your combined list to easily calculate the total transaction costs for what you plan to do. At this time, there is no automated process for generating such a list. Here's an example that you can download to get you started, keeping in mind that the fees may have changed since the writing of this guide.
-
-#### Download
-
-An example of the combined list of Operation IDs, Operation Names, and their Fees:
-
-{% file src="../.gitbook/assets/peerplays-operations.xlsx" %}
-Peerplays Operations with Fees
-{% endfile %}
+Then you can use your combined list to easily calculate the total transaction costs for what you plan to do. At this time, there is no automated process for generating such a list.
 
 {% hint style="info" %}
-PPY has a precision of 5. So the numbers listed in the `get_global_properties` function are in Satoshi. That is to say, to convert this number to nominal units, a decimal point is added 5 places from the right.
+The PPY asset has a precision of 5. So the numbers listed in the `get_global_properties` function are in Satoshi. That is to say, to convert this number to nominal units, a decimal point is added 5 places from the right.
 
 Some examples:
 
@@ -149,19 +141,19 @@ To calculate the total cost for this, you'll find the transaction fees for each 
 
 Using `get_global_properties` and the list of operation ID's you find the following transaction fees:
 
-1. Operation #85 -> `custom_account_authority_create_operation` -> Fee = 1PPY & Kb of Data = 1PPY
-2. Operation #92 -> `nft_metadata_create_operation` -> Fee = 1PPY & Kb of Data = 1PPY
-3. Operation #94 -> `nft_mint_operation` -> Fee = 1PPY & Kb of Data = 1PPY
+1. Operation #85 -> `custom_account_authority_create_operation` -> Fee = 0.005 PPY & Kb of Data = 0.01 PPY
+2. Operation #92 -> `nft_metadata_create_operation` -> Fee = 0.1 PPY & Kb of Data = 0.01 PPY
+3. Operation #94 -> `nft_mint_operation` -> Fee = 0.01 PPY & Kb of Data = 0.01 PPY
 
-You will need to create the custom permissions once: 1 PPY (the fee) + 1 PPY (for 1 Kb worth of data). Then you will need to create the NFT metadata once: 1 PPY (the fee) + 1 PPY (for 1 Kb worth of data). Last you will need to mint the 50,000 NFTs, which issues them to the accounts that will ultimately own them: 50,000 PPY (the fee) + 50,000 PPY (for 1 Kb worth of data).
+You will need to create the custom permissions once: 0.005 PPY (the fee) + 0.01 PPY (for 1 Kb worth of data). Then you will need to create the NFT metadata once: 0.1 PPY (the fee) + 0.01 PPY (for 1 Kb worth of data). Last you will need to mint the 50,000 NFTs, which issues them to the accounts that will ultimately own them: 500 PPY (the fee) + 500 PPY (for 1 Kb worth of data).
 
 {% hint style="info" %}
-A Kb (Kilobyte) of data can accommodate about 1/2 page worth of text. So unless you have a lot of information to apply to your NFTs, the 1 PPY for a Kb of data should cover most use cases!
+A Kb (Kilobyte) of data can accommodate about 1/2 page worth of text. So unless you have a lot of information to apply to your NFTs, the 0.01 PPY for a Kb of data should cover most use cases!
 {% endhint %}
 
 When added all together, you get:
 
-1 + 1 + 1 + 1 + 50,000 + 50,000 = **100,004 PPY** cost in transaction fees to accomplish your goal.
+0.005 + 0.01 + 0.1 + 0.01 + 500 + 500 = **1,000.125 PPY** cost in transaction fees to accomplish your goal. And this accounts for the use of an entire Kb of data per NFT. Using less data will make the total much less in this case.
 
 This could represent 50,000 movie tickets, 50,000 shares of a company, or even 50,000 college degrees!
 
