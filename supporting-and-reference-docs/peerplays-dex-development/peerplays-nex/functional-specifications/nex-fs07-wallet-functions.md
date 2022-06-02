@@ -200,7 +200,12 @@ The wallet, in the context of the page layout:
 
 The wallet, in the context of the assets list:
 
-**NEX-FS07-18:** shall display a list of the user’s available assets. May display two separate lists: one for coins and tokens, the other for NFTs.
+**NEX-FS07-18:** shall display two lists of the user’s available assets:
+
+* coins and tokens
+* NFTs
+
+#### 8.2.1. coins and tokens list
 
 **NEX-FS07-19:** shall include the following fields for each available asset:
 
@@ -230,11 +235,41 @@ The wallet, in the context of the assets list:
 
 **NEX-FS07-27:** shall allow the user to download a copy of the list, as it has been filtered and sorted, as either a PDF file or CSV file.
 
+#### 8.2.2. NFTs list
+
+**NEX-FS07-28:** shall include the following fields for each available asset:
+
+* NFT image
+* NFT name
+* creator name
+* collection name
+* last price
+* best offer
+* quantity
+* total value
+* on sale (true/false)
+
+**NEX-FS07-29:** shall display the total value in the user’s preferred currency (app settings).
+
+**NEX-FS07-30:** shall display the total value of **all** assets (excluding coins and tokens) in the user’s wallet in the user’s preferred currency (app settings).
+
+**NEX-FS07-31:** shall allow the user to sort the list by its data fields.
+
+**NEX-FS07-32:** shall allow the user to filter the list by its data fields.
+
+**NEX-FS07-33:** shall allow the user to open and close the list (expandable menu).
+
+**NEX-FS07-34:** shall allow the user to download a copy of the list, as it has been filtered and sorted, as either a PDF file or CSV file.
+
+**NEX-FS07-35:** shall display a link to the Peerplays NFT Store.
+
+**NEX-FS07-36:** shall make the NFT name field link to the corresponding NFT detail page within the Peerplays NFT Store.
+
 ### 8.3. Send Function
 
 The wallet, in the context of the send function:
 
-**NEX-FS07-28:** shall provide the following user input controls:
+**NEX-FS07-37:** shall provide the following user input controls:
 
 * asset to send (drop down)
 * amount to send (numeric field)
@@ -245,42 +280,42 @@ The wallet, in the context of the send function:
 * “Send” button to initiate the send function
 * “clear form” function
 
-**NEX-FS07-29:** shall provide convenience controls to the user which allows them to easily adjust the send amount automatically to any percentage of their asset available to send. For example, supply a slider user input control which allows input from 0% to 100% of their available asset balance. This slider could even have nodes that allow easy selection of 0%, 25%, 50%, 75%, and 100%, but still allows any whole number percentage in between.
+**NEX-FS07-38:** shall provide convenience controls to the user which allows them to easily adjust the send amount automatically to any percentage of their asset available to send. For example, supply a slider user input control which allows input from 0% to 100% of their available asset balance. This slider could even have nodes that allow easy selection of 0%, 25%, 50%, 75%, and 100%, but still allows any whole number percentage in between.
 
-**NEX-FS07-30:** shall display the following information relevant to the send transaction:
+**NEX-FS07-39:** shall display the following information relevant to the send transaction:
 
 * amount of selected asset available to send
 * estimated fees
 * transaction total
 * estimated confirmation time (length of time)
 
-**NEX-FS07-31:** shall allow the selection of any asset for which the user has an available balance.
+**NEX-FS07-40:** shall allow the selection of any asset for which the user has an available balance.
 
-**NEX-FS07-32:** shall, upon selecting an asset, update the form controls in the following ways:
+**NEX-FS07-41:** shall, upon selecting an asset, update the form controls in the following ways:
 
 * (PPY selected) blockchain selection set to Peerplays and disabled.
 * (BTC selected and Bitcoin blockchain selected) memo is disabled.
 * (HIVE selected and Hive blockchain selected) memo is disabled.
 
-**NEX-FS07-33:** shall, upon selecting the “clear form” function, clear the form back to its initial state.
+**NEX-FS07-42:** shall, upon selecting the “clear form” function, clear the form back to its initial state.
 
-**NEX-FS07-34:** shall, when necessary, indicate to the user that the Peerplays network is not available for transactions.
+**NEX-FS07-43:** shall, when necessary, indicate to the user that the Peerplays network is not available for transactions.
 
-**NEX-FS07-35:** shall, once initiated by the user, summarize the send and ask the user for their confirmation to proceed.
+**NEX-FS07-44:** shall, once initiated by the user, summarize the send and ask the user for their confirmation to proceed.
 
-**NEX-FS07-36:** shall, once initiated or confirmed by the user, indicate send is in process. (loading spinner)
+**NEX-FS07-45:** shall, once initiated or confirmed by the user, indicate send is in process. (loading spinner)
 
-**NEX-FS07-37:** shall, once confirmed by the user, submit the transaction to the Peerplays network.
+**NEX-FS07-46:** shall, once confirmed by the user, submit the transaction to the Peerplays network.
 
-**NEX-FS07-38:** shall indicate to the user if the send was successfully (or unsuccessfully) initiated. This could be indicated with a message modal, UI elements like color and icons, etc.
+**NEX-FS07-47:** shall indicate to the user if the send was successfully (or unsuccessfully) initiated. This could be indicated with a message modal, UI elements like color and icons, etc.
 
-**NEX-FS07-39:** shall, if the send initiation process fails, explain to the user why the process failed and steps the user can take to fix the issue or learn more about the issue.
+**NEX-FS07-48:** shall, if the send initiation process fails, explain to the user why the process failed and steps the user can take to fix the issue or learn more about the issue.
 
-**NEX-FS07-40:** shall, upon successful send initiation, update the user’s asset balances.
+**NEX-FS07-49:** shall, upon successful send initiation, update the user’s asset balances.
 
-**NEX-FS07-41:** shall display a list of the user’s available assets (excluding NFTs).
+**NEX-FS07-50:** shall display a list of the user’s available assets (excluding NFTs).
 
-**NEX-FS07-42:** shall include the following fields for each available asset:
+**NEX-FS07-51:** shall include the following fields for each available asset:
 
 * asset symbol
 * asset name
@@ -291,45 +326,45 @@ The wallet, in the context of the send function:
 * actions
   * select this asset
 
-**NEX-FS07-43:** shall display the total value in the user’s preferred currency (app settings).
+**NEX-FS07-52:** shall display the total value in the user’s preferred currency (app settings).
 
-**NEX-FS07-44:** shall, upon activating the “select this asset” action, populate the asset selection with the corresponding asset.
+**NEX-FS07-53:** shall, upon activating the “select this asset” action, populate the asset selection with the corresponding asset.
 
-**NEX-FS07-45:** shall allow the user to sort the list by its data fields.
+**NEX-FS07-54:** shall allow the user to sort the list by its data fields.
 
-**NEX-FS07-46:** shall allow the user to filter the list by its data fields.
+**NEX-FS07-55:** shall allow the user to filter the list by its data fields.
 
-**NEX-FS07-47:** shall allow the user to open and close the list (expandable menu).
+**NEX-FS07-56:** shall allow the user to open and close the list (expandable menu).
 
 ### 8.4. Receive Function
 
 The wallet, in the context of the receive function:
 
-**NEX-FS07-48:** shall provide the following user input controls:
+**NEX-FS07-57:** shall provide the following user input controls:
 
 * asset to receive (drop down)
 
-**NEX-FS07-49:** shall allow the selection of any asset which can be received on the Peerplays network.
+**NEX-FS07-58:** shall allow the selection of any asset which can be received on the Peerplays network.
 
-**NEX-FS07-50:** shall, upon selecting an asset, update the form controls in the following ways:
+**NEX-FS07-59:** shall, upon selecting an asset, update the form controls in the following ways:
 
 * (PPY selected) display help text for receiving PPY to a Peerplays account.
 * (BTC selected) display help text for receiving BTC to a Peerplays account.
 * (HIVE selected) display help text for receiving HIVE to a Peerplays account.
 
-**NEX-FS07-51:** shall, if BTC is the selected asset, check if the user has a BTC sidechain address which is associated with their account. If not, display a “Generate Bitcoin Address” function. If so, display the BTC deposit address with a function to copy the address to the user’s clipboard.
+**NEX-FS07-60:** shall, if BTC is the selected asset, check if the user has a BTC sidechain address which is associated with their account. If not, display a “Generate Bitcoin Address” function. If so, display the BTC deposit address with a function to copy the address to the user’s clipboard.
 
-**NEX-FS07-52:** shall, when generating a new BTC address, generate a new BTC deposit and withdraw address and associate them with the user’s Peerplays account.
+**NEX-FS07-61:** shall, when generating a new BTC address, generate a new BTC deposit and withdraw address and associate them with the user’s Peerplays account.
 
-**NEX-FS07-53:** shall, when generating a new BTC address, display the newly generated BTC deposit address with a function to copy the address to the user’s clipboard.
+**NEX-FS07-62:** shall, when generating a new BTC address, display the newly generated BTC deposit address with a function to copy the address to the user’s clipboard.
 
-**NEX-FS07-54:** shall, when generating a new BTC address, display a link to download the BTC deposit and withdraw address private keys and a warning for the user to do so.
+**NEX-FS07-63:** shall, when generating a new BTC address, display a link to download the BTC deposit and withdraw address private keys and a warning for the user to do so.
 
-**NEX-FS07-55:** shall, when necessary, indicate to the user that the Peerplays network is not available for transactions.
+**NEX-FS07-64:** shall, when necessary, indicate to the user that the Peerplays network is not available for transactions.
 
-**NEX-FS07-56:** shall display a list of the user’s available assets (excluding NFTs).
+**NEX-FS07-65:** shall display a list of the user’s available assets (excluding NFTs).
 
-**NEX-FS07-57:** shall include the following fields for each available asset:
+**NEX-FS07-66:** shall include the following fields for each available asset:
 
 * asset symbol
 * asset name
@@ -340,15 +375,15 @@ The wallet, in the context of the receive function:
 * actions
   * select this asset
 
-**NEX-FS07-58:** shall display the total value in the user’s preferred currency (app settings).
+**NEX-FS07-67:** shall display the total value in the user’s preferred currency (app settings).
 
-**NEX-FS07-59:** shall, upon activating the “select this asset” action, populate the asset selection with the corresponding asset.
+**NEX-FS07-68:** shall, upon activating the “select this asset” action, populate the asset selection with the corresponding asset.
 
-**NEX-FS07-60:** shall allow the user to sort the list by its data fields.
+**NEX-FS07-69:** shall allow the user to sort the list by its data fields.
 
-**NEX-FS07-61:** shall allow the user to filter the list by its data fields.
+**NEX-FS07-70:** shall allow the user to filter the list by its data fields.
 
-**NEX-FS07-62:** shall allow the user to open and close the list (expandable menu).
+**NEX-FS07-71:** shall allow the user to open and close the list (expandable menu).
 
 ## 9. Appendix A: Glossary
 
