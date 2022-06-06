@@ -79,6 +79,7 @@ The app header:
 **NEX-FS03-2:** shall, for **unauthenticated** users, provide the kebab nav menu with the following navigation links:
 
 * Login
+* Create Account
 * Dashboard
 * Market
 * Blocks
