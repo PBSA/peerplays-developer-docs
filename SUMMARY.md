@@ -129,6 +129,7 @@
       * [NEX-FS05 Market Page](supporting-and-reference-docs/peerplays-dex-development/peerplays-nex/functional-specifications/nex-fs05-market-page.md)
       * [NEX-FS06 Profile Page](supporting-and-reference-docs/peerplays-dex-development/peerplays-nex/functional-specifications/nex-fs06-profile-page.md)
       * [NEX-FS07 Wallet Functions](supporting-and-reference-docs/peerplays-dex-development/peerplays-nex/functional-specifications/nex-fs07-wallet-functions.md)
+      * [NEX-FS08 App Settings](supporting-and-reference-docs/peerplays-dex-development/peerplays-nex/functional-specifications/nex-fs08-app-settings.md)
   * [Requirements Specification](supporting-and-reference-docs/peerplays-dex-development/requirements-specification.md)
   * [Functional Specs](supporting-and-reference-docs/peerplays-dex-development/functional-specs/README.md)
     * [Asset Info Page and Asset Lists](supporting-and-reference-docs/peerplays-dex-development/functional-specs/asset-info-page-and-asset-lists.md)
