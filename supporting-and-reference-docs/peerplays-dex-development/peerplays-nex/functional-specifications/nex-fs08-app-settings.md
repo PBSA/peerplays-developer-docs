@@ -129,19 +129,29 @@ The app settings page layout:
 
 **NEX-FS08-12:** shall allow the user to select among the following languages, including but not limited to: (single select)
 
-* English (US)
-* English (UK)
 * Chinese
+* English (UK)
+* English (US)
+* French
 * Hindi
 * Russian
 * Spanish
 
-**NEX-FS08-13:** shall allow the user to select among the following UI designs, including but not limited to: (single select)
+**NEX-FS08-13:** shall allow the user to select their preferred fiat currency for displaying certain values in the UI among the following options, including but not limited to: (single select)
+
+* CAD ($) - Canadian Dollar
+* CNY (¥) - Chinese Yuan
+* EUR (€) - Eurozone Euro
+* INR (₹) - Indian Rupee
+* RUB (₽) - Russian Ruble
+* USD ($) - United States Dollar
+
+**NEX-FS08-14:** shall allow the user to select among the following UI designs, including but not limited to: (single select)
 
 * light mode
 * dark mode
 
-**NEX-FS08-14:** shall allow the user to enable or disable notifications for the following specific events, including but not limited to: (multi-select)
+**NEX-FS08-15:** shall allow the user to enable or disable notifications for the following specific events, including but not limited to: (multi-select)
 
 * funds sent from account
 * funds received to account
@@ -154,7 +164,7 @@ The app settings page layout:
 * order canceled
 * order expired
 
-**NEX-FS08-15:** shall allow the user to lock their wallet after one of the following time intervals, including but not limited to: (single select)
+**NEX-FS08-16:** shall allow the user to lock their wallet after one of the following time intervals, including but not limited to: (single select)
 
 * 10 minutes
 * 30 minutes
@@ -165,53 +175,53 @@ The app settings page layout:
 * 1 month
 * never
 
-**NEX-FS08-16:** shall display a notice to the user when they have changed but not yet saved their general settings.
+**NEX-FS08-17:** shall display a notice to the user when they have changed but not yet saved their general settings.
 
-**NEX-FS08-17:** shall remove the unsaved changes notice when the user successfully saves their general settings.
+**NEX-FS08-18:** shall remove the unsaved changes notice when the user successfully saves their general settings.
 
-**NEX-FS08-18:** shall allow the user to save their general settings with a user input control button.
+**NEX-FS08-19:** shall allow the user to save their general settings with a user input control button.
 
-**NEX-FS08-19:** shall display feedback to the user when they have successfully saved their general settings.
+**NEX-FS08-20:** shall display feedback to the user when they have successfully saved their general settings.
 
-**NEX-FS08-20:** shall, upon saving the user’s general settings, make all the necessary changes to the UI and app functions to accommodate the user’s new settings (settings go into effect).
+**NEX-FS08-21:** shall, upon saving the user’s general settings, make all the necessary changes to the UI and app functions to accommodate the user’s new settings (settings go into effect).
 
-**NEX-FS08-21:** shall display the standard Peerplays faucet URL as a reference for the user’s convenience.
+**NEX-FS08-22:** shall display the standard Peerplays faucet URL as a reference for the user’s convenience.
 
 ### 7.3. Key Management Settings
 
-**NEX-FS08-22:** shall provide a password input field and the following options for generating a new public/private key pair: (multi-select)
+**NEX-FS08-23:** shall provide a password input field and the following options for generating a new public/private key pair: (multi-select)
 
 * Owner keys
 * Active keys
 * Memo keys
 
-**NEX-FS08-23:** shall allow the user to initiate the key generation with a user input control button.
+**NEX-FS08-24:** shall allow the user to initiate the key generation with a user input control button.
 
-**NEX-FS08-24:** shall, when generating a new key pair, display (obfuscated with the option to deobfuscate, or “unhide”) the newly generated private key with a function to copy the key to the user’s clipboard.
+**NEX-FS08-25:** shall, when generating a new key pair, display (obfuscated with the option to deobfuscate, or “unhide”) the newly generated private key with a function to copy the key to the user’s clipboard.
 
-**NEX-FS08-25:** shall, when generating a new key pair, display a link to download the public/private key pair and a warning for the user to do so.
+**NEX-FS08-26:** shall, when generating a new key pair, display a link to download the public/private key pair and a warning for the user to do so.
 
-**NEX-FS08-26:** shall display the user’s public keys which are associated with their account with a function to copy the key to the user’s clipboard.
+**NEX-FS08-27:** shall display the user’s public keys which are associated with their account with a function to copy the key to the user’s clipboard.
 
 ### 7.4. Membership Settings
 
-**NEX-FS08-27:** shall display a description of the lifetime membership (upgraded account) feature.
+**NEX-FS08-28:** shall display a description of the lifetime membership (upgraded account) feature.
 
-**NEX-FS08-28:** shall display the current cost (in PPY) of upgrading an account to lifetime membership status.
+**NEX-FS08-29:** shall display the current cost (in PPY) of upgrading an account to lifetime membership status.
 
-**NEX-FS08-29:** shall allow the user to initiate the account upgrade function with a user input control button.
+**NEX-FS08-30:** shall allow the user to initiate the account upgrade function with a user input control button.
 
-**NEX-FS08-30:** shall display a description of the current network fee distribution.
+**NEX-FS08-31:** shall display a description of the current network fee distribution.
 
-**NEX-FS08-31:** shall display the reviewer, registrar, and referrer accounts associated with the user’s account.
+**NEX-FS08-32:** shall display the reviewer, registrar, and referrer accounts associated with the user’s account.
 
-**NEX-FS08-32:** shall display the membership expiration date and time of the user’s account (or if the expiration is not applicable).
+**NEX-FS08-33:** shall display the membership expiration date and time of the user’s account (or if the expiration is not applicable).
 
-**NEX-FS08-33:** shall display the total amount of fees paid by the user’s account.
+**NEX-FS08-34:** shall display the total amount of fees paid by the user’s account.
 
-**NEX-FS08-34:** shall display a description of the fee distribution and maintenance interval.
+**NEX-FS08-35:** shall display a description of the fee distribution and maintenance interval.
 
-**NEX-FS08-35:** shall display a description of the vesting requirements for fee allocations.
+**NEX-FS08-36:** shall display a description of the vesting requirements for fee allocations.
 
 ## 8. Appendix A: Glossary
 
