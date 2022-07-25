@@ -264,7 +264,6 @@ The blockchain page layout:
 **NEX-FS09-46:** shall display an expandable panel or menu which hides the advanced transaction details by default. This menu can be opened by the user to reveal the full details of the transaction which includes, but is not limited to, the following:
 
 * transaction ID
-* transaction memo
 * reference block prefix
 * reference block number
 * transaction extensions
@@ -278,7 +277,7 @@ The blockchain page layout:
 * operation ID
 * operation type (name of the operation. ex: SON Heartbeat, transfer, or issue asset)
 * fees
-* operation details
+* operation details (including memo)
 * operation results
 
 **NEX-FS09-49:** shall allow the user to sort the list by its data fields.
