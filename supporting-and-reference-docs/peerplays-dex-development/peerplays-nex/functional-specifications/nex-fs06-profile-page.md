@@ -204,6 +204,7 @@ The profile page, in the context of the activity list:
 * detailed activity description with relevant links (usernames)
 * transaction ID
 * fee
+* transaction memo
 
 **NEX-FS06-31:** shall allow the user to sort the list by its data fields.
 

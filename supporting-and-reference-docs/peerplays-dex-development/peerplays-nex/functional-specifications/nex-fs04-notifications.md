@@ -87,6 +87,7 @@ The all activity table:
 * Detailed description of the activity
 * Transaction ID
 * Fee (in PPY)
+* Transaction memo
 
 **NEX-FS04-5:** shall display date and time information in the user’s local time and format.
 
