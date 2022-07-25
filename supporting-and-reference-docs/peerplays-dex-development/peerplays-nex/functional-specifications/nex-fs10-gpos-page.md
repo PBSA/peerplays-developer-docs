@@ -55,7 +55,7 @@ The keywords `may`, `could`, and `should` are not requirements but rather indica
 
 ## 5. Context
 
-The context.
+The Gamified Proof of Stake (GPOS) page is for blockchain governance by voting for the various nodes in the network. Users need a simple and intuitive way to compare the candidates they can vote on. The GPOS consensus mechanism is unique and needs to be explained to the user so that they know what GPOS is, how it works, and how it can effect their voting power and available balance over time.
 
 ## 6. Design Wire-frames
 
