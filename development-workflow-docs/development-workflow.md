@@ -2,7 +2,7 @@
 
 We want to fine-tune the development workflow to have the right balance of stability and speed.
 
-###  Development Ticket Creation \(Feature or Bug\):
+### &#x20;Development Ticket Creation (Feature or Bug):
 
 Everyone on the team can create new tickets.
 
@@ -22,9 +22,9 @@ Everyone on the team can create new tickets.
 * For tickets with the type of feature we must have:
   * Detailed Description
   * The purpose of the feature
-  * Extra resources \(if needed\)
+  * Extra resources (if needed)
 
-###  Ticket Development
+### &#x20;Ticket Development
 
 1. During Sprint meetings we will discuss and assign different tasks to different Developers for the next milestone
 2. When a developer wants to start the task he/she should change the state to `in progress`
@@ -36,21 +36,24 @@ Everyone on the team can create new tickets.
 1. For each commit developers must use the following structure for the commit message:
 
 * `#<issue number> <commit message>`
-* Example: \#271 change login page style
+* Example: #271 change login page style
 
 1. After completing the task developer must create an MR with the following title:
 
 * `<task type> #<issue number> <task title>`
-* Example: feature \#271 login page style
+* Example: feature #271 login page style
+
+{% hint style="info" %}
+Label usage is defined here [https://community.peerplays.tech/gitlab/labels](https://community.peerplays.tech/gitlab/labels)
+{% endhint %}
 
 1. After creating MR, both issue and MR should be assigned to another developer for code review and the label should be `in review`
-2. After code review the MR should be approved and merged then the assignee should be changed to **riledsun** in order to deployment \(we can ignore this step by having scheduled deployments\)
+2. After code review the MR should be approved and merged then the assignee should be changed to **riledsun** in order to deployment (we can ignore this step by having scheduled deployments)
 3. When the changes have been deployed the status should be changed to `in testing` and the assignee should be changed to the Test team.
 4. If the task was working properly then it should be closed and the status should be changed to `completed`
 5. In any of the above steps on the rejection of that task the assignee should be changed into the developer and status should be changed into `pending`
 
-###  Some Useful Hints:
+### &#x20;Some Useful Hints:
 
 * Each developer must have less than 3 tickets with a state of `in progress`
 * Each Ticket must have only one assignee unless it needs discussion or a teamwork action.
-
