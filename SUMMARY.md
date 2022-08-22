@@ -132,6 +132,7 @@
       * [NEX-FS08 App Settings](supporting-and-reference-docs/peerplays-dex-development/peerplays-nex/functional-specifications/nex-fs08-app-settings.md)
       * [NEX-FS09 Blockchain Page](supporting-and-reference-docs/peerplays-dex-development/peerplays-nex/functional-specifications/nex-fs09-blockchain-page.md)
       * [NEX-FS10 GPOS Page](supporting-and-reference-docs/peerplays-dex-development/peerplays-nex/functional-specifications/nex-fs10-gpos-page.md)
+      * [NEX-FS11 WhaleVault Integration](supporting-and-reference-docs/peerplays-dex-development/peerplays-nex/functional-specifications/nex-fs11-whalevault-integration.md)
   * [Requirements Specification](supporting-and-reference-docs/peerplays-dex-development/requirements-specification.md)
   * [Functional Specs](supporting-and-reference-docs/peerplays-dex-development/functional-specs/README.md)
     * [Asset Info Page and Asset Lists](supporting-and-reference-docs/peerplays-dex-development/functional-specs/asset-info-page-and-asset-lists.md)
