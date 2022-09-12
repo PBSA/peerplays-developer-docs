@@ -175,6 +175,6 @@
 
 ***
 
-* [Docs Home](https://peerplays.tech)
-* [Community Docs](https://community.peerplays.tech)
-* [Infrastructure Docs](https://infra.peerplays.tech)
+* [Peerplays Home](https://peerplays.com)
+* [Community Docs](https://community.peerplays.com)
+* [Infrastructure Docs](https://infra.peerplays.com)
