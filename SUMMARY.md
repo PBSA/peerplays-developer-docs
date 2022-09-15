@@ -166,6 +166,12 @@
 * [Operation IDs List](supporting-and-reference-docs/operation-ids-list.md)
 * [Sidechain Flow Diagram (HIVE coin)](supporting-and-reference-docs/sidechain-flow-diagram-hive.md)
 * [Sidechain Flow Diagram (Bitcoin)](supporting-and-reference-docs/sidechain-flow-diagram-bitcoin.md)
+* [Grafana](supporting-and-reference-docs/grafana/README.md)
+  * [Grafana Installation](supporting-and-reference-docs/grafana/grafana-installation.md)
+  * [Install Grafana Behind reverse proxy](supporting-and-reference-docs/grafana/install-grafana-behind-reverse-proxy.md)
+  * [Loki Installation](supporting-and-reference-docs/grafana/loki-installation.md)
+  * [Promtail agent Installation](supporting-and-reference-docs/grafana/promtail-agent-installation.md)
+  * [Grafana Explorer](supporting-and-reference-docs/grafana/grafana-explorer.md)
 
 ## Development Workflow Docs
 
