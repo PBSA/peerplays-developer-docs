@@ -31,7 +31,7 @@ Link to [Draw.io](http://draw.io/) file
 * In general, Sidechain Handler contains event listener, communication interface and event handler.
 * Event listener is “listening” for events on a sidechain. When event happens, event listener will notify event handler about incoming event.
 * Event handler uses communication interface to read all the information needed in order to process the event.
-* Once the processing is finished, event handler will pass the result to the Sidechan Manager, for further processing.
+* Once the processing is finished, event handler will pass the result to the Sidechain Manager, for further processing.
 
 ## Sequence diagram
 

@@ -9,7 +9,7 @@ There are two ways to create an account.
 
 You need a funded account to create additional accounts. The funded account should be upgraded to create new accounts. To upgrade an account
 
-```text
+```
 p.upgrade_account(account="account_name")
 ```
 
@@ -19,9 +19,9 @@ Once the account is upgraded
 
 ### The Faucet Method
 
-`url =` [`https://elizabeth-faucet.peerplays.download/api/v1/accounts`](https://elizabeth-faucet.peerplays.download/api/v1/accounts)
+`url =` [`https://mint-faucet.peerplays.download/`](https://mint-faucet.peerplays.download/)``
 
-```text
+```
 params = {'account': {
     'name': 'new_account_name',
     'owner_key': 'TEST6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV',
@@ -35,7 +35,6 @@ params = {'account': {
 
 ## Additional Methods
 
-```text
+```
 p.transfer(to, amount, asset, memo="", account=None)
 ```
-

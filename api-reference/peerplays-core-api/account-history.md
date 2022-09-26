@@ -126,7 +126,7 @@ vector<bucket_object> graphene::app::history_api::get_market_history(
 * **`bucket_seconds`**: Length of each time bucket in seconds.&#x20;
 
 {% hint style="warning" %}
-**Note**: It needs to be within result of [get\_market\_history\_buckets()](https://app.gitbook.com/s/-McxsyggfxkblmD-4Tzy/api-reference/peerplays-core-api/account-history-api.md#get\_market\_history\_buckets), otherwise no data will be returned
+**Note**: It needs to be within result of [get\_market\_history\_buckets()](account-history.md#get\_market\_history\_buckets), otherwise no data will be returned
 {% endhint %}
 
 * **`start`**: The start of a time range, E.G. “2018-01-01T00:00:00”

@@ -60,7 +60,7 @@ The signed transaction creating a new asset.
 {% endtab %}
 {% endtabs %}
 
-### update\_asset
+### update\_asset <a href="#update-asset" id="update-asset"></a>
 
 Update the core options on an asset. There are a number of options which all assets in the network use. These options are enumerated in the `asset_object::asset_options` struct.
 

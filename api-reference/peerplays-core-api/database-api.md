@@ -4,7 +4,7 @@ The database API is available from the full node via web-sockets.
 
 ## Objects
 
-### get\_objects
+### get\_objects <a href="#get_objects" id="get_objects"></a>
 
 Get the objects corresponding to the provided IDs.
 
@@ -242,7 +242,7 @@ ID of all accounts that refer to the specified keys.
 
 Get a list of accounts by names or IDs.
 
-This function has semantics identical to[get\_objects](https://dev.bitshares.works/en/master/api/namespaces/app.html#classgraphene\_1\_1app\_1\_1database\_\_api\_1a1f20e51d290fc3ac2409c49c058585b3)\*\*\*\*
+This function has semantics identical to [get\_objects](https://dev.bitshares.works/en/master/api/namespaces/app.html#classgraphene\_1\_1app\_1\_1database\_\_api\_1a1f20e51d290fc3ac2409c49c058585b3)\*\*\*\*
 
 ```cpp
 vector<optional<account_object>> graphene::app::database_api::get_accounts(
@@ -326,7 +326,7 @@ All accounts that refer to the specified account in their owner or active author
 
 Get a list of accounts by name.
 
-This function has semantics identical to [get\_objects](https://app.gitbook.com/s/-McxsyggfxkblmD-4Tzy/api-reference/peerplays-core-api/database-api.md#get\_objects), but doesn’t subscribe
+This function has semantics identical to[ get\_objects](database-api.md#get\_objects), but doesn’t subscribe
 
 ```cpp
 vector<optional<account_object>> graphene::app::database_api::lookup_account_names(
@@ -483,7 +483,7 @@ All vesting balance objects owned by the account.
 
 Get a list of assets by symbol names or IDs.
 
-Semantically equivalent to [get\_objects](https://app.gitbook.com/s/-McxsyggfxkblmD-4Tzy/api-reference/peerplays-core-api/database-api.md#get\_objects).
+Semantically equivalent to [get\_objects](database-api.md#get\_objects).
 
 ```cpp
 vector<optional<extended_asset_object>> graphene::app::database_api::get_assets(
@@ -527,7 +527,7 @@ The assets found.
 
 Get a list of assets by symbol names or IDs.
 
-Semantically equivalent to [get\_objects](https://app.gitbook.com/s/-McxsyggfxkblmD-4Tzy/api-reference/peerplays-core-api/database-api.md#get\_objects), but doesn’t subscribe.
+Semantically equivalent to [get\_objects](database-api.md#get\_objects), but doesn’t subscribe.
 
 ```cpp
 vector<optional<extended_asset_object>> graphene::app::database_api::lookup_asset_symbols(
@@ -776,7 +776,7 @@ Recent transactions in the market
 
 Get a list of witnesses by ID.
 
-Semantically equivalent to [get\_objects](https://app.gitbook.com/s/-McxsyggfxkblmD-4Tzy/api-reference/peerplays-core-api/database-api.md#get\_objects), but doesn’t subscribe.
+Semantically equivalent to [get\_objects](database-api.md#get\_objects), but doesn’t subscribe.
 
 ```cpp
 vector<optional<witness_object>> graphene::app::database_api::get_witnesses(
@@ -846,7 +846,7 @@ uint64_t graphene::app::database_api::get_witness_count()const
 
 Get a list of committee\_members by ID.
 
-Semantically equivalent to [get\_objects](https://app.gitbook.com/s/-McxsyggfxkblmD-4Tzy/api-reference/peerplays-core-api/database-api.md#get\_objects), but doesn’t subscribe.
+Semantically equivalent to [get\_objects](database-api.md#get\_objects), but doesn’t subscribe.
 
 ```cpp
 vector<optional<committee_member_object>> graphene::app::database_api::get_committee_members(

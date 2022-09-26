@@ -13,7 +13,7 @@ The functional requirement listed in this document will be limited to the config
 
 ## 3. Background
 
-The Bitcoin Sidechain functionality has been implemented in the Peerplays blockchain but it doesn't take into account, the change of SONs. As per the current implementation of Sidechain, a multisig bitcoin wallet will be created on the bitcoin blockchain to hold the bitcoins that have been deposited into the pBTC accounts of the Peerplays users. Every SON will have a bitcoin transaction signing key for this multisig bitcoin wallet and will be required to sign any withdrawal transaction. When a SONs changes, the transaction signing key of the outgoing SON needs to be removed from the multisig bitcoin wallet and the key of the incoming SON needs to be added. The suggested proposal is to make the Sidechain code available as a plugin and assign the responsibility for running the sidechain code to separate nodes called the Sidechain Operating Nodes \(SONs\).
+The Bitcoin Sidechain functionality has been implemented in the Peerplays blockchain but it doesn't take into account, the change of SONs. As per the current implementation of Sidechain, a multisig bitcoin wallet will be created on the bitcoin blockchain to hold the bitcoins that have been deposited into the pBTC accounts of the Peerplays users. Every SON will have a bitcoin transaction signing key for this multisig bitcoin wallet and will be required to sign any withdrawal transaction. When a SONs changes, the transaction signing key of the outgoing SON needs to be removed from the multisig bitcoin wallet and the key of the incoming SON needs to be added. The suggested proposal is to make the Sidechain code available as a plugin and assign the responsibility for running the sidechain code to separate nodes called the Sidechain Operating Nodes (SONs).
 
 ## 4. Process Overview
 
@@ -58,7 +58,7 @@ This command will disable the SON functionality in the Peerplays node and deregi
 The error messages are to be displayed in GUI wallet or cli\_wallet or other programatic means.
 
 1. Only a SON node which is in "enabled state" can be disabled
-2. Trying to de-activate/disable a Peerplays node with SON not enabled will give the error message "SON is not enabled for account\_name" 
+2. Trying to de-activate/disable a Peerplays node with SON not enabled will give the error message "SON is not enabled for account\_name"&#x20;
 3. If a SON is disabled and trying to move the VESTED funds before 2 days duration via any means should be prevented
 
 ## API Requirements
@@ -81,7 +81,7 @@ rank: 1,
 
 about\_url: www.memphis-node.com,
 
-sidechain\_url: [http://www.memphis-node.com/sidechain](http://www.memphis-node.com/sidechain),
+sidechain\_url: http://www.memphis-node.com/sidechain,
 
 is\_active: true,
 
@@ -97,7 +97,7 @@ votes: 23223245
 
 ....
 
-\]
+]
 
 ## CLI Wallet Command Requirements
 
@@ -105,4 +105,3 @@ These are new options to be added.
 
 1. list\_sons: We need a command in the CLI Wallet similar to list\_witnesses to get the list of SONs.
 2. list\_active\_sons: This command should provide a list of active SONs on the Peerplays blockchain.
-

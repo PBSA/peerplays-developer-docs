@@ -2,7 +2,7 @@
 
 ## Trading Calls
 
-### sell\_asset
+### sell\_asset <a href="#sell-asset" id="sell-asset"></a>
 
 Place a limit order attempting to sell one asset for another.
 
@@ -51,7 +51,7 @@ Borrow an asset or update the debt/collateral ratio for the loan.
 
 This is the first step in shorting an asset.
 
-Call [`sell_asset()`](https://app.gitbook.com/s/-McxsyggfxkblmD-4Tzy/api-reference/wallet-api/trading-calls.md#sell\_asset) to complete the short.
+Call [`sell_asset()`](trading-calls.md#sell\_asset) to complete the short.
 
 ```cpp
 signed_transaction graphene::

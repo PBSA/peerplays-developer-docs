@@ -161,8 +161,6 @@
       * [APP-FS08 Browse View](supporting-and-reference-docs/nft-development/nft-store/functional-specifications/app-fs08-browse-view.md)
     * [App Page List](supporting-and-reference-docs/nft-development/nft-store/app-page-list.md)
     * [Requirement Traceability Matrix](supporting-and-reference-docs/nft-development/nft-store/requirement-traceability-matrix.md)
-  * [Django-NFT](supporting-and-reference-docs/nft-development/django-nft/README.md)
-    * [Requirements Specification](supporting-and-reference-docs/nft-development/django-nft/requirements-specification.md)
 * [Operation IDs List](supporting-and-reference-docs/operation-ids-list.md)
 * [Sidechain Flow Diagram (HIVE coin)](supporting-and-reference-docs/sidechain-flow-diagram-hive.md)
 * [Sidechain Flow Diagram (Bitcoin)](supporting-and-reference-docs/sidechain-flow-diagram-bitcoin.md)

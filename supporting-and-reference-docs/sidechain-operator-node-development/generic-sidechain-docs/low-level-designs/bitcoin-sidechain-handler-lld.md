@@ -84,7 +84,7 @@ In general, we will need:
 * Method to retrieve the transaction by hash
   * [https://bitcoin.org/en/developer-reference#gettransaction](https://bitcoin.org/en/developer-reference#gettransaction)
 * Method to retrieve block as json
-  * HTTP request to "[http://IP:PORT/rest/block/BLOCK\_HASH.json](http://ip/:PORT/rest/block/BLOCK\_HASH.json)";
+  * HTTP request to "http://ip/:PORT/rest/block/BLOCK\_HASH.json"
 * Method to decode transaction
   * [https://bitcoin.org/en/developer-reference#decoderawtransaction](https://bitcoin.org/en/developer-reference#decoderawtransaction)
 * Method to retrieve the transaction fee
