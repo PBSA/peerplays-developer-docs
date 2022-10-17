@@ -167,6 +167,7 @@
 * [TradeHands Explorer](supporting-and-reference-docs/tradehands-explorer/README.md)
   * [User Personas](supporting-and-reference-docs/tradehands-explorer/user-personas.md)
   * [User stories](supporting-and-reference-docs/tradehands-explorer/user-stories.md)
+  * [APP-FS01 Detailed View](supporting-and-reference-docs/tradehands-explorer/app-fs01-detailed-view.md)
 * [Grafana](supporting-and-reference-docs/grafana/README.md)
   * [Grafana Installation](supporting-and-reference-docs/grafana/grafana-installation.md)
   * [Install Grafana Behind reverse proxy](supporting-and-reference-docs/grafana/install-grafana-behind-reverse-proxy.md)
