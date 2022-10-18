@@ -91,7 +91,7 @@ This section shall display the **series name** using Series Name Extractor. ****
 
 #### **B. NFT Title** <a href="#nft-title" id="nft-title"></a>
 
-This section shall display the NFT name using NFT Name Extractor. The "name extractor" checks to see if there is a interpretable data in the `token_uri` field defined as _display name_, otherwise it can fall back to the _series name_ as defined in the metadata object and optionally appending an _"index"_ into the series, n incase if one can be determined (depends on a not-yet-existent core API call).\
+This section shall display the NFT name using NFT Name Extractor. The "name extractor" checks to see if there is a interpretable data in the `token_uri` field defined as _display name_, otherwise it can fall back to the _series name_ as defined in the metadata object and optionally appending an _"index"_ into the series, incase if one can be determined (depends on a not-yet-existent core API call).\
 **Extracted From:** [NFT Object](app-fs01-detailed-view.md#a.-nft-object) (1.31.x)\
 **Field:** [`token_uri`](app-fs01-detailed-view.md#points-to-remember)``\
 ``**Else Extracted From:** [Metadata Object](app-fs01-detailed-view.md#b.-nft-metadata-object) (1.30.x)\
@@ -114,7 +114,7 @@ In the latter case above (where we fell back on the metadata object `name` field
 
 #### **C. Owned By**
 
-This section shall display the account name of the NFT owner using the name map. The NFT object identifies the account ID.  Note that a separate API call is needed to look up the account name from the chain.\
+This section shall display the account name of the NFT owner using the name map. The NFT object identifies the account ID.  Note that a separate API call is needed to look up the account name from the chain. The name should be clickable and direct to the current profile owner of NFT.\
 **Extracted From:** [NFT Object](app-fs01-detailed-view.md#a.-nft-object) (1.31.x)\
 **Field:** `owner`&#x20;
 
@@ -142,7 +142,7 @@ This section shall display the simple narration about the NFT using Description 
 
 #### **B. By Field** (Creator/Author)
 
-Within the description field there should be an option to display the NFT creator/author using the NFT Creator Extractor. After receiving the field value it follows the fallback sequence to determine the author.\
+Within the description field there should be an option to display the NFT creator/author using the NFT Creator Extractor. After receiving the field value it follows the fallback sequence to determine the author. The creator filed should be clickable and direct to the NFT issuing User profile account which created the NFT.\
 **Extracted From:** [NFT Object](app-fs01-detailed-view.md#a.-nft-object) (1.31.x)\
 **Field:** [`token_uri`](app-fs01-detailed-view.md#points-to-remember)``
 
@@ -190,18 +190,6 @@ This section shall display the series name and series description of the NFT obj
 
 This is similar to the description above except it is extracting a description of the _series_ rather than of the individual, specific NFT.
 
-#### **E. Option 4 as Raw Data**&#x20;
-
-This section shall display the Raw NFT object data which is mainly for the technical users and it is nested/closed by default. It displays the `token_uri` value from [NFT Object](app-fs01-detailed-view.md#a.-nft-object) (1.31.x), to allow users to make their own judgements of the semantic meaning of the NFT, in the event that the NFT Details Page produces an incomplete or erroneous rendering.
-
-{% code overflow="wrap" %}
-```json
-// Token data value
-  
-{"name":"Mint Bears #1","created_by":"Masha","description":"Furry and fun MintBears! This is an early preliminary issuance of the Mint Bears. More to come?","image":"ipfs://bafybeidbpxnhns73t2le244n3l73q4ex6o4edu32bqgp72toarr6a6ukim/1.png","attributes":[{"trait_type":"Fur Color","value":"Brown"},{"trait_type":"Eye Color","value":"Red"}]}
-```
-{% endcode %}
-
 ### 6.2 Market Activity
 
 This section shall display the Offer object that will be retrieved from Chain.\
@@ -227,6 +215,16 @@ This section renders the summary view of the similar NFT collections which is ex
 * [ ] Image - The NFT image can be displayed using the same method used in the section, [Image Card](app-fs01-detailed-view.md#1.-image-card)
 * [ ] Series name - Display the series name which can be similar to the section, [Series Name](app-fs01-detailed-view.md#a.-series-name)
 * [ ] NFT Name - The NFT name can be extracted using the method in the section , [NFT Title](app-fs01-detailed-view.md#b.-nft-title)
+* [ ] NFT ID - The ID field can be extracted from _`token_uri` and `base_uri`_ based on the NFT object selection.
+
+```
+// The NFT ID of NFT Object is extracted from token_uri field
+"id": "1.31.7"
+
+//The NFT ID of NFT Metadata Object is extracted from base_uri field
+"id": "1.30.8"
+```
+
 * [ ] View NFT - Clicking this **Button** should redirect to a separate page to display the NFT in detailed view.
 
 #### B. View Collections
@@ -235,7 +233,7 @@ Clicking on this option shall direct to a separate page to display the collectio
 
 This option shall display the object page using extraction and can be limited to show 2 rows of NFTs in single page.
 
-### 7. Appendix A
+## 7. Appendix A
 
 This document explains the association between User Interface elements and the chain data that inform those elements. The chain object falls in the below two category.
 
