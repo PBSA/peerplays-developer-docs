@@ -168,6 +168,7 @@
   * [User Personas](supporting-and-reference-docs/tradehands-explorer/user-personas.md)
   * [User stories](supporting-and-reference-docs/tradehands-explorer/user-stories.md)
   * [APP-FS01 Detailed View](supporting-and-reference-docs/tradehands-explorer/app-fs01-detailed-view.md)
+  * [Draft: APP-FS02 Front Page](supporting-and-reference-docs/tradehands-explorer/draft-app-fs02-front-page.md)
   * [APP-FS03 Collection Details Page](supporting-and-reference-docs/tradehands-explorer/app-fs03-collection-details-page.md)
 * [Grafana](supporting-and-reference-docs/grafana/README.md)
   * [Grafana Installation](supporting-and-reference-docs/grafana/grafana-installation.md)

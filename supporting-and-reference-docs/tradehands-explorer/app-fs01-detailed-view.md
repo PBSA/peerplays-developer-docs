@@ -31,6 +31,10 @@ For the purpose of traceability, the following code(s) will be used in this func
 | ---------- | ----------------------------------------- |
 | APP-FS01-# | App Component Requirement - Detailed View |
 
+**The keyword `shall` indicates a requirement statement.**
+
+The keywords `may`, `could`, and `should` are not requirements but rather indicate items related to requirements that are worthy of consideration.
+
 ## 4. Context
 
 The detailed view page is the place where a user will land when following a link to any NFT from elsewhere in the TradeHands app. Users have different requirements based on their goal. So, the representation of any NFT should provide all the requisite details which helps the user to track information in a single section.&#x20;
@@ -61,7 +65,7 @@ This section describes the NFTs which shall contain the list of components below
 2. Identifiers (Series name, NFT Title,  Owner)
 3. Descriptive Data Card
 
-### 1. Image card
+### 1. Image card <a href="#image-card" id="image-card"></a>
 
 The image card shall display the **NFT image** using the Image link received from Image link Extractor.\
 **Extracted From:** [NFT Object](app-fs01-detailed-view.md#a.-nft-object) (1.31.x)\
